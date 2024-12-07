@@ -7,10 +7,11 @@ import vikeSolid from 'vike-solid/vite'
 import type { UserConfig } from 'vite'
 
 export default {
-  cacheDir: '.vite',
+  root: 'src',
+  cacheDir: path.resolve(import.meta.dirname, '.vite'),
   plugins: [
     vike(),
-    vikeNode('src/server/index.ts'),
+    vikeNode('server/index.ts'),
     vikeSolid()
   ],
   server: {
@@ -21,7 +22,7 @@ export default {
   },
   build: {
     target: 'esnext',
-    outDir: '.vite/dist'
+    outDir: path.resolve(import.meta.dirname, '.vite/dist')
   },
   css: {
     postcss: {

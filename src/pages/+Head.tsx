@@ -4,7 +4,7 @@ export function Head() {
     <>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
+      <link rel="shortcut icon" type="image/ico" href="/assets/favicon.ico" />
       <title>Solid App</title>
     </>
   )
