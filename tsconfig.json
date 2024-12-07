@@ -30,7 +30,6 @@
     ".github",
     ".vite",
     ".vscode",
-    ".yarn",
-    "node_modules"
+    ".yarn"
   ]
 }
