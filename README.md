@@ -1,4 +1,4 @@
-# template-vike-solid-daisyui
+# template-vike-solid-daisyui-hono
 
 ### 📚 Template stack
 - **Vike**
@@ -14,7 +14,7 @@
 
 ### ⬇️ Clone
 ```sh
-git clone https://github.com/templates-ecosystem/template-vike-solid-daisyui.git
+git clone https://github.com/templates-ecosystem/template-vike-solid-daisyui-hono.git
 ```
 
 ### ⚙️ Install

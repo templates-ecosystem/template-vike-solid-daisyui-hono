@@ -4415,9 +4415,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"template-vike-solid-daisyui@workspace:.":
+"template-vike-solid-daisyui-hono@workspace:.":
   version: 0.0.0-use.local
-  resolution: "template-vike-solid-daisyui@workspace:."
+  resolution: "template-vike-solid-daisyui-hono@workspace:."
   dependencies:
     "@types/node": "npm:^22.10.1"
     "@yarnpkg/sdks": "npm:^3.2.0"
