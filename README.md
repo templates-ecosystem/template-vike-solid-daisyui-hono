@@ -1,5 +1,7 @@
 # template-vike-solid-daisyui-hono
 
+Issue: https://github.com/vikejs/vike/issues/2010
+
 ### 📚 Template stack
 - **Vike**
 - **Vite**

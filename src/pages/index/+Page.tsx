@@ -1,9 +1,8 @@
 function Page() {
   return (
     <>
-      <h1>My Vike + Solid App</h1>
-      This page is:
-      <input type="checkbox" checked class="checkbox" />
+      <h1>My Vike</h1>
+      Hello, world!
     </>
   )
 }
