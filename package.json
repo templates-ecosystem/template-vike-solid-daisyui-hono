@@ -13,14 +13,11 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
-    "hono": "^4.6.13",
-    "hono-autoloader": "^0.3.0",
-    "solid-js": "^1.9.3"
+    "hono": "^4.6.13"
   },
   "devDependencies": {
     "@types/node": "^22.10.1",
     "@yarnpkg/sdks": "^3.2.0",
-    "tsx": "^4.19.2",
     "typescript": "5.7.2",
     "vike": "^0.4.206",
     "vike-node": "^0.2.3",
