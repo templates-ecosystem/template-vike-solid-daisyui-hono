@@ -1464,20 +1464,43 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@universal-middleware/compress@npm:^0.2.1":
-  version: 0.2.5
-  resolution: "@universal-middleware/compress@npm:0.2.5"
-  checksum: 10c0/cd4dd0a6466da98a7cd5ab9932fb68e3d12703e8505ceffac818f8fd1106020fe4a2f3cfb4cf55cefe9319f3e72225b5d382437fc32a67c876d5f13223548229
+"@universal-middleware/compress@npm:^0.2.6":
+  version: 0.2.6
+  resolution: "@universal-middleware/compress@npm:0.2.6"
+  checksum: 10c0/40a98035f147c207db4e50675868bd1fd23a9e92f82ed9d62cac86e1d186ea15b3c23049b55b1dd17da57a86f9bc2519c792c613a26f45ef1d29f0c6a1334d02
   languageName: node
   linkType: hard
 
-"@universal-middleware/core@npm:^0.2.13":
-  version: 0.2.14
-  resolution: "@universal-middleware/core@npm:0.2.14"
+"@universal-middleware/core@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "@universal-middleware/core@npm:0.3.2"
   dependencies:
     regexparam: "npm:^3.0.0"
     tough-cookie: "npm:^5.0.0"
-  checksum: 10c0/0b3e37cbfe730e596932969909e0a645fe745c667f57902b212cb5163ba760189dc4226282c12ad2517e500d1b29ea339c93dac30434898ea2abab6b8fedd309
+  peerDependencies:
+    "@cloudflare/workers-types": ^4.20241202.0
+    "@hattip/core": ^0.0.49
+    "@webroute/route": ^0.8.0
+    elysia: ^1.1.25
+    fastify: ^5.1.0
+    h3: ^1.13.0
+    hono: ^4.6.12
+  peerDependenciesMeta:
+    "@cloudflare/workers-types":
+      optional: true
+    "@hattip/core":
+      optional: true
+    "@webroute/route":
+      optional: true
+    elysia:
+      optional: true
+    fastify:
+      optional: true
+    h3:
+      optional: true
+    hono:
+      optional: true
+  checksum: 10c0/f7544d11c048ea12b0db3d8b83b3a739d1a6af59e5aa6464ee3c69986f7d296b8f1cfa1c992b0b48bf56c8b189b8a995873951f5d96eaaa5ff07a0d8bca38c11
   languageName: node
   linkType: hard
 
@@ -2276,15 +2299,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^4.12.14":
-  version: 4.12.14
-  resolution: "daisyui@npm:4.12.14"
+"daisyui@npm:^4.12.20":
+  version: 4.12.20
+  resolution: "daisyui@npm:4.12.20"
   dependencies:
     css-selector-tokenizer: "npm:^0.8"
     culori: "npm:^3"
     picocolors: "npm:^1"
     postcss-js: "npm:^4"
-  checksum: 10c0/8b665e285cea4fa8775428ea6b6ca5f86b41077ac37db2faae9566bc97c9dc4fc637243791a795ba3db17fe62beeef01fb02092d26323cab90e93ce2768b7d14
+  checksum: 10c0/067d89d481a7759e315862802f315e66a0e0a19eec04cd6b98de6993dd8462665d87ca885cc773af8a982f8875c495fca70945d85ed6ee2f39600beb8c194412
   languageName: node
   linkType: hard
 
@@ -5291,7 +5314,7 @@ __metadata:
     "@types/node": "npm:^22.10.1"
     "@yarnpkg/sdks": "npm:^3.2.0"
     autoprefixer: "npm:^10.4.20"
-    daisyui: "npm:^4.12.14"
+    daisyui: "npm:^4.12.20"
     eslint: "npm:^9.16.0"
     eslint-plugin-solid: "npm:^0.14.4"
     eslint-plugin-tailwindcss: "npm:^3.17.5"
@@ -5305,7 +5328,7 @@ __metadata:
     typescript: "npm:5.7.2"
     typescript-eslint: "npm:^8.17.0"
     vike: "npm:^0.4.206"
-    vike-node: "npm:^0.2.3"
+    vike-node: "npm:^0.2.4"
     vike-solid: "npm:^0.7.6"
     vite: "npm:^5.4.11"
   languageName: unknown
@@ -5610,14 +5633,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vike-node@npm:^0.2.3":
-  version: 0.2.3
-  resolution: "vike-node@npm:0.2.3"
+"vike-node@npm:^0.2.4":
+  version: 0.2.4
+  resolution: "vike-node@npm:0.2.4"
   dependencies:
     "@brillout/picocolors": "npm:^1.0.14"
     "@nitedani/shrink-ray-current": "npm:^4.3.0"
-    "@universal-middleware/compress": "npm:^0.2.1"
-    "@universal-middleware/core": "npm:^0.2.13"
+    "@universal-middleware/compress": "npm:^0.2.6"
+    "@universal-middleware/core": "npm:^0.3.2"
     "@vercel/nft": "npm:^0.26.5"
     esbuild: "npm:^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0"
     resolve-from: "npm:^5.0.0"
@@ -5626,7 +5649,7 @@ __metadata:
   peerDependencies:
     vike: ^0.4.198
     vite: ">=5.0.10"
-  checksum: 10c0/b2d2f597bda0b3a8a2b39dcfbadb0079c04145c051a3ce3789f1ab09330cdd8c24e9da1214b2ccc83533540037cfa6c507af729d660bca458023b25b882cad40
+  checksum: 10c0/eb2b2f43a44467696a52000fef466b2358dbac930361a731ed616846307f7ab9ee3677c4af70d44599b65af4891f8511cb3a566ece4c0c70d274f9612de4959d
   languageName: node
   linkType: hard
 
