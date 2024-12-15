@@ -13,27 +13,27 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
-    "hono": "^4.6.13",
-    "hono-autoloader": "^0.3.0",
-    "solid-js": "^1.9.3"
+    "hono": "^4.6.14",
+    "solid-js": "^1.9.3",
+    "universal-autoloader": "^0.1.1"
   },
   "devDependencies": {
-    "@types/node": "^22.10.1",
+    "@types/node": "^22.10.2",
     "@yarnpkg/sdks": "^3.2.0",
     "autoprefixer": "^10.4.20",
-    "daisyui": "^4.12.14",
-    "eslint": "^9.16.0",
-    "eslint-plugin-solid": "^0.14.4",
+    "daisyui": "^4.12.22",
+    "eslint": "^9.17.0",
+    "eslint-plugin-solid": "^0.14.5",
     "eslint-plugin-tailwindcss": "^3.17.5",
     "eslint-plugin-unicorn": "^56.0.1",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.16",
     "tsx": "^4.19.2",
     "typescript": "5.7.2",
-    "typescript-eslint": "^8.17.0",
-    "vike": "^0.4.206",
-    "vike-node": "^0.2.3",
-    "vike-solid": "^0.7.6",
+    "typescript-eslint": "^8.18.0",
+    "vike": "^0.4.209",
+    "vike-node": "^0.2.8",
+    "vike-solid": "^0.7.7",
     "vite": "^5.4.11"
   },
   "engines": {

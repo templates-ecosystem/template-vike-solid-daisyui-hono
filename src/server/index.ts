@@ -2,7 +2,7 @@ import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 // import { logger } from 'hono/logger'
-import { autoloadRoutes } from 'hono-autoloader'
+import { autoloadRoutes } from 'universal-autoloader'
 import vike from 'vike-node/hono'
 
 const port = +(process.env.PORT || 3000)
