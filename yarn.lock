@@ -226,10 +226,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@brillout/json-serializer@npm:^0.5.13":
-  version: 0.5.13
-  resolution: "@brillout/json-serializer@npm:0.5.13"
-  checksum: 10c0/03d83927456328339dcc15024dee0025924654078eb4b7fcbad56ec6adea6dd4342cfa686bd1106dd459afef49a0447cb222e86db20945a32a7f4fba59e04a75
+"@brillout/json-serializer@npm:^0.5.15":
+  version: 0.5.15
+  resolution: "@brillout/json-serializer@npm:0.5.15"
+  checksum: 10c0/eb04c5f8f4d736a5494eb7b7e6ec8f80a913fd76bf462ff593c886e17e67729270a2aaaba17523d34a8b8b660ed9999ee18af04b6b77a9c68179ef4a83a00759
   languageName: node
   linkType: hard
 
@@ -247,12 +247,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@brillout/vite-plugin-server-entry@npm:^0.5.0":
-  version: 0.5.1
-  resolution: "@brillout/vite-plugin-server-entry@npm:0.5.1"
+"@brillout/vite-plugin-server-entry@npm:^0.5.6":
+  version: 0.5.6
+  resolution: "@brillout/vite-plugin-server-entry@npm:0.5.6"
   dependencies:
     "@brillout/import": "npm:^0.2.3"
-  checksum: 10c0/50b84a933b59f2460a48a51d1fa687076dfd590e1fe8862fc61754b2caa6be88dc30e841fb43286928b00f1a7bb44c6c7ee3768a9f783498d29782cba5d3343a
+    "@brillout/picocolors": "npm:^1.0.14"
+  checksum: 10c0/2d5875588874737645092451fd803477359ba6c2f0c4d81fce2ec3044f4d0d35b078cdadaac6083ec99162290957fb9fdc769203d1ec844d2cb6b6b2d65ba0bb
   languageName: node
   linkType: hard
 
@@ -878,21 +879,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-core@npm:5.62.3":
-  version: 5.62.3
-  resolution: "@tanstack/query-core@npm:5.62.3"
-  checksum: 10c0/917cb1c4abbfcdd52e3fb5008cbf6d2d079ccf6c703913f07dc064de047ccec499b81c29f742ade4bbf4a3f33391f0112b59d0b262fb3e2eebbe5be3ac52382c
+"@tanstack/query-core@npm:5.62.7":
+  version: 5.62.7
+  resolution: "@tanstack/query-core@npm:5.62.7"
+  checksum: 10c0/d7aa83571b56e7bf1b608b8f56c90a9e9e759ba5a8899686182e8961c94432d1b6437b066a228765250498a3009623a30c5ca17b2714ddb30e2d727adea9aa0c
   languageName: node
   linkType: hard
 
-"@tanstack/solid-query@npm:^5.62.3":
-  version: 5.62.3
-  resolution: "@tanstack/solid-query@npm:5.62.3"
+"@tanstack/solid-query@npm:^5.62.7":
+  version: 5.62.7
+  resolution: "@tanstack/solid-query@npm:5.62.7"
   dependencies:
-    "@tanstack/query-core": "npm:5.62.3"
+    "@tanstack/query-core": "npm:5.62.7"
   peerDependencies:
     solid-js: ^1.6.0
-  checksum: 10c0/9b490c41d5280075c351f282f3484fc9c3b039f3ce5b18b430a9439035c4581aa40a183bb5727437dfad2147612ad2673d2537d923223b017391772a6bdeae27
+  checksum: 10c0/52ab8b4727ef38138a4224d45c68ff7f18450295d11db6bb14a1b515cfb16d19b231dc1613983bfc472edbaecd3901f5a0559e7c63eb42c0aa3f84c04c369318
   languageName: node
   linkType: hard
 
@@ -979,12 +980,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.10.1":
-  version: 22.10.1
-  resolution: "@types/node@npm:22.10.1"
+"@types/node@npm:*, @types/node@npm:^22.10.2":
+  version: 22.10.2
+  resolution: "@types/node@npm:22.10.2"
   dependencies:
     undici-types: "npm:~6.20.0"
-  checksum: 10c0/0fbb6d29fa35d807f0223a4db709c598ac08d66820240a2cd6a8a69b8f0bc921d65b339d850a666b43b4e779f967e6ed6cf6f0fca3575e08241e6b900364c234
+  checksum: 10c0/2c7b71a040f1ef5320938eca8ebc946e6905caa9bbf3d5665d9b3774a8d15ea9fab1582b849a6d28c7fc80756a62c5666bc66b69f42f4d5dafd1ccb193cdb4ac
   languageName: node
   linkType: hard
 
@@ -1011,20 +1012,43 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@universal-middleware/compress@npm:^0.2.1":
-  version: 0.2.5
-  resolution: "@universal-middleware/compress@npm:0.2.5"
-  checksum: 10c0/cd4dd0a6466da98a7cd5ab9932fb68e3d12703e8505ceffac818f8fd1106020fe4a2f3cfb4cf55cefe9319f3e72225b5d382437fc32a67c876d5f13223548229
+"@universal-middleware/compress@npm:^0.2.8":
+  version: 0.2.8
+  resolution: "@universal-middleware/compress@npm:0.2.8"
+  checksum: 10c0/1c51946aa21ff24d2b7a2de1532c45ce050671eb1c700bb833bab4cb7c2f0211e0c44f3b85993473db8a2d434d58d6aecc8a09be5211835aa8f384c90de2823c
   languageName: node
   linkType: hard
 
-"@universal-middleware/core@npm:^0.2.13":
-  version: 0.2.14
-  resolution: "@universal-middleware/core@npm:0.2.14"
+"@universal-middleware/core@npm:^0.3.3":
+  version: 0.3.3
+  resolution: "@universal-middleware/core@npm:0.3.3"
   dependencies:
     regexparam: "npm:^3.0.0"
     tough-cookie: "npm:^5.0.0"
-  checksum: 10c0/0b3e37cbfe730e596932969909e0a645fe745c667f57902b212cb5163ba760189dc4226282c12ad2517e500d1b29ea339c93dac30434898ea2abab6b8fedd309
+  peerDependencies:
+    "@cloudflare/workers-types": ^4.20241202.0
+    "@hattip/core": ^0.0.49
+    "@webroute/route": ^0.8.0
+    elysia: ^1.1.25
+    fastify: ^5.1.0
+    h3: ^1.13.0
+    hono: ^4.6.12
+  peerDependenciesMeta:
+    "@cloudflare/workers-types":
+      optional: true
+    "@hattip/core":
+      optional: true
+    "@webroute/route":
+      optional: true
+    elysia:
+      optional: true
+    fastify:
+      optional: true
+    h3:
+      optional: true
+    hono:
+      optional: true
+  checksum: 10c0/4f429fd9a4d5c043d0e31f01416b900823789b602ed274e2d94092de608217d3b35e6ad6a8d40cb8becb869c80840262f9d168a948c909c54c155417f0a3a172
   languageName: node
   linkType: hard
 
@@ -3431,14 +3455,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "template-vike-solid-daisyui-hono@workspace:."
   dependencies:
-    "@tanstack/solid-query": "npm:^5.62.3"
-    "@types/node": "npm:^22.10.1"
+    "@tanstack/solid-query": "npm:^5.62.7"
+    "@types/node": "npm:^22.10.2"
     "@yarnpkg/sdks": "npm:^3.2.0"
     solid-js: "npm:^1.9.3"
     typescript: "npm:5.7.2"
-    vike: "npm:^0.4.206"
-    vike-node: "npm:^0.2.3"
-    vike-solid: "npm:^0.7.6"
+    vike: "npm:^0.4.209"
+    vike-node: "npm:^0.2.8"
+    vike-solid: "npm:^0.7.7"
     vike-solid-query: "npm:^0.1.0"
     vite: "npm:5.4.11"
   languageName: unknown
@@ -3628,14 +3652,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vike-node@npm:^0.2.3":
-  version: 0.2.3
-  resolution: "vike-node@npm:0.2.3"
+"vike-node@npm:^0.2.8":
+  version: 0.2.8
+  resolution: "vike-node@npm:0.2.8"
   dependencies:
     "@brillout/picocolors": "npm:^1.0.14"
     "@nitedani/shrink-ray-current": "npm:^4.3.0"
-    "@universal-middleware/compress": "npm:^0.2.1"
-    "@universal-middleware/core": "npm:^0.2.13"
+    "@universal-middleware/compress": "npm:^0.2.8"
+    "@universal-middleware/core": "npm:^0.3.3"
     "@vercel/nft": "npm:^0.26.5"
     esbuild: "npm:^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0"
     resolve-from: "npm:^5.0.0"
@@ -3644,7 +3668,7 @@ __metadata:
   peerDependencies:
     vike: ^0.4.198
     vite: ">=5.0.10"
-  checksum: 10c0/b2d2f597bda0b3a8a2b39dcfbadb0079c04145c051a3ce3789f1ab09330cdd8c24e9da1214b2ccc83533540037cfa6c507af729d660bca458023b25b882cad40
+  checksum: 10c0/55fd23ae7e00fdd53fce60dd9aa87aef95b353b3f9f1942950319b44b150e4daaa89da8e21575c42501ae306cf2335a0d0177655f70d9c9dfd024669da37c126
   languageName: node
   linkType: hard
 
@@ -3659,29 +3683,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vike-solid@npm:^0.7.6":
-  version: 0.7.6
-  resolution: "vike-solid@npm:0.7.6"
+"vike-solid@npm:^0.7.7":
+  version: 0.7.7
+  resolution: "vike-solid@npm:0.7.7"
   dependencies:
     isbot-fast: "npm:^1.2.0"
-    vite-plugin-solid: "npm:^2.10.2"
+    vite-plugin-solid: "npm:^2.11.0"
   peerDependencies:
     solid-js: ^1.8.7
     vike: ">=0.4.195"
     vite: ">=5.0.0"
-  checksum: 10c0/be630c66386c522dab82ae02aa536aef70cfdf5c7179f7e86071db4914cfa6511cffea55395c5a16bb24865533ce1e1b153c3cfff16399a771ded5c4ee89ff1c
+  checksum: 10c0/019a4b597103fd6487475e7b768c313d123ca507fd7c810a838e81d79dd8150284af1e0c7b7eb883c544148730ead1caabf44997920388156791c6b83186caf2
   languageName: node
   linkType: hard
 
-"vike@npm:^0.4.206":
-  version: 0.4.206
-  resolution: "vike@npm:0.4.206"
+"vike@npm:^0.4.209":
+  version: 0.4.209
+  resolution: "vike@npm:0.4.209"
   dependencies:
     "@brillout/import": "npm:^0.2.3"
-    "@brillout/json-serializer": "npm:^0.5.13"
+    "@brillout/json-serializer": "npm:^0.5.15"
     "@brillout/picocolors": "npm:^1.0.15"
     "@brillout/require-shim": "npm:^0.1.2"
-    "@brillout/vite-plugin-server-entry": "npm:^0.5.0"
+    "@brillout/vite-plugin-server-entry": "npm:^0.5.6"
     acorn: "npm:^8.0.0"
     cac: "npm:^6.0.0"
     es-module-lexer: "npm:^1.0.0"
@@ -3697,11 +3721,11 @@ __metadata:
       optional: true
   bin:
     vike: node/cli/bin-entry.js
-  checksum: 10c0/b75d5f5d8d1bdcbd1ab41f065d2babf0d7a4c442315f1205e8138f1d0ee4a1d6629cfe31c66bf0b18599b76c827dfa64af08b3dd32384ec2d1b37db45276bbb1
+  checksum: 10c0/20905f4e444090f5e08153c2cce0ef8fce294f61dc921071c4e57ee229314a96318384c17582f5002c095f0c9186e7e238160e2f54c07c23a55e4b29d6ccfbb9
   languageName: node
   linkType: hard
 
-"vite-plugin-solid@npm:^2.10.2":
+"vite-plugin-solid@npm:^2.11.0":
   version: 2.11.0
   resolution: "vite-plugin-solid@npm:2.11.0"
   dependencies:
