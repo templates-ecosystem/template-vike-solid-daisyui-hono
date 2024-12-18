@@ -9,7 +9,10 @@ export default {
   cacheDir: path.resolve(import.meta.dirname, '.vite'),
   plugins: [
     vike(),
-    vikeNode('server/index.ts'),
+    vikeNode({
+      entry: 'server/index.ts',
+      standalone: true
+    }),
     vikeSolid()
   ],
   server: {
