@@ -29,10 +29,7 @@ app.use(cors())
 
 app.use(vike())
 
-serve(
-  {
-    fetch: app.fetch,
-    port
-  },
-  () => console.log(`Server running at http://localhost:${port}`)
-)
+serve({
+  fetch: app.fetch,
+  port
+}, () => console.log(`Server running at http://localhost:${port}`))
