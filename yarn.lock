@@ -5310,7 +5310,7 @@ __metadata:
     tsx: "npm:^4.19.2"
     typescript: "npm:5.7.2"
     typescript-eslint: "npm:^8.18.0"
-    universal-autoloader: "npm:^0.1.1"
+    universal-autorouter: "npm:^0.2.0"
     vike: "npm:^0.4.209"
     vike-node: "npm:^0.2.8"
     vike-solid: "npm:^0.7.7"
@@ -5561,10 +5561,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"universal-autoloader@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "universal-autoloader@npm:0.1.1"
-  checksum: 10c0/d6119e5f45c367719679562ec8df194c1ed7074e23f504560deae475fd1d49fe4cdc4c4637321a68b36595a06ac01f5097d656d71bba38ed9a2a16d32df3b479
+"universal-autorouter@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "universal-autorouter@npm:0.2.0"
+  checksum: 10c0/975e8f9a42cced4c60308b52bb8e653ec20a6e342dd9691e556fca9ced4acaa47575cd34d7c774f0e3e153ce17b1eec418b4742b698cba7714d70664236144f5
   languageName: node
   linkType: hard
 
