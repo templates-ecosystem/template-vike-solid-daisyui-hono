@@ -22,7 +22,7 @@ export default {
   },
   build: {
     target: 'esnext',
-    outDir: path.resolve(import.meta.dirname, '.vite/dist')
+    outDir: path.resolve(import.meta.dirname, 'dist')
   },
   css: {
     postcss: {
