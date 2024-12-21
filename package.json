@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "serve": "vite preview",
+    "prod": "NODE_ENV=production node dist/server/index.mjs",
+    "serve": "yarn build && yarn prod",
     "lint": "eslint src/**/*.{ts,tsx} *.ts",
     "od": "yarn outdated"
   },
@@ -21,7 +22,6 @@
     "@yarnpkg/sdks": "^3.2.0",
     "typescript": "5.7.2",
     "vike": "^0.4.210",
-    "vike-node": "^0.2.9",
     "vike-solid": "^0.7.7",
     "vite": "^5.4.11"
   },
