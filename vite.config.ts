@@ -8,9 +8,9 @@ export default {
   root: 'src',
   cacheDir: '../.vite',
   plugins: [
-    // vike(),
-    // vikeNode('server/index.ts'),
-    // vikeSolid(),
+    vike(),
+    vikeNode('server/index.ts'),
+    vikeSolid(),
     viteApiAutoloader('server/api')
   ],
   server: {
