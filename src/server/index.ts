@@ -5,8 +5,6 @@ import { cors } from 'hono/cors'
 import autoloadRoutes from 'universal-autorouter'
 import vike from 'vike-node/hono'
 
-const port = +(process.env.PORT || 3000)
-
 let pattern
 let viteDevServer
 if (process.env.NODE_ENV === 'production') {
@@ -28,6 +26,8 @@ app.use(cors())
 // app.use(logger())
 
 app.use(vike())
+
+const port = +(process.env.PORT || 3000)
 
 serve({
   fetch: app.fetch,
