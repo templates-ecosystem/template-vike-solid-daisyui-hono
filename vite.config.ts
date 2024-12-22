@@ -8,7 +8,7 @@ import type { UserConfig } from 'vite'
 
 export default {
   root: 'src',
-  cacheDir: path.resolve(import.meta.dirname, '.vite'),
+  cacheDir: '../.vite',
   plugins: [
     vike(),
     vikeNode('server/index.ts'),
@@ -22,7 +22,7 @@ export default {
   },
   build: {
     target: 'esnext',
-    outDir: path.resolve(import.meta.dirname, 'dist')
+    outDir: '../dist'
   },
   css: {
     postcss: {
