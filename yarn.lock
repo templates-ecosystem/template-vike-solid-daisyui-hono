@@ -3459,6 +3459,7 @@ __metadata:
     hono: "npm:^4.6.14"
     solid-js: "npm:^1.9.3"
     typescript: "npm:5.7.2"
+    universal-autorouter: "npm:^0.2.0"
     vike: "npm:^0.4.210"
     vike-node: "npm:^0.2.9"
     vike-solid: "npm:^0.7.7"
@@ -3612,6 +3613,13 @@ __metadata:
   dependencies:
     imurmurhash: "npm:^0.1.4"
   checksum: 10c0/cb811d9d54eb5821b81b18205750be84cb015c20a4a44280794e915f5a0a70223ce39066781a354e872df3572e8155c228f43ff0cce94c7cbf4da2cc7cbdd635
+  languageName: node
+  linkType: hard
+
+"universal-autorouter@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "universal-autorouter@npm:0.2.0"
+  checksum: 10c0/975e8f9a42cced4c60308b52bb8e653ec20a6e342dd9691e556fca9ced4acaa47575cd34d7c774f0e3e153ce17b1eec418b4742b698cba7714d70664236144f5
   languageName: node
   linkType: hard
 

@@ -1,6 +1,9 @@
+import { useData } from 'vike-solid/useData'
+
 function Page() {
+  const { data } = useData<{ data: string[] }>()
   return (
-    <>Hello World</>
+    <>{JSON.stringify(data)}</>
   )
 }
 
