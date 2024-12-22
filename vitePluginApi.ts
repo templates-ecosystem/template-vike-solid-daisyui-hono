@@ -39,9 +39,11 @@ export default function bundleFilesPlugin(options: string | PluginOptions): Plug
 
       // Create an input map for Rollup
       const entries: Record<string, string> = {}
-      for (const filepath of filepaths) {
+      for (const rawFilepath of filepaths) {
+        // Normalize file paths for Windows
+        const filepath = rawFilepath.replaceAll('\\', '/')
         // Use relative paths as keys to preserve directory structure
-        const resolvedFilepath = path.resolve(entryFull, filepath).replaceAll('\\', '/')
+        const resolvedFilepath = path.resolve(entryFull, filepath)
         // const relativePath = path.relative(entryFull, resolvedFilepath)
         const relativePath = filepath.replace(/\.ts$/, '')
         entries[relativePath] = resolvedFilepath
@@ -59,7 +61,7 @@ export default function bundleFilesPlugin(options: string | PluginOptions): Plug
               dir: outFull, // Directory for this specific file
               format: 'esm',
               entryFileNames: 'api/[name].mjs', // File name pattern
-              chunkFileNames: 'chunks/chunk-[hash].mjs' // Output for chunks
+              // chunkFileNames: 'chunks/chunk-[hash].mjs' // Output for chunks
             }
           },
           emptyOutDir: false // Do not clear the output folder for incremental builds
