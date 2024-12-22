@@ -5,20 +5,13 @@ import { cors } from 'hono/cors'
 import autoloadRoutes from 'universal-autorouter'
 import vike from 'vike-node/hono'
 
-let pattern
-let viteDevServer
-if (process.env.NODE_ENV === 'production') {
-  pattern = '**/*.mjs'
-} else {
-  pattern = '**/*.ts'
-  viteDevServer = globalThis.__vikeNode.viteDevServer
-}
+const pattern = process.env.NODE_ENV === 'production' ? '**/*.mjs' : '**/*.ts'
 
 const app = await autoloadRoutes(new Hono(), {
   pattern,
   prefix: '/api',
   routesDir: './src/server/api',
-  viteDevServer
+  viteDevServer: globalThis.__vikeNode?.viteDevServer
 })
 
 app.use(cors())
