@@ -16,9 +16,9 @@ export default function bundleFilesPlugin(options: string | PluginOptions): Plug
     config(_config, { command }) {
       isBuild = command === 'build'
     },
-    configResolved: (_config) => {
+    configResolved: (config_) => {
       if (!isBuild) return
-      config = _config
+      config = config_
     },
     async buildStart() {
       if (!isBuild) return
