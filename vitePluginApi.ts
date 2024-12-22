@@ -61,7 +61,7 @@ export default function bundleFilesPlugin(options: string | PluginOptions): Plug
               dir: outFull, // Directory for this specific file
               format: 'esm',
               entryFileNames: 'api/[name].mjs', // File name pattern
-              // chunkFileNames: 'chunks/chunk-[hash].mjs' // Output for chunks
+              chunkFileNames: 'chunks/chunk-[hash].mjs' // Output for chunks
             }
           },
           emptyOutDir: false // Do not clear the output folder for incremental builds
