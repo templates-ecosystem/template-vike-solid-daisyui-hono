@@ -5310,11 +5310,12 @@ __metadata:
     tsx: "npm:^4.19.2"
     typescript: "npm:5.7.2"
     typescript-eslint: "npm:^8.18.1"
-    universal-autorouter: "npm:^0.2.0"
+    universal-autorouter: "npm:^0.2.3"
     vike: "npm:^0.4.210"
     vike-node: "npm:^0.2.9"
     vike-solid: "npm:^0.7.7"
     vite: "npm:^5.4.11"
+    vite-plugin-build-routes: "npm:^0.2.0"
   languageName: unknown
   linkType: soft
 
@@ -5561,10 +5562,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"universal-autorouter@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "universal-autorouter@npm:0.2.0"
-  checksum: 10c0/975e8f9a42cced4c60308b52bb8e653ec20a6e342dd9691e556fca9ced4acaa47575cd34d7c774f0e3e153ce17b1eec418b4742b698cba7714d70664236144f5
+"universal-autorouter@npm:^0.2.3":
+  version: 0.2.3
+  resolution: "universal-autorouter@npm:0.2.3"
+  checksum: 10c0/eb760631144ec85446ba1670929ddbe0a5f123c77014390d1ff652ed719536e2c41050d05e110723ee2c7c74ffd76cdaa2e65800500d6cf2faae83d481f30589
   languageName: node
   linkType: hard
 
@@ -5681,6 +5682,17 @@ __metadata:
   bin:
     vike: node/cli/bin-entry.js
   checksum: 10c0/82544235e4a28898c05f48a8dc0af51a9f7c81307ca07eb7336615221f260b38be7b1e65ce1a4d45f310a4737c17cb7e951928f624e25d1d2680865594c3d393
+  languageName: node
+  linkType: hard
+
+"vite-plugin-build-routes@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "vite-plugin-build-routes@npm:0.2.0"
+  dependencies:
+    universal-autorouter: "npm:^0.2.3"
+  peerDependencies:
+    vite: "*"
+  checksum: 10c0/ec7c2cd8cc97ce9f82cbf0db8aac3973133567cce5830b0463dc74f1841797c52acd9cf4b5e47baec4e23e03410c4407f45ad83c8e4d102e900a1a9ac431adc9
   languageName: node
   linkType: hard
 

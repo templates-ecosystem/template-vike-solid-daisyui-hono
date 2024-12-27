@@ -15,7 +15,7 @@
     "@hono/node-server": "^1.13.7",
     "hono": "^4.6.14",
     "solid-js": "^1.9.3",
-    "universal-autorouter": "^0.2.0"
+    "universal-autorouter": "^0.2.3"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
@@ -34,7 +34,8 @@
     "vike": "^0.4.210",
     "vike-node": "^0.2.9",
     "vike-solid": "^0.7.7",
-    "vite": "^5.4.11"
+    "vite": "^5.4.11",
+    "vite-plugin-build-routes": "^0.2.0"
   },
   "engines": {
     "node": ">=20"
