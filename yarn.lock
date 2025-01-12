@@ -4847,7 +4847,7 @@ __metadata:
     universal-autorouter: "npm:^0.2.5"
     universal-autorouter-hono: "npm:^0.2.5"
     vike: "npm:^0.4.214"
-    vike-node: "npm:^0.2.10"
+    vike-node: "npm:^0.3.0"
     vike-solid: "npm:^0.7.8"
     vite: "npm:^6.0.7"
     vite-plugin-build-routes: "npm:^0.2.1"
@@ -5172,9 +5172,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vike-node@npm:^0.2.10":
-  version: 0.2.10
-  resolution: "vike-node@npm:0.2.10"
+"vike-node@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "vike-node@npm:0.3.0"
   dependencies:
     "@brillout/picocolors": "npm:^1.0.14"
     "@nitedani/shrink-ray-current": "npm:^4.3.0"
@@ -5186,9 +5186,9 @@ __metadata:
     sirv: "npm:^2.0.4"
     unenv-nightly: "npm:2.0.0-20241015-162228-03257ee"
   peerDependencies:
-    vike: ^0.4.198
+    vike: ^0.4.213
     vite: ">=5.0.10"
-  checksum: 10c0/69d1cd532e6b76507042fd33e7bb45c195dc358d9bc55d4ef5c6a664a9125ca51c56fcacc168b3de2db588465263012383c36d261cbb15592b61ca349726ce99
+  checksum: 10c0/a54f8c7b607c4026d5bda1a9bbbe0e940c8c12045ad30c7d8c7c06f937ab2d08da53a800d4574a14066775f627a63dbe33fff9189822c3bfe70157367345037a
   languageName: node
   linkType: hard
 

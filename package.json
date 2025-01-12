@@ -33,7 +33,7 @@
     "typescript-eslint": "^8.19.1",
     "universal-autorouter-hono": "^0.2.5",
     "vike": "^0.4.214",
-    "vike-node": "^0.2.10",
+    "vike-node": "^0.3.0",
     "vike-solid": "^0.7.8",
     "vite": "^6.0.7",
     "vite-plugin-build-routes": "^0.2.1"
