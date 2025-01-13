@@ -11,12 +11,9 @@ const app = new Hono()
 app.use(cors())
 
 let autoloadRoutes
-// Options of "universal-autorouter" package
-const autoloadRoutesOptions = {
+const autoloadRoutesOptions: AutoloadRoutesOptions = {
   prefix: '/api',
   routesDir: path.resolve(import.meta.dirname, 'api')
-} as Omit<AutoloadRoutesOptions, 'viteDevServer'> & {
-  viteDevServer: import('vite').ViteDevServer
 }
 if (process.env.NODE_ENV === 'production') {
   ({ default: autoloadRoutes } = await import('universal-autorouter'))
@@ -27,7 +24,7 @@ if (process.env.NODE_ENV === 'production') {
   autoloadRoutesOptions.viteDevServer = globalThis.__vikeNode!.viteDevServer
 }
 
-await autoloadRoutes(app, autoloadRoutesOptions as unknown as AutoloadRoutesOptions)
+await autoloadRoutes(app, autoloadRoutesOptions)
 
 // app.use(logger())
 

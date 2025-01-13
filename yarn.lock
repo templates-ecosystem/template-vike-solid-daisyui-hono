@@ -4844,8 +4844,8 @@ __metadata:
     tailwindcss: "npm:^3.4.17"
     typescript: "npm:^5.7.3"
     typescript-eslint: "npm:^8.19.1"
-    universal-autorouter: "npm:^0.2.5"
-    universal-autorouter-hono: "npm:^0.2.5"
+    universal-autorouter: "npm:^0.2.6"
+    universal-autorouter-hono: "npm:^0.2.6"
     vike: "npm:^0.4.214"
     vike-node: "npm:^0.3.0"
     vike-solid: "npm:^0.7.8"
@@ -5101,20 +5101,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"universal-autorouter-hono@npm:^0.2.5":
-  version: 0.2.5
-  resolution: "universal-autorouter-hono@npm:0.2.5"
+"universal-autorouter-hono@npm:^0.2.6":
+  version: 0.2.6
+  resolution: "universal-autorouter-hono@npm:0.2.6"
   peerDependencies:
     hono: "*"
     universal-autorouter: "*"
-  checksum: 10c0/ed2bcdfe07e9a75f7b3fb98d30dbba044919dab65573d222adff959968e82a11d37ff8af6d39990d65efbfce677b7069f367feef7080d6002be97d5e90a35076
+  checksum: 10c0/ae8600a1185f7dc978e5ded868b6254a5fec9206aaa3d433c57d99ab195c7877187eda5bab7aace3254ca7a3c16186ea143613a1492393a9bef812a325c76bc9
   languageName: node
   linkType: hard
 
-"universal-autorouter@npm:^0.2.5":
-  version: 0.2.5
-  resolution: "universal-autorouter@npm:0.2.5"
-  checksum: 10c0/90415a9b191827fef63037c6518ef6e9aea31afd013b5097688dd2f58aedc2011bb3bb1ef2215e75d2ae6b4076671690454f610849389534ff2b733ba3d5e3b6
+"universal-autorouter@npm:^0.2.6":
+  version: 0.2.6
+  resolution: "universal-autorouter@npm:0.2.6"
+  peerDependencies:
+    vite: "*"
+  peerDependenciesMeta:
+    vite:
+      optional: true
+  checksum: 10c0/63771ab54b9245bb96520f991a3716706e9289c44a7ffb29c80afa1f1500e21d530f8f36d4551fe59b1ac03722dc04e0fec56277d0303109fbf458f22ab36d46
   languageName: node
   linkType: hard
 
