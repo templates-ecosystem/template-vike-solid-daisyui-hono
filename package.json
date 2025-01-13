@@ -5,25 +5,24 @@
   "type": "module",
   "packageManager": "yarn@4.5.3",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "serve": "vite preview",
+    "dev": "vike dev",
+    "build": "vike build",
     "lint": "eslint src/**/*.{ts,tsx} *.ts",
     "od": "yarn outdated"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
-    "hono": "^4.6.14",
-    "solid-js": "^1.9.3"
+    "hono": "^4.6.16",
+    "solid-js": "^1.9.4"
   },
   "devDependencies": {
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.10.5",
     "@yarnpkg/sdks": "^3.2.0",
     "typescript": "5.7.2",
-    "vike": "^0.4.210",
-    "vike-node": "^0.2.9",
-    "vike-solid": "^0.7.7",
-    "vite": "^5.4.11"
+    "vike": "^0.4.214",
+    "vike-node": "^0.3.0",
+    "vike-solid": "^0.7.8",
+    "vite": "^6.0.7"
   },
   "engines": {
     "node": ">=20"
