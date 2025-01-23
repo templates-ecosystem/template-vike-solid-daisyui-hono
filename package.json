@@ -12,15 +12,15 @@
     "od": "yarn outdated"
   },
   "dependencies": {
-    "solid-js": "^1.9.3"
+    "solid-js": "^1.9.4"
   },
   "devDependencies": {
-    "@tanstack/solid-query": "^5.62.8",
-    "@types/node": "^22.10.2",
+    "@tanstack/solid-query": "^5.64.2",
+    "@types/node": "^22.10.10",
     "@yarnpkg/sdks": "^3.2.0",
     "typescript": "5.7.2",
-    "vike": "^0.4.210",
-    "vike-node": "^0.2.9",
+    "vike": "^0.4.218",
+    "vike-node": "^0.3.0",
     "vike-solid": "^0.7.8",
     "vike-solid-query": "^0.1.0",
     "vite": "5.4.11"
