@@ -12,7 +12,8 @@
     "**/.pnp.*": true,
     "**/.vite": true,
     "**/.vscode": true,
-    "**/.yarn": true
+    "**/.yarn": true,
+    "**/dist": true
   },
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "typescript.tsdk": ".yarn/sdks/typescript/lib",

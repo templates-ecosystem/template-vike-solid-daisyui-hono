@@ -2,8 +2,6 @@ import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import vike from 'vike-node/hono'
 
-const port = +(process.env.PORT || 3000)
-
 const app = new Hono()
 
 app.get('/api', (c) => {
@@ -11,6 +9,8 @@ app.get('/api', (c) => {
 })
 
 app.use(vike())
+
+const port = +(process.env.PORT || 3000)
 
 serve({
   fetch: app.fetch,

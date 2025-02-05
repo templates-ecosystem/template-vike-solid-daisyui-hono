@@ -8,8 +8,8 @@ export default {
   cacheDir: '../.vite',
   plugins: [
     vike(),
-    vikeNode('server/index.ts'),
-    vikeSolid()
+    vikeSolid(),
+    vikeNode('server/index.ts')
   ],
   server: {
     port: 3000
