@@ -1,3 +1,4 @@
+import telefunc from 'telefunc/vite'
 import { plugin as vike } from 'vike/plugin'
 import { vikeNode } from 'vike-node/plugin'
 import vikeSolid from 'vike-solid/vite'
@@ -9,7 +10,8 @@ export default {
   plugins: [
     vike(),
     vikeSolid(),
-    vikeNode('server/index.ts')
+    vikeNode('server/index.ts'),
+    telefunc()
   ],
   server: {
     port: 3000

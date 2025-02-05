@@ -1,6 +1,15 @@
+import testTelefunc from '../../_telefunc/testTelefunc.telefunc'
+
 function Page() {
+  const onClick = () => async () => {
+    testTelefunc()
+  }
   return (
-    <>Hello World</>
+    <>
+      <>Hello World</>
+
+      <button onClick={onClick()}>Click me to Test Telefunc</button>
+    </>
   )
 }
 

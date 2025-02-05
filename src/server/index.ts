@@ -2,11 +2,15 @@ import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import vike from 'vike-node/hono'
 
+import telefuncHandler from './telefunc-handler'
+
 const app = new Hono()
 
 app.get('/api', (c) => {
   return c.text('Hello, World!')
 })
+
+app.post('/_telefunc', telefuncHandler)
 
 app.use(vike())
 

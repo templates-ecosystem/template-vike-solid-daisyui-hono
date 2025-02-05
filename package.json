@@ -20,6 +20,7 @@
     "@hono/node-server": "^1.13.8",
     "@types/node": "^22.13.1",
     "@yarnpkg/sdks": "^3.2.0",
+    "telefunc": "patch:telefunc@npm%3A0.1.85#~/.yarn/patches/telefunc-npm-0.1.85-0fbfd1b7a7.patch",
     "typescript": "^5.7.3",
     "vike": "^0.4.220",
     "vike-node": "^0.3.5",

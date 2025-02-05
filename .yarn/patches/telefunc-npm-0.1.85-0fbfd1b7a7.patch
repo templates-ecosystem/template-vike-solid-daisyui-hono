@@ -1,0 +1,28 @@
+diff --git a/dist/cjs/node/vite/importGlob/telefuncFilesGlob.js b/dist/cjs/node/vite/importGlob/telefuncFilesGlob.js
+index 12d2beb0902533d560a37205d5c1779a41192d46..a9369b2a79929fd8dc53f02a50bc5d6cf000ae84 100644
+--- a/dist/cjs/node/vite/importGlob/telefuncFilesGlob.js
++++ b/dist/cjs/node/vite/importGlob/telefuncFilesGlob.js
+@@ -1,4 +1 @@
+-"use strict";
+-Object.defineProperty(exports, "__esModule", { value: true });
+-exports.importGlobUnset = void 0;
+-exports.importGlobUnset = true;
++export const telefuncFilesGlob = import.meta.glob("/**/*.telefunc.(js|cjs|mjs|ts|cts|mts|jsx|cjsx|mjsx|tsx|ctsx|mtsx)");
+diff --git a/dist/cjs/node/vite/index.js b/dist/cjs/node/vite/index.js
+index 60a85cdbbcfb954fe202c98aa53933b9766cf568..713f72935119c8fa3d08742aa4b67482ee36d865 100644
+--- a/dist/cjs/node/vite/index.js
++++ b/dist/cjs/node/vite/index.js
+@@ -11,13 +11,11 @@ const packageJsonFile_1 = require("./plugins/packageJsonFile");
+ const importBuild_1 = require("./plugins/importBuild");
+ const previewConfig_1 = require("./plugins/previewConfig");
+ const printShieldGenResult_1 = require("./plugins/printShieldGenResult");
+-const toggle_1 = require("./importGlob/toggle");
+ const serverConfig_1 = require("../server/serverConfig");
+ // Return as `any` to avoid Plugin type mismatches when there are multiple Vite versions installed
+ function plugin(
+ /** @deprecated */
+ configUser) {
+-    (0, toggle_1.importGlobOn)();
+     // We use this for minimal /examples/* that don't have any server code.
+     // Telefunc users aren't expected to use this. (We expect users to always have server code.)
+     Object.assign(serverConfig_1.config, configUser);

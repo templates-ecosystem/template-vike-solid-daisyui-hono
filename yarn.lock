@@ -226,7 +226,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@brillout/json-serializer@npm:^0.5.15":
+"@brillout/json-serializer@npm:^0.5.15, @brillout/json-serializer@npm:^0.5.6":
   version: 0.5.15
   resolution: "@brillout/json-serializer@npm:0.5.15"
   checksum: 10c0/eb04c5f8f4d736a5494eb7b7e6ec8f80a913fd76bf462ff593c886e17e67729270a2aaaba17523d34a8b8b660ed9999ee18af04b6b77a9c68179ef4a83a00759
@@ -247,7 +247,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@brillout/vite-plugin-server-entry@npm:^0.5.8":
+"@brillout/vite-plugin-server-entry@npm:^0.5.1, @brillout/vite-plugin-server-entry@npm:^0.5.8":
   version: 0.5.8
   resolution: "@brillout/vite-plugin-server-entry@npm:0.5.8"
   dependencies:
@@ -761,6 +761,18 @@ __metadata:
   dependencies:
     defer-to-connect: "npm:^2.0.0"
   checksum: 10c0/73946918c025339db68b09abd91fa3001e87fc749c619d2e9c2003a663039d4c3cb89836c98a96598b3d47dec2481284ba85355392644911f5ecd2336536697f
+  languageName: node
+  linkType: hard
+
+"@ts-morph/common@npm:~0.20.0":
+  version: 0.20.0
+  resolution: "@ts-morph/common@npm:0.20.0"
+  dependencies:
+    fast-glob: "npm:^3.2.12"
+    minimatch: "npm:^7.4.3"
+    mkdirp: "npm:^2.1.6"
+    path-browserify: "npm:^1.0.1"
+  checksum: 10c0/d15bbbf3573d25357c75a1f8725c87d60f03f76b6bec1838b4f699ed00c4e0ff44912d226286fa74e9af2be903c87bd08f43716297bf6250bad319fdf4949cc2
   languageName: node
   linkType: hard
 
@@ -1377,6 +1389,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"code-block-writer@npm:^12.0.0":
+  version: 12.0.0
+  resolution: "code-block-writer@npm:12.0.0"
+  checksum: 10c0/ced73cdc466bff968bba9e8e32340d88420d25a229b9269f7425a10a7c2c9a12ca702dcb601b2462b96472d354f021cf66e552179fcbe30c8f7ecd0173c5fa07
+  languageName: node
+  linkType: hard
+
 "color-convert@npm:^2.0.1":
   version: 2.0.1
   resolution: "color-convert@npm:2.0.1"
@@ -1608,7 +1627,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-module-lexer@npm:^1.0.0":
+"es-module-lexer@npm:^1.0.0, es-module-lexer@npm:^1.6.0":
   version: 1.6.0
   resolution: "es-module-lexer@npm:1.6.0"
   checksum: 10c0/667309454411c0b95c476025929881e71400d74a746ffa1ff4cb450bd87f8e33e8eef7854d68e401895039ac0bac64e7809acbebb6253e055dd49ea9e3ea9212
@@ -1732,7 +1751,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.0.0, fast-glob@npm:^3.2.2":
+"fast-glob@npm:^3.0.0, fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.2":
   version: 3.3.3
   resolution: "fast-glob@npm:3.3.3"
   dependencies:
@@ -2336,6 +2355,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minimatch@npm:^7.4.3":
+  version: 7.4.6
+  resolution: "minimatch@npm:7.4.6"
+  dependencies:
+    brace-expansion: "npm:^2.0.1"
+  checksum: 10c0/e587bf3d90542555a3d58aca94c549b72d58b0a66545dd00eef808d0d66e5d9a163d3084da7f874e83ca8cc47e91c670e6c6f6593a3e7bb27fcc0e6512e87c67
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^9.0.4":
   version: 9.0.5
   resolution: "minimatch@npm:9.0.5"
@@ -2445,6 +2473,15 @@ __metadata:
   bin:
     mkdirp: bin/cmd.js
   checksum: 10c0/46ea0f3ffa8bc6a5bc0c7081ffc3907777f0ed6516888d40a518c5111f8366d97d2678911ad1a6882bf592fa9de6c784fea32e1687bb94e1f4944170af48a5cf
+  languageName: node
+  linkType: hard
+
+"mkdirp@npm:^2.1.6":
+  version: 2.1.6
+  resolution: "mkdirp@npm:2.1.6"
+  bin:
+    mkdirp: dist/cjs/src/bin.js
+  checksum: 10c0/96f551c651dd8f5f9435d53df1a7b9bfc553be769ee6da5192c37c1f303a376ef1c6996f96913d4a8d357060451d4526a346031d1919f92c58806a5fa3cd8dfe
   languageName: node
   linkType: hard
 
@@ -2670,6 +2707,13 @@ __metadata:
   dependencies:
     entities: "npm:^4.5.0"
   checksum: 10c0/829d37a0c709215a887e410a7118d754f8e1afd7edb529db95bc7bbf8045fb0266a7b67801331d8e8d9d073ea75793624ec27ce9ff3b96862c3b9008f4d68e80
+  languageName: node
+  linkType: hard
+
+"path-browserify@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "path-browserify@npm:1.0.1"
+  checksum: 10c0/8b8c3fd5c66bd340272180590ae4ff139769e9ab79522e2eb82e3d571a89b8117c04147f65ad066dccfb42fcad902e5b7d794b3d35e0fd840491a8ddbedf8c66
   languageName: node
   linkType: hard
 
@@ -3261,6 +3305,68 @@ __metadata:
   languageName: node
   linkType: hard
 
+"telefunc@npm:0.1.85":
+  version: 0.1.85
+  resolution: "telefunc@npm:0.1.85"
+  dependencies:
+    "@brillout/import": "npm:^0.2.3"
+    "@brillout/json-serializer": "npm:^0.5.6"
+    "@brillout/picocolors": "npm:^1.0.15"
+    "@brillout/vite-plugin-server-entry": "npm:^0.5.1"
+    es-module-lexer: "npm:^1.6.0"
+    ts-morph: "npm:^19.0.0"
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    "@babel/parser": ^7.0.0
+    "@babel/types": ^7.0.0
+    react: ^18.0.0
+    react-streaming: ^0.3.3
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@babel/parser":
+      optional: true
+    "@babel/types":
+      optional: true
+    react:
+      optional: true
+    react-streaming:
+      optional: true
+  checksum: 10c0/30bb8be534351f4e6491eeff7f4eb90cc374bf0c34c4b78c3ee36e31b00fedbf8af171c1145e5c420812129448084d3644c59a96c104d3c1b5402a6272c17089
+  languageName: node
+  linkType: hard
+
+"telefunc@patch:telefunc@npm%3A0.1.85#~/.yarn/patches/telefunc-npm-0.1.85-0fbfd1b7a7.patch":
+  version: 0.1.85
+  resolution: "telefunc@patch:telefunc@npm%3A0.1.85#~/.yarn/patches/telefunc-npm-0.1.85-0fbfd1b7a7.patch::version=0.1.85&hash=10fa57"
+  dependencies:
+    "@brillout/import": "npm:^0.2.3"
+    "@brillout/json-serializer": "npm:^0.5.6"
+    "@brillout/picocolors": "npm:^1.0.15"
+    "@brillout/vite-plugin-server-entry": "npm:^0.5.1"
+    es-module-lexer: "npm:^1.6.0"
+    ts-morph: "npm:^19.0.0"
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    "@babel/parser": ^7.0.0
+    "@babel/types": ^7.0.0
+    react: ^18.0.0
+    react-streaming: ^0.3.3
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@babel/parser":
+      optional: true
+    "@babel/types":
+      optional: true
+    react:
+      optional: true
+    react-streaming:
+      optional: true
+  checksum: 10c0/fe0929930f0cc39ff5a2f3291246caccf64704045da124a422b18fa9cc61691379ad7042e5b0246323b56223af494e62af96ec5a91ceb01f37423cb6b533ffc8
+  languageName: node
+  linkType: hard
+
 "template-vike-solid-daisyui-hono@workspace:.":
   version: 0.0.0-use.local
   resolution: "template-vike-solid-daisyui-hono@workspace:."
@@ -3270,6 +3376,7 @@ __metadata:
     "@yarnpkg/sdks": "npm:^3.2.0"
     hono: "npm:^4.6.20"
     solid-js: "npm:^1.9.4"
+    telefunc: "patch:telefunc@npm%3A0.1.85#~/.yarn/patches/telefunc-npm-0.1.85-0fbfd1b7a7.patch"
     typescript: "npm:^5.7.3"
     vike: "npm:^0.4.220"
     vike-node: "npm:^0.3.5"
@@ -3339,6 +3446,16 @@ __metadata:
   version: 1.1.0
   resolution: "treeify@npm:1.1.0"
   checksum: 10c0/2f0dea9e89328b8a42296a3963d341ab19897a05b723d6b0bced6b28701a340d2a7b03241aef807844198e46009aaf3755139274eb082cfce6fdc1935cbd69dd
+  languageName: node
+  linkType: hard
+
+"ts-morph@npm:^19.0.0":
+  version: 19.0.0
+  resolution: "ts-morph@npm:19.0.0"
+  dependencies:
+    "@ts-morph/common": "npm:~0.20.0"
+    code-block-writer: "npm:^12.0.0"
+  checksum: 10c0/fe06b69b85df84afa141f07b8fc83e27be844739b6ea64f6a74aa7b4f6c6bdc1b232c129d67a6ac4e64f74011ff5946be6f012350a64e65e4bcd0024ce4270a1
   languageName: node
   linkType: hard
 
