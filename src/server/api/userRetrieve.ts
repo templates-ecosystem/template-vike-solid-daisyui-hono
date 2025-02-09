@@ -1,5 +1,5 @@
 import type { Context } from 'hono'
 
-export default (c: Context) => {
+export function userRetrieve(c: Context) {
   return c.text('Hello World!')
 }
