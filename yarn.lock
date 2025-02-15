@@ -247,13 +247,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@brillout/vite-plugin-server-entry@npm:^0.5.8":
-  version: 0.5.8
-  resolution: "@brillout/vite-plugin-server-entry@npm:0.5.8"
+"@brillout/vite-plugin-server-entry@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "@brillout/vite-plugin-server-entry@npm:0.6.0"
   dependencies:
     "@brillout/import": "npm:^0.2.3"
     "@brillout/picocolors": "npm:^1.0.14"
-  checksum: 10c0/dfe28b2edbdb8bb2c4707bbf8b8072dd8fa1d089b834e26e1def33f6bba346f2bc3c7cf5610a2d22c5461bb5f0765723fc9000be7ec4c80b1ad33e6abe53c814
+  checksum: 10c0/1f994d52142bac5bd95f30c343f209b38143a120b2c5f54cc2cfba72d96e171f127d20d584fb5478ddcbf7342a25bbf01bb490a2bff696a49ff9a57fd021e2b5
   languageName: node
   linkType: hard
 
@@ -847,12 +847,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.13.1":
-  version: 22.13.1
-  resolution: "@types/node@npm:22.13.1"
+"@types/node@npm:*, @types/node@npm:^22.13.4":
+  version: 22.13.4
+  resolution: "@types/node@npm:22.13.4"
   dependencies:
     undici-types: "npm:~6.20.0"
-  checksum: 10c0/d4e56d41d8bd53de93da2651c0a0234e330bd7b1b6d071b1a94bd3b5ee2d9f387519e739c52a15c1faa4fb9d97e825b848421af4b2e50e6518011e7adb4a34b7
+  checksum: 10c0/3a234fa7766a3efc382cf81f66f474c26cdab2f54f43f757634c81c0444eb2160c2dabbde9741e4983078a318a88515b65416b5f1ab5478548579d7b3ead1d95
   languageName: node
   linkType: hard
 
@@ -1957,10 +1957,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hono@npm:^4.6.20":
-  version: 4.6.20
-  resolution: "hono@npm:4.6.20"
-  checksum: 10c0/f4ebc987452e8cfc87577cae3b3fe7553affb10121d5fb48401d139c6c378824b9d5d88e42972781124251c466bfb8bfdeb67cb95928f9d6b91d8f4925ce031c
+"hono@npm:^4.7.1":
+  version: 4.7.1
+  resolution: "hono@npm:4.7.1"
+  checksum: 10c0/5a2325c028a46299154e5c17af03d541166016e18c2c031c80db7e579c3d4e66cb47d067074d2ef468626c9343acb729cfd092dd47e0b6a1206a6c01b26b4d9b
   languageName: node
   linkType: hard
 
@@ -3266,13 +3266,13 @@ __metadata:
   resolution: "template-vike-solid-daisyui-hono@workspace:."
   dependencies:
     "@hono/node-server": "npm:^1.13.8"
-    "@types/node": "npm:^22.13.1"
+    "@types/node": "npm:^22.13.4"
     "@yarnpkg/sdks": "npm:^3.2.0"
-    hono: "npm:^4.6.20"
+    hono: "npm:^4.7.1"
     solid-js: "npm:^1.9.4"
     typescript: "npm:^5.7.3"
-    vike: "npm:^0.4.220"
-    vike-node: "npm:^0.3.5"
+    vike: "npm:^0.4.222"
+    vike-node: "npm:^0.3.6"
     vike-solid: "npm:^0.7.8"
     vite: "npm:^6.1.0"
   languageName: unknown
@@ -3462,9 +3462,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vike-node@npm:^0.3.5":
-  version: 0.3.5
-  resolution: "vike-node@npm:0.3.5"
+"vike-node@npm:^0.3.6":
+  version: 0.3.6
+  resolution: "vike-node@npm:0.3.6"
   dependencies:
     "@brillout/picocolors": "npm:^1.0.14"
     "@nitedani/shrink-ray-current": "npm:^4.3.0"
@@ -3482,7 +3482,7 @@ __metadata:
   peerDependenciesMeta:
     vite:
       optional: true
-  checksum: 10c0/229558111b81d4f101a1a51e13eabac834b114cc9e0e485fd5026316b0e989b34d443c21d3f1d9ceb8a407a6ac8c63d668d4dfbf19e57ef5d024119e2c33cd57
+  checksum: 10c0/bc9d72f7eaa6b82d34808767a83310cf5edea29caa035533fb102b224d288bd6d4a0ba8d90aa4771b6a5f1a84e96753dfef70125087b3a7d6ec5ac2b2c2bdf5c
   languageName: node
   linkType: hard
 
@@ -3500,15 +3500,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vike@npm:^0.4.220":
-  version: 0.4.220
-  resolution: "vike@npm:0.4.220"
+"vike@npm:^0.4.222":
+  version: 0.4.222
+  resolution: "vike@npm:0.4.222"
   dependencies:
     "@brillout/import": "npm:^0.2.3"
     "@brillout/json-serializer": "npm:^0.5.15"
     "@brillout/picocolors": "npm:^1.0.15"
     "@brillout/require-shim": "npm:^0.1.2"
-    "@brillout/vite-plugin-server-entry": "npm:^0.5.8"
+    "@brillout/vite-plugin-server-entry": "npm:^0.6.0"
     acorn: "npm:^8.0.0"
     cac: "npm:^6.0.0"
     es-module-lexer: "npm:^1.0.0"
@@ -3528,7 +3528,7 @@ __metadata:
       optional: true
   bin:
     vike: node/cli/bin.js
-  checksum: 10c0/58dee89fdaa4e7ff3b73f27905f9f968bc866eeb96d1bee2672f091a7f4a3d051c33d8f206a64b08b3d20f80c945866900f8a0de468129f769269065b23f9612
+  checksum: 10c0/9b134a2541eb78c069bfb916ab09d8cc8f8ea582a1d1e28a0b8a7a59c972b454de57f79ca2b7792d144d781b5d54fd6e7de42781ad37e18bc97afedcdd9bfd01
   languageName: node
   linkType: hard
 

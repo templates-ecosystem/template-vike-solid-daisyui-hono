@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/*#region Page Transition Anmiation*/
+#page-content {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+body.page-is-transitioning #page-content {
+  opacity: 0;
+}
+
+/*#endregion*/

@@ -4,9 +4,9 @@ import vike from 'vike-node/hono'
 
 const app = new Hono()
 
-app.get('/api', (c) => {
-  return c.text('Hello, World!')
-})
+// app.get('/api', (c) => {
+//   return c.text('API Hello, World!')
+// })
 
 app.use(vike())
 
