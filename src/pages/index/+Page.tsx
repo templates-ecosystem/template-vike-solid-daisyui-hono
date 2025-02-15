@@ -1,12 +1,12 @@
 import { useData } from 'vike-solid/useData'
 
 function Page() {
-  const data = useData<{ query: Record<string, string> }>()
+  const data = useData<{ urlOriginal: string }>()
   return (
     <>
       Hello World
       <br />
-      Query: {JSON.stringify(data.query)}
+      Data: {JSON.stringify(data)}
     </>
   )
 }
