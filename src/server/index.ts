@@ -12,7 +12,7 @@ app.use(cors())
 
 // app.use(logger())
 
-app.post('/api/:rpcFunction', handlerApi)
+app.post('/api/:functionName', handlerApi)
 
 app.use(vike())
 

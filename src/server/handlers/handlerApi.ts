@@ -3,12 +3,12 @@ import type { Context } from 'hono'
 import api from '../api'
 
 export async function handlerApi(c: Context) {
-  const rpcFunction = c.req.param('rpcFunction') as keyof typeof api
-  if (!(rpcFunction in api)) {
+  const functionName = c.req.param('functionName') as keyof typeof api
+  if (!(functionName in api)) {
     return c.json({ error: 'Function not found' }, 400)
   }
   try {
-    return await api[rpcFunction](c)
+    return await api[functionName](c)
   } catch (error) {
     console.error(error)
     return c.json({ error: 'Internal server error' }, 500)
