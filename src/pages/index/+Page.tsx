@@ -6,7 +6,7 @@ function Page() {
     <>
       Hello World
       <br />
-      Data: {JSON.stringify(data)}
+      urlOriginal: {data.urlOriginal}
     </>
   )
 }
