@@ -1,13 +1,14 @@
 import pluginTypescript from 'typescript-eslint'
 import pluginUnicorn from 'eslint-plugin-unicorn'
 import pluginSolid from 'eslint-plugin-solid/configs/typescript'
-import pluginTailwindcss from 'eslint-plugin-tailwindcss'
+// TODO waiting fix of https://github.com/francoismassart/eslint-plugin-tailwindcss/pull/381
+// import pluginTailwindcss from 'eslint-plugin-tailwindcss'
 
 export default pluginTypescript.config(
   ...pluginTypescript.configs.recommended,
   pluginUnicorn.configs.recommended,
   pluginSolid,
-  ...pluginTailwindcss.configs['flat/recommended'],
+  // ...pluginTailwindcss.configs['flat/recommended'],
   {
     rules: {
       'comma-dangle': [1, 'never'],
@@ -25,9 +26,9 @@ export default pluginTypescript.config(
       'unicorn/prefer-node-protocol': 0,
       'unicorn/prevent-abbreviations': 0,
 
-      'tailwindcss/no-custom-classname': [1, {
-        whitelist: ['is-active']
-      }]
+      // 'tailwindcss/no-custom-classname': [1, {
+      //   whitelist: ['is-active']
+      // }]
     }
   }
 )
