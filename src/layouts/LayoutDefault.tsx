@@ -1,6 +1,6 @@
 import type { JSX } from 'solid-js'
 
-import '../layouts/styles.css'
+import './styles.css'
 
 function Content(props: { children: JSX.Element }) {
   return (
