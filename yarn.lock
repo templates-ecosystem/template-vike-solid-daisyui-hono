@@ -3555,6 +3555,7 @@ __metadata:
     vike-node: "npm:^0.3.7"
     vike-solid: "npm:^0.7.8"
     vite: "npm:^6.2.0"
+    vlitejs: "npm:^7.2.0"
   languageName: unknown
   linkType: soft
 
@@ -3745,6 +3746,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"validate-target@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "validate-target@npm:3.1.1"
+  checksum: 10c0/d0888fc890e3ffa0a71b6cbebda132fff138d6f143b357723ffa78a2c370afecb55fc1c5366c7220fc5d7ecd2e09ae4380186f302ec41115e9093f8f0caf5724
+  languageName: node
+  linkType: hard
+
 "vary@npm:^1.1.0":
   version: 1.1.2
   resolution: "vary@npm:1.1.2"
@@ -3905,6 +3913,15 @@ __metadata:
     vite:
       optional: true
   checksum: 10c0/067644463538b4aa52b3d3a5541051ccabda0099a427fa06b37d4df57a0092475f6881fdff987d0456dbf6a01a983e03996e1aed26db8060be5bf8a28a3ec9e8
+  languageName: node
+  linkType: hard
+
+"vlitejs@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "vlitejs@npm:7.2.0"
+  dependencies:
+    validate-target: "npm:^3.1.1"
+  checksum: 10c0/5aa0308acf2e93b08d2573e4b2501fd69f77608ec2ec268cda038bbbb208c5e2b137509fe2ddefa04bfd3b9acabe5b28dd42a9e506ca29be496c78776abc9315
   languageName: node
   linkType: hard
 

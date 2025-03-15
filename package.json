@@ -24,7 +24,8 @@
     "vike": "^0.4.224",
     "vike-node": "^0.3.7",
     "vike-solid": "^0.7.8",
-    "vite": "^6.2.0"
+    "vite": "^6.2.0",
+    "vlitejs": "^7.2.0"
   },
   "engines": {
     "node": ">=20"
