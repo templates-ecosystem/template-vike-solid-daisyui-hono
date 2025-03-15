@@ -3383,13 +3383,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"solid-jotai@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "solid-jotai@npm:0.3.0"
+"solid-jotai@npm:^0.3.1":
+  version: 0.3.1
+  resolution: "solid-jotai@npm:0.3.1"
   peerDependencies:
     jotai: ">=2.1.0"
     solid-js: ">=1.6.0"
-  checksum: 10c0/07e1409fe6191aaf243b64aaf109b491d6634aa340962720d2992e9cb0c1d8fd4904413d88c3fb2010cea7a8147fbedc6546b0af021afc3691f8fc24fd89044c
+  checksum: 10c0/30ba5ee5863e7826df4a135988919afc6b9dc0edbc27a566a570607fcfe00a30afd5762c10c7e64db7a752713ba7d5970cbd1a0757faf15d11a885eb1aacabf0
   languageName: node
   linkType: hard
 
@@ -3575,7 +3575,7 @@ __metadata:
     "@yarnpkg/sdks": "npm:^3.2.1"
     hono: "npm:^4.7.4"
     jotai: "npm:^2.12.2"
-    solid-jotai: "npm:^0.3.0"
+    solid-jotai: "npm:^0.3.1"
     solid-js: "npm:^1.9.5"
     typescript: "npm:^5.8.2"
     vike: "npm:^0.4.225"
