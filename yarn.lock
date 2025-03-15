@@ -2412,6 +2412,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jotai@npm:^2.12.2":
+  version: 2.12.2
+  resolution: "jotai@npm:2.12.2"
+  peerDependencies:
+    "@types/react": ">=17.0.0"
+    react: ">=17.0.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    react:
+      optional: true
+  checksum: 10c0/df135d8a8c635df5d34bdb30b2e24afa93292c9c0bdac589ed9df31da50cec8c4820f66d04f23fa05f6c0ed0726e86c83b0767ca9c6abae4d281a253526d2db3
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -3368,6 +3383,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"solid-jotai@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "solid-jotai@npm:0.3.0"
+  peerDependencies:
+    jotai: ">=2.1.0"
+    solid-js: ">=1.6.0"
+  checksum: 10c0/07e1409fe6191aaf243b64aaf109b491d6634aa340962720d2992e9cb0c1d8fd4904413d88c3fb2010cea7a8147fbedc6546b0af021afc3691f8fc24fd89044c
+  languageName: node
+  linkType: hard
+
 "solid-js@npm:^1.9.5":
   version: 1.9.5
   resolution: "solid-js@npm:1.9.5"
@@ -3549,6 +3574,8 @@ __metadata:
     "@types/node": "npm:^22.13.10"
     "@yarnpkg/sdks": "npm:^3.2.1"
     hono: "npm:^4.7.4"
+    jotai: "npm:^2.12.2"
+    solid-jotai: "npm:^0.3.0"
     solid-js: "npm:^1.9.5"
     typescript: "npm:^5.8.2"
     vike: "npm:^0.4.225"
