@@ -7,7 +7,7 @@ export function Link(props: { href: string, children: string }) {
     props.href === '/' ? pageContext.urlPathname === props.href : pageContext.urlPathname.startsWith(props.href)
   )
   return (
-    <a href={props.href} class={isActive() ? 'is-active' : undefined}>
+    <a href={props.href} class={`link ${isActive() ? 'is-active' : undefined}`}>
       {props.children}
     </a>
   )

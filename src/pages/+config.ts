@@ -5,9 +5,6 @@ import type { Config } from 'vike/types'
 export default {
   title: 'My Vike + Solid App', // <title>
   description: 'Demo showcasing Vike + Solid', // <meta name='description'>
-  bodyAttributes: {
-    class: 'dark'
-  },
   prerender: true,
   extends: vikeSolid
 } satisfies Config
