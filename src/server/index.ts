@@ -1,6 +1,6 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
-import vike from 'vike-node/hono'
+import { apply } from 'vike-server/hono'
 
 const app = new Hono()
 
@@ -8,7 +8,7 @@ const app = new Hono()
 //   return c.text('API Hello, World!')
 // })
 
-app.use(vike())
+apply(app)
 
 const port = +(process.env.PORT || 3000)
 
