@@ -13,18 +13,18 @@
     "od": "yarn outdated"
   },
   "dependencies": {
-    "hono": "^4.7.4",
+    "hono": "^4.7.5",
     "solid-js": "^1.9.5"
   },
   "devDependencies": {
-    "@hono/node-server": "^1.13.8",
-    "@types/node": "^22.13.10",
+    "@hono/node-server": "^1.14.0",
+    "@types/node": "^22.13.13",
     "@yarnpkg/sdks": "^3.2.1",
     "typescript": "^5.8.2",
-    "vike": "^0.4.225",
+    "vike": "^0.4.227",
     "vike-node": "^0.3.7",
     "vike-solid": "^0.7.9",
-    "vite": "^6.2.2"
+    "vite": "^6.2.3"
   },
   "engines": {
     "node": ">=20"
