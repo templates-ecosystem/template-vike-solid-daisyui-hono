@@ -693,15 +693,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hono/node-server@npm:^1.14.0":
-  version: 1.14.0
-  resolution: "@hono/node-server@npm:1.14.0"
-  peerDependencies:
-    hono: ^4
-  checksum: 10c0/8a012f07afd17afa40b48dc2684e6023233cd84c89cd862b97bae284a979471ce442ccd5709f06a76115e29cee1665b349984b9aa3321bde8be3081a4b043e4f
-  languageName: node
-  linkType: hard
-
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
@@ -4420,7 +4411,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "template-vike-solid-daisyui-hono@workspace:."
   dependencies:
-    "@hono/node-server": "npm:^1.14.0"
     "@tailwindcss/vite": "npm:^4.0.16"
     "@types/node": "npm:^22.13.13"
     "@yarnpkg/sdks": "npm:^3.2.1"

@@ -17,7 +17,6 @@
     "solid-js": "^1.9.5"
   },
   "devDependencies": {
-    "@hono/node-server": "^1.14.0",
     "@tailwindcss/vite": "^4.0.16",
     "@types/node": "^22.13.13",
     "@yarnpkg/sdks": "^3.2.1",
