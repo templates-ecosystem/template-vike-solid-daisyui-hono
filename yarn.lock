@@ -1256,12 +1256,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.13.13":
-  version: 22.13.13
-  resolution: "@types/node@npm:22.13.13"
+"@types/node@npm:*, @types/node@npm:^22.13.14":
+  version: 22.13.14
+  resolution: "@types/node@npm:22.13.14"
   dependencies:
     undici-types: "npm:~6.20.0"
-  checksum: 10c0/daf792ba5dcff1316abf4b33680f94b792f8d54d6ae495efc8929531e0ba1284a248d29aab117d2259f9280284d986ad5799b193b0516e2b926d713aab835f7d
+  checksum: 10c0/fa2ab5b8277bfbcc86c42e46a3ea9871b0d559894cc9d955685d17178c9499f0b1bf03d1d1ea8d92ef2dda818988f4035acb8abf9dc15423a998fa56173ab804
   languageName: node
   linkType: hard
 
@@ -4429,7 +4429,7 @@ __metadata:
   resolution: "template-vike-solid-daisyui-hono@workspace:."
   dependencies:
     "@tailwindcss/vite": "npm:^4.0.17"
-    "@types/node": "npm:^22.13.13"
+    "@types/node": "npm:^22.13.14"
     "@yarnpkg/sdks": "npm:^3.2.1"
     daisyui: "npm:^5.0.9"
     eslint: "npm:^9.23.0"
@@ -4441,7 +4441,7 @@ __metadata:
     typescript: "npm:^5.8.2"
     typescript-eslint: "npm:^8.28.0"
     vike: "npm:^0.4.227"
-    vike-server: "npm:^1.0.4"
+    vike-server: "npm:^1.0.7"
     vike-solid: "npm:^0.7.9"
     vite: "npm:^6.2.3"
   languageName: unknown
@@ -4680,9 +4680,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vike-server@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "vike-server@npm:1.0.4"
+"vike-server@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "vike-server@npm:1.0.7"
   dependencies:
     "@brillout/picocolors": "npm:^1.0.26"
     "@brillout/vite-plugin-server-entry": "npm:^0.7.1"
@@ -4702,7 +4702,7 @@ __metadata:
   peerDependenciesMeta:
     vite:
       optional: true
-  checksum: 10c0/18bdbf800f6155d8afa85cdfd9bcaa6f2cd942a10cb1480fb1acf42bbb6ea660d282cb9fabb943cc5cd3a606f9de36573f777bf201a8506b6b0c5bb153ef2175
+  checksum: 10c0/9395921ad5457ae696282e1da10f77824c6e0da796c416d27389e017978e9af3c885eaa7980ce21224293ed9d086a3849ae24322d7bad90136130c93910fb3ec
   languageName: node
   linkType: hard
 
