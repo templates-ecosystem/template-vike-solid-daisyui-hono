@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "type": "module",
-  "packageManager": "yarn@4.7.0",
+  "packageManager": "yarn@4.8.1",
   "scripts": {
     "dev": "vike dev",
     "build": "vike build",
@@ -17,14 +17,13 @@
     "solid-js": "^1.9.5"
   },
   "devDependencies": {
-    "@hono/node-server": "^1.14.0",
-    "@types/node": "^22.13.13",
+    "@types/node": "^22.14.0",
     "@yarnpkg/sdks": "^3.2.1",
     "typescript": "^5.8.2",
-    "vike": "^0.4.227",
-    "vike-node": "^0.3.7",
+    "vike": "^0.4.228",
+    "vike-server": "^1.0.13",
     "vike-solid": "^0.7.9",
-    "vite": "^6.2.3"
+    "vite": "^6.2.5"
   },
   "engines": {
     "node": ">=20"
