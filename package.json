@@ -27,10 +27,10 @@
     "tailwindcss": "^4.1.11",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.38.0",
-    "vike": "^0.4.228",
-    "vike-server": "^1.0.13",
-    "vike-solid": "^0.7.9",
-    "vite": "^6.2.5"
+    "vike": "^0.4.236",
+    "vike-server": "^1.0.19",
+    "vike-solid": "^0.7.11",
+    "vite": "^6.3.5"
   },
   "engines": {
     "node": ">=20"
