@@ -79,3 +79,11 @@ yarn dev
   -serve(app, { port })
   +export default app
   ```
+
+- On Vercel:
+  - Go to create a [new project](https://vercel.com/new)
+  - Search and import the repository
+  - `Framework Preset` = `Vite`
+  - `Root Directory` = `./`
+  - `Build and Output Settings` → `Output Directory` = `dist/client`
+  - Set evnironment variables
