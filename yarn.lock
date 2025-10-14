@@ -1972,10 +1972,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "daisyui@npm:5.3.0"
-  checksum: 10c0/d37626060dd13e0cfb204addc83b5f063c33ad539cb9d259ea24b51ca900f1c5fd9b83a1476b991c9015f54a1120da0a5d73244f8428891ebe4a4818fd730bb4
+"daisyui@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "daisyui@npm:5.3.1"
+  checksum: 10c0/239589fc79beda5784e89c4e66dc6bee63bec73c700eb3ca8be890f8ea8dd33470d08311ee0c40ffd8bef56173cbf093853dd5d82b3b54c00a72efb04c94d773
   languageName: node
   linkType: hard
 
@@ -4195,7 +4195,7 @@ __metadata:
     "@tailwindcss/vite": "npm:^4.1.14"
     "@types/node": "npm:^24.7.2"
     "@yarnpkg/sdks": "npm:^3.2.3"
-    daisyui: "npm:^5.3.0"
+    daisyui: "npm:^5.3.1"
     eslint: "npm:^9.37.0"
     eslint-plugin-solid: "npm:^0.14.5"
     eslint-plugin-unicorn: "npm:^61.0.2"
@@ -4207,7 +4207,7 @@ __metadata:
     vike: "npm:^0.4.242"
     vike-server: "npm:^1.0.24"
     vike-solid: "npm:^0.7.13"
-    vite: "npm:^7.1.9"
+    vite: "npm:^7.1.10"
   languageName: unknown
   linkType: soft
 
@@ -4510,9 +4510,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:>=6.3.0, vite@npm:^7.1.9":
-  version: 7.1.9
-  resolution: "vite@npm:7.1.9"
+"vite@npm:>=6.3.0, vite@npm:^7.1.10":
+  version: 7.1.10
+  resolution: "vite@npm:7.1.10"
   dependencies:
     esbuild: "npm:^0.25.0"
     fdir: "npm:^6.5.0"
@@ -4561,7 +4561,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10c0/f628f903a137c1410232558bde99c223ea00a090bda6af77752c61f912955f0050aac12d3cfe024d08a0f150ff6fab61b3d0be75d634a59b94d49f525392e1f7
+  checksum: 10c0/ea296971a3094b0e463a91af58de64dca56c8c5c563237e59d158641f8ad7f600f624c4f7c05c18fad68f414e23d50d7145118169b8dcd4bc85283c63c7185bb
   languageName: node
   linkType: hard
 
