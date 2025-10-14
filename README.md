@@ -44,6 +44,12 @@ yarn dev
 
   export default {
     ...
+  // Needed to generate /dist/server files
+  +  prerender: false
+  // OR with at least another +config with prerender: false
+  +  prerender: {
+  +    partial: true
+  +  }
     extends: [
       vikeSolid,
       vikeServer
