@@ -17,7 +17,11 @@
     ...
   // Needed to generate /dist/server files
   +  prerender: false
-  // OR with at least another +config with prerender: false
+  // OR
+  // If you have path parameter pages and want to prerender all pages except the path parameter pages,
+  // use prerender.partial=true in /pages/+config to prerender all pages and
+  // use prerender=false in /pages/<pathParameter>/+config to disable prerender in that page and children pages
+  // See https://vike.dev/prerender#partial
   +  prerender: {
   +    partial: true
   +  }
