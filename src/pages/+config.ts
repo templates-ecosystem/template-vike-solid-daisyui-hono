@@ -1,5 +1,5 @@
 import type { Config } from 'vike/types'
-import vikeServer from 'vike-server/config'
+import vikePhoton from 'vike-photon/config'
 import vikeSolid from 'vike-solid/config'
 
 // Default config (can be overridden by pages)
@@ -9,7 +9,9 @@ export default {
   prerender: true,
   extends: [
     vikeSolid,
-    vikeServer
+    vikePhoton
   ],
-  server: 'server/index.ts'
+  photon: {
+    server: 'server/index.ts'
+  }
 } satisfies Config
