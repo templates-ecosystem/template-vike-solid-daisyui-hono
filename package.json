@@ -18,11 +18,11 @@
   },
   "devDependencies": {
     "@photonjs/hono": "^0.1.4",
-    "@types/node": "^24.9.2",
+    "@types/node": "^24.10.0",
     "@yarnpkg/sdks": "^3.2.3",
     "typescript": "^5.9.3",
-    "vike": "^0.4.244",
-    "vike-photon": "^0.1.13",
+    "vike": "^0.4.245",
+    "vike-photon": "^0.1.14",
     "vike-solid": "^0.7.13",
     "vite": "^7.1.12"
   },
