@@ -31,19 +31,20 @@ WORKDIR /app
 # Copy the necessary files from the builder
 COPY --from=builder /app/dist ./dist
 
-# Copy the Yarn files
-COPY .yarnrc.yml package.json yarn.lock ./
-COPY .yarn/plugins ./.yarn/plugins
-COPY .yarn/releases ./.yarn/releases
+# ENABLE IF YOU USE NODE-MODULES LINKER
+# # Copy the Yarn files
+# COPY .yarnrc.yml package.json yarn.lock ./
+# COPY .yarn/plugins ./.yarn/plugins
+# COPY .yarn/releases ./.yarn/releases
 
-# Use node-modules linker instead of PnP
-RUN yarn config set nodeLinker node-modules \
-# Install only production dependencies
-&& yarn workspaces focus --production \
-# Clean up the yarn cache
-&& yarn cache clean \
-# Clean up unnecessary files to reduce image size
-&& rm -rf .yarn .yarnrc.yml package.json yarn.lock
+# # Use node-modules linker instead of PnP
+# RUN yarn config set nodeLinker node-modules \
+# # Install only production dependencies
+# && yarn workspaces focus --production \
+# # Clean up the yarn cache
+# && yarn cache clean \
+# # Clean up unnecessary files to reduce image size
+# && rm -rf .yarn .yarnrc.yml package.json yarn.lock
 
 # Override some config defaults with values that will work better for docker
 ENV NODE_ENV=production \
