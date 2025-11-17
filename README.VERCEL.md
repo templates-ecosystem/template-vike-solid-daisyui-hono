@@ -1,12 +1,4 @@
 ### ▲ Adapt to Deploy on Vercel
-- Create `/api/ssr.js`
-  ```ts
-  import app from '../dist/server/index.mjs'
-
-  export const GET = app.fetch
-  export const POST = app.fetch
-  ```
-
 - Update `/pages/+config.ts`
   ```diff
   import type { Config } from 'vike/types'
@@ -76,10 +68,36 @@
   +export default app
   ```
 
+- Create `/api/ssr.js`
+  ```ts
+  import app from '../dist/server/index.mjs'
+
+  export const GET = app.fetch
+  export const POST = app.fetch
+  ```
+
+- Create `/vercel.json`
+  ```json
+  {
+    "outputDirectory": "dist/client",
+    "rewrites": [
+      {
+        "source": "/((?!assets/).*)",
+        "destination": "/api/ssr.js"
+      }
+    ]
+  }
+  ```
+
 ### ▲ Config Vercel Website
   - Go to create a [new project](https://vercel.com/new)
   - Search and import the repository
-  - `Framework Preset` = `Vite`
-  - `Root Directory` = `./`
-  - `Build and Output Settings` → `Output Directory` = `dist/client`
-  - Set evnironment variables
+  - In the current **Settings**:
+    - **Build and Deployment**
+      - `Framework Preset` = `Vite`
+      - `Root Directory` = `./`
+      - `Build and Output Settings` → `Output Directory` = `dist/client`
+    - **Environments**
+      - Set evnironment variables
+    - **Functions**
+      - `Fluid Compute` = `Enabled`
