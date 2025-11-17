@@ -31,9 +31,19 @@
     ],
     photon {
   -   server: 'server/index.ts'
-      // To run serve script, enable next line
-      // server: 'server/entry.node.ts'
+      // Vercel
   +   server: process.env.NODE_ENV === 'production' ? 'server/index.ts' : 'server/entry.node.ts'
+      // OR
+      // Docker + Vercel
+  +   server: process.env.NODE_ENV === 'production'
+  +     ? (process.env.ENTRY_NODE === 'true'
+  +       // Docker
+  +       ? 'server/entry.node.ts'
+  +       // Vercel
+  +       : 'server/index.ts')
+  +     // development
+  +     : 'server/index.ts'
+  +   }
     }
   } satisfies Config
   ```
