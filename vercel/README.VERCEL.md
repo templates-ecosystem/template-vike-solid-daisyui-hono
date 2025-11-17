@@ -35,7 +35,7 @@
           // Vercel
   +       : 'server/index.ts')
         // development
-  +     : 'server/index.ts'
+  +     : 'server/entry.node.ts'
   +   }
     }
   } satisfies Config
