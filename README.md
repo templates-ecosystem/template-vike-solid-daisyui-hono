@@ -25,7 +25,7 @@ yarn dev
 ```
 
 ### ▲ Deploy/Config Vercel
-See [Vercel Guide](README.VERCEL.md)
+See [Vercel Guide](/vercel/README.VERCEL.md)
 
 ### Issues
 - "Unknown at rule: @property" warning after `yarn build`
