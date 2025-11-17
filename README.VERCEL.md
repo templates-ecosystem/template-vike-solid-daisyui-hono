@@ -16,7 +16,7 @@
   export default {
     ...
     // Needed to generate /dist/server files
-  + prerender: false
+  + prerender: false,
     // OR
     // If you have path parameter pages and want to prerender all pages except the path parameter pages,
     // use prerender.partial=true in /pages/+config to prerender all pages and
@@ -24,7 +24,7 @@
     // See https://vike.dev/prerender#partial
   + prerender: {
   +   partial: true
-  + }
+  + },
     extends: [
       vikeSolid,
       vikePhoton
