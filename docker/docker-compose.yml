@@ -1,0 +1,6 @@
+services:
+  vike-app:
+    container_name: vike-app
+    image: vike-app
+    ports:
+      - 3000:3000

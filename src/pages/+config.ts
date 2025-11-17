@@ -3,12 +3,15 @@ import vikePhoton from 'vike-photon/config'
 import vikeSolid from 'vike-solid/config'
 
 export default {
-  prerender: true,
+  prerender: false,
   extends: [
     vikeSolid,
     vikePhoton
   ],
   photon: {
-    server: 'server/index.ts'
+    server: {
+      id: 'server/index.ts',
+      standalone: true
+    }
   }
 } satisfies Config
