@@ -813,7 +813,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@photonjs/core@npm:^0.1.13, @photonjs/core@npm:^0.1.9":
+"@photonjs/core@npm:^0.1.13, @photonjs/core@npm:^0.1.8, @photonjs/core@npm:^0.1.9":
   version: 0.1.13
   resolution: "@photonjs/core@npm:0.1.13"
   dependencies:
@@ -835,25 +835,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@photonjs/hono@npm:^0.1.7":
-  version: 0.1.7
-  resolution: "@photonjs/hono@npm:0.1.7"
+"@photonjs/hono@npm:0.1.6":
+  version: 0.1.6
+  resolution: "@photonjs/hono@npm:0.1.6"
   dependencies:
-    "@photonjs/core": "npm:^0.1.9"
+    "@photonjs/core": "npm:^0.1.8"
     "@universal-middleware/hono": "npm:^0.4.17"
   peerDependencies:
-    "@hono/node-server": ^1
     vite: ">=7.1"
   peerDependenciesMeta:
-    "@hono/node-server":
-      optional: true
     vite:
       optional: true
-  checksum: 10c0/503f0f8d604583c5db3fd4ab9adc45e07d01143b945cb84c2cf428d175ca9fa4814e1c396aeef3e6f09c5d71bedb6295d40ef04d2b5c5620e079fdfb99b5643d
+  checksum: 10c0/f48dd9b116c3f2acc541cd7609298c83bc4c0995435e64f6cc5d33f0ce9f7ed83fe35120000782c7a48f40c40048fcd1dea949dd71c34095bd27998fa46d5db6
   languageName: node
   linkType: hard
 
-"@photonjs/runtime@npm:^0.1.9":
+"@photonjs/runtime@npm:^0.1.6":
   version: 0.1.10
   resolution: "@photonjs/runtime@npm:0.1.10"
   dependencies:
@@ -1327,7 +1324,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@universal-middleware/compress@npm:^0.2.34":
+"@universal-middleware/compress@npm:^0.2.33, @universal-middleware/compress@npm:^0.2.34":
   version: 0.2.34
   resolution: "@universal-middleware/compress@npm:0.2.34"
   checksum: 10c0/bd199be6415799b9aba97dadaf728a5366626c41fe57ab4e42ca283c44b4f5e61066714e8516ee5e802394efbc6b90035e22e439980179e011714635f4e4826e
@@ -2036,7 +2033,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:>=0.19.0":
+"esbuild@npm:>=0.19.0, esbuild@npm:^0.27.0":
   version: 0.27.0
   resolution: "esbuild@npm:0.27.0"
   dependencies:
@@ -3646,14 +3643,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "template-vike-solid-daisyui-hono@workspace:."
   dependencies:
-    "@photonjs/hono": "npm:^0.1.7"
+    "@photonjs/hono": "npm:0.1.6"
     "@types/node": "npm:^24.10.1"
     "@yarnpkg/sdks": "npm:^3.2.3"
     hono: "npm:^4.10.6"
     solid-js: "npm:^1.9.10"
     typescript: "npm:^5.9.3"
     vike: "npm:^0.4.247"
-    vike-photon: "npm:^0.1.20"
+    vike-photon: "npm:0.1.16"
     vike-solid: "npm:^0.7.13"
     vite: "npm:^7.2.4"
   languageName: unknown
@@ -3813,19 +3810,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vike-photon@npm:^0.1.20":
-  version: 0.1.20
-  resolution: "vike-photon@npm:0.1.20"
+"vike-photon@npm:0.1.16":
+  version: 0.1.16
+  resolution: "vike-photon@npm:0.1.16"
   dependencies:
     "@brillout/picocolors": "npm:^1.0.29"
     "@brillout/vite-plugin-server-entry": "npm:^0.7.15"
-    "@photonjs/core": "npm:^0.1.13"
-    "@photonjs/runtime": "npm:^0.1.9"
-    "@universal-middleware/compress": "npm:^0.2.34"
+    "@photonjs/core": "npm:^0.1.8"
+    "@photonjs/runtime": "npm:^0.1.6"
+    "@universal-middleware/compress": "npm:^0.2.33"
     "@universal-middleware/core": "npm:^0.4.13"
     "@universal-middleware/sirv": "npm:^0.1.23"
+    esbuild: "npm:^0.27.0"
     pkg-types: "npm:^2.3.0"
-    standaloner: "npm:^0.1.8"
   peerDependencies:
     "@photonjs/cloudflare": ">=0.0.9"
     "@photonjs/core": ^0.1.0
@@ -3840,7 +3837,7 @@ __metadata:
       optional: true
     vite:
       optional: true
-  checksum: 10c0/c489c4a8f955ac5c8eeff0ba5d5cdfddcdd419e60ec85faafb3101aa97693da77df1c82bb5e23bb356c50ecf1106d9fca6e3a5e3b0e1833d5ff43f6d5ac07746
+  checksum: 10c0/1db6bebd401661865aa8311d6af0be39b93ea37b5fbeeafa9025191082763009253ecf183ba4a037a0be3316aa3bcac4180ec155dc8a52c50af983515d7e48e2
   languageName: node
   linkType: hard
 
