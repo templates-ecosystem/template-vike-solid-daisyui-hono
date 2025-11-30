@@ -80,6 +80,7 @@
   ```json
   {
     "outputDirectory": "dist/client",
+    "installCommand": "yarn install --immutable",
     "rewrites": [
       {
         "source": "/((?!assets/).*)",
@@ -96,7 +97,9 @@
     - **Build and Deployment**
       - `Framework Preset` = `Vite`
       - `Root Directory` = `./`
-      - `Build and Output Settings` → `Output Directory` = `dist/client`
+      - `Build and Output Settings`
+        → `Output Directory` = `dist/client`
+        → `Install Command` = `yarn install --immutable`
     - **Environments**
       - Set evnironment variables
     - **Functions**
