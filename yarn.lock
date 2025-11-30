@@ -835,18 +835,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@photonjs/hono@npm:0.1.6":
-  version: 0.1.6
-  resolution: "@photonjs/hono@npm:0.1.6"
+"@photonjs/hono@npm:^0.1.7":
+  version: 0.1.7
+  resolution: "@photonjs/hono@npm:0.1.7"
   dependencies:
-    "@photonjs/core": "npm:^0.1.8"
+    "@photonjs/core": "npm:^0.1.9"
     "@universal-middleware/hono": "npm:^0.4.17"
   peerDependencies:
+    "@hono/node-server": ^1
     vite: ">=7.1"
   peerDependenciesMeta:
+    "@hono/node-server":
+      optional: true
     vite:
       optional: true
-  checksum: 10c0/f48dd9b116c3f2acc541cd7609298c83bc4c0995435e64f6cc5d33f0ce9f7ed83fe35120000782c7a48f40c40048fcd1dea949dd71c34095bd27998fa46d5db6
+  checksum: 10c0/503f0f8d604583c5db3fd4ab9adc45e07d01143b945cb84c2cf428d175ca9fa4814e1c396aeef3e6f09c5d71bedb6295d40ef04d2b5c5620e079fdfb99b5643d
   languageName: node
   linkType: hard
 
@@ -3626,7 +3629,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "template-vike-solid-daisyui-hono@workspace:."
   dependencies:
-    "@photonjs/hono": "npm:0.1.6"
+    "@photonjs/hono": "npm:^0.1.7"
     "@types/node": "npm:^24.10.1"
     "@yarnpkg/sdks": "npm:^3.2.3"
     hono: "npm:^4.10.7"
