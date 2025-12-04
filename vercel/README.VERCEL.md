@@ -1,4 +1,9 @@
 ### ▲ Adapt to Deploy on Vercel
+- Install `@photonjs/vercel`
+```sh
+yarn add -D @photonjs/vercel
+```
+
 - Update `/pages/+config.ts`
   ```diff
   import type { Config } from 'vike/types'
@@ -22,50 +27,10 @@
       vikePhoton
     ],
     photon {
-  -   server: 'server/index.ts'
-      // Vercel
-  +   server: process.env.NODE_ENV === 'production' ? 'server/index.ts' : 'server/entry.node.ts'
-      // OR
-  +   server: process.env.NODE_ENV === 'production'
-        // (Preview deployment OR Docker) + Vercel
-        // run build:node-entry and then run preview or run node dist/server/index.mjs
-  +     ? (process.env.ENTRY_NODE === 'true'
-          // Preview deployment OR Docker
-  +       ? 'server/entry.node.ts'
-          // Vercel
-  +       : 'server/index.ts')
-        // development
-  +     : 'server/entry.node.ts'
-  +   }
+      server: 'server/index.ts',
+      standalone: true
     }
   } satisfies Config
-  ```
-
-- Create `/server/entry.node.ts`
-  ```ts
-  import { serve } from '@photonjs/hono'
-
-  import app from './index'
-
-  const port = +(process.env.PORT || 3000)
-
-  export default serve(app, { port })
-  ```
-
-- Update `/server/index.ts`
-  ```diff
-  import { Hono } from 'hono'
-  -import { apply, serve } from '@photonjs/hono'
-  +import { apply } from '@photonjs/hono'
-
-  const app = new Hono()
-
-  apply(app)
-
-  -const port = +(process.env.PORT || 3000)
-
-  -serve(app, { port })
-  +export default app
   ```
 
 - Create `/api/ssr.js`
