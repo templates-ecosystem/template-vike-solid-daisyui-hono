@@ -13,6 +13,9 @@ export default {
   ],
   photon: {
     server: 'server/index.ts',
-    standalone: true
+    standalone: {
+      bundle: true,
+      minify: true
+    }
   }
 } satisfies Config

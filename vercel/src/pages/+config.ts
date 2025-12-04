@@ -4,8 +4,6 @@ import vikeSolid from 'vike-solid/config'
 
 // Default config (can be overridden by pages)
 export default {
-  // title: '', // <title>
-  // description: '', // <meta name='description'>
   prerender: {
     partial: true
   },
@@ -14,6 +12,10 @@ export default {
     vikePhoton
   ],
   photon: {
-    server: 'server/index.ts'
+    server: 'server/index.ts',
+    standalone: {
+      bundle: true,
+      minify: true
+    }
   }
 } satisfies Config
