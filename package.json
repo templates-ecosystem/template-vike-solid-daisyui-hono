@@ -17,7 +17,7 @@
     "solid-js": "^1.9.10"
   },
   "devDependencies": {
-    "@photonjs/hono": "^0.1.8",
+    "@photonjs/hono": "^0.1.10",
     "@photonjs/vercel": "^0.1.16",
     "@tailwindcss/vite": "^4.1.17",
     "@types/node": "^24.10.1",
@@ -30,7 +30,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.48.1",
     "vike": "^0.4.247",
-    "vike-photon": "^0.1.21",
+    "vike-photon": "^0.1.22",
     "vike-solid": "^0.7.13",
     "vite": "^7.2.6"
   },
