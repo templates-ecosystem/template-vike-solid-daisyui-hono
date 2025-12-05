@@ -959,7 +959,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@photonjs/core@npm:^0.1.14, @photonjs/core@npm:^0.1.16":
+"@photonjs/core@npm:^0.1.16":
   version: 0.1.16
   resolution: "@photonjs/core@npm:0.1.16"
   dependencies:
@@ -999,7 +999,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@photonjs/runtime@npm:^0.1.11, @photonjs/runtime@npm:^0.1.13":
+"@photonjs/runtime@npm:^0.1.13":
   version: 0.1.13
   resolution: "@photonjs/runtime@npm:0.1.13"
   dependencies:
@@ -1034,13 +1034,13 @@ __metadata:
   linkType: hard
 
 "@photonjs/vercel@npm:^0.1.16":
-  version: 0.1.16
-  resolution: "@photonjs/vercel@npm:0.1.16"
+  version: 0.1.20
+  resolution: "@photonjs/vercel@npm:0.1.20"
   dependencies:
     "@brillout/libassert": "npm:^0.5.8"
     "@manypkg/find-root": "npm:^3.1.0"
-    "@photonjs/core": "npm:^0.1.14"
-    "@photonjs/runtime": "npm:^0.1.11"
+    "@photonjs/core": "npm:^0.1.16"
+    "@photonjs/runtime": "npm:^0.1.13"
     "@universal-middleware/core": "npm:^0.4.13"
     "@universal-middleware/vercel": "npm:^0.4.29"
     "@vercel/build-utils": "npm:^13.2.1"
@@ -1055,10 +1055,10 @@ __metadata:
     strip-ansi: "npm:^7.1.2"
     vite-plugin-wasm: "npm:^3.5.0"
   peerDependencies:
-    "@photonjs/core": ^0.1.14
-    "@photonjs/runtime": ^0.1.11
+    "@photonjs/core": ^0.1.16
+    "@photonjs/runtime": ^0.1.13
     vite: ">=7.1"
-  checksum: 10c0/6bc64bc0705dbfa143d64fc7e887bd37281e23884b54690a09b12ceed47d0eb13ceb4f0e0ee6dcd4cc3f302a6962f4aad6bb01cba43100bd3e01431dc7520480
+  checksum: 10c0/beddabf5d91a3ceda23302379dbd60b0dee0abc56cf69ff0ac32b81f6f9396123137fd1905714ca2de2c1b840722d961f27dc8da227d8bc23b044ff825df024f
   languageName: node
   linkType: hard
 
