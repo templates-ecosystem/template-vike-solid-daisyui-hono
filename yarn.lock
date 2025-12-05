@@ -914,9 +914,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@photonjs/vercel@npm:^0.1.15":
-  version: 0.1.15
-  resolution: "@photonjs/vercel@npm:0.1.15"
+"@photonjs/vercel@npm:^0.1.16":
+  version: 0.1.16
+  resolution: "@photonjs/vercel@npm:0.1.16"
   dependencies:
     "@brillout/libassert": "npm:^0.5.8"
     "@manypkg/find-root": "npm:^3.1.0"
@@ -939,7 +939,7 @@ __metadata:
     "@photonjs/core": ^0.1.14
     "@photonjs/runtime": ^0.1.11
     vite: ">=7.1"
-  checksum: 10c0/b1e8b5429959c2eace4dcb6f96fcfcf5754b3276b414b0fc17d85eab5ca0980eeeb1593bf0851521f83258f464b3c746a4f541436a1520179713da7eda1ab662
+  checksum: 10c0/6bc64bc0705dbfa143d64fc7e887bd37281e23884b54690a09b12ceed47d0eb13ceb4f0e0ee6dcd4cc3f302a6962f4aad6bb01cba43100bd3e01431dc7520480
   languageName: node
   linkType: hard
 
@@ -3878,7 +3878,7 @@ __metadata:
   resolution: "template-vike-solid-daisyui-hono@workspace:."
   dependencies:
     "@photonjs/hono": "npm:^0.1.8"
-    "@photonjs/vercel": "npm:^0.1.15"
+    "@photonjs/vercel": "npm:^0.1.16"
     "@types/node": "npm:^24.10.1"
     "@yarnpkg/sdks": "npm:^3.2.3"
     hono: "npm:^4.10.7"

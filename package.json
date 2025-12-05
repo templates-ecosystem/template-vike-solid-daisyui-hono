@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@photonjs/hono": "^0.1.8",
-    "@photonjs/vercel": "^0.1.15",
+    "@photonjs/vercel": "^0.1.16",
     "@types/node": "^24.10.1",
     "@yarnpkg/sdks": "^3.2.3",
     "typescript": "^5.9.3",
