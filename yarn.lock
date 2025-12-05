@@ -1503,9 +1503,9 @@ __metadata:
   linkType: hard
 
 "@vercel/build-utils@npm:^13.2.1":
-  version: 13.2.2
-  resolution: "@vercel/build-utils@npm:13.2.2"
-  checksum: 10c0/904949b1c9aa16d679414f7dc4a2d161afc741de154e4d0de3089d451b63d08226390fd672e42303817cae9dc8ceeabf33683dc73a739573ac20800646c141ee
+  version: 13.2.3
+  resolution: "@vercel/build-utils@npm:13.2.3"
+  checksum: 10c0/4d48b6d8ab1e716f61155d51281992d5a4cc6891c6996574a5cf9fb0e9c0e556144ccc6ac9c80a9aeb39d6e8b8a9e8324b8f7768f18e96d87c832193a902c63d
   languageName: node
   linkType: hard
 
@@ -2128,9 +2128,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.263":
-  version: 1.5.264
-  resolution: "electron-to-chromium@npm:1.5.264"
-  checksum: 10c0/d62cfc6ed02856de59b0e7baf5bb7995b611ba4df14355a0943301a56628bd0fad98287c0becdcf55509ff5ed38d7f01a33b9f962820c8aa8cbc90292035275c
+  version: 1.5.266
+  resolution: "electron-to-chromium@npm:1.5.266"
+  checksum: 10c0/74ada92ada1ace76ec5b7da8a9cc2d7f03db122a64ac8e12ae30eba3e358ffec443c0c5265bc6edcdeebfa73f449b21c361080c064eb1eec437db2d71fc03248
   languageName: node
   linkType: hard
 
