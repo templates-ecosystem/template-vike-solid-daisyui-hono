@@ -1,8 +1,8 @@
 import { cors } from 'hono/cors'
 import { Hono } from 'hono/quick'
-import { apply, serve } from '@photonjs/hono'
+import { apply } from '@photonjs/hono'
 
-import { handlerApi } from '@/server/handlers/handlerApi'
+import { handlerApi } from './handlers/handlerApi'
 
 const app = new Hono()
 
@@ -12,6 +12,4 @@ app.post('/api/:functionName', handlerApi)
 
 apply(app)
 
-const port = +(process.env.PORT || 3000)
-
-export default serve(app, { port })
+export default app

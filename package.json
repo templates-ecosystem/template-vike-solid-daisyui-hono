@@ -7,8 +7,9 @@
   "scripts": {
     "dev": "vike dev",
     "build": "vike build",
+    "build:entry-node": "ENTRY_NODE=true vike build",
     "prod": "NODE_ENV=production node dist/server/index.mjs",
-    "preview": "yarn build && yarn prod",
+    "preview": "yarn build:entry-node && yarn prod",
     "lint": "eslint src/**/*.{ts,tsx} *.ts",
     "od": "yarn outdated"
   },
@@ -18,7 +19,6 @@
   },
   "devDependencies": {
     "@photonjs/hono": "^0.1.10",
-    "@photonjs/vercel": "^0.1.16",
     "@tailwindcss/vite": "^4.1.17",
     "@types/node": "^24.10.1",
     "@yarnpkg/sdks": "^3.2.3",
