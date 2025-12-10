@@ -9,9 +9,9 @@ export default {
     vikePhoton
   ],
   photon: {
-    server: {
-      id: 'server/index.ts',
-      standalone: true
+    server: 'server/index.ts',
+    standalone: {
+      bundle: true
     }
   }
 } satisfies Config
