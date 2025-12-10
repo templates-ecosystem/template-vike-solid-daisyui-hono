@@ -1286,12 +1286,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^24.10.1":
-  version: 24.10.1
-  resolution: "@types/node@npm:24.10.1"
+"@types/node@npm:*, @types/node@npm:^24.10.2":
+  version: 24.10.2
+  resolution: "@types/node@npm:24.10.2"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10c0/d6bca7a78f550fbb376f236f92b405d676003a8a09a1b411f55920ef34286ee3ee51f566203920e835478784df52662b5b2af89159d9d319352e9ea21801c002
+  checksum: 10c0/560c894e1a9bf7468718ceca8cd520361fd0d3fcc0b020c2f028fc722b28b5b56aecd16736a9b753d52a14837c066cf23480a8582ead59adc63a7e4333bc976c
   languageName: node
   linkType: hard
 
@@ -2457,10 +2457,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hono@npm:^4.10.7":
-  version: 4.10.7
-  resolution: "hono@npm:4.10.7"
-  checksum: 10c0/11aec63ce11b0d635b7ecf24009ba2b694eac7a8ef8e3b7c1b2c7898dc6b39b7a6de1a8454608aade8c66685b016c0e5483b253d55431210a9116461f1a670ea
+"hono@npm:^4.10.8":
+  version: 4.10.8
+  resolution: "hono@npm:4.10.8"
+  checksum: 10c0/4b8d9f9f982a16e0bd7aeb0c068df5017ceb1ea8d34530c7d362d8afc5c5abda8961e8484a4424cc43428454f92fb67df6849391ebe676bea486bbb3ba9ee11b
   languageName: node
   linkType: hard
 
@@ -3630,15 +3630,15 @@ __metadata:
   resolution: "template-vike-solid-daisyui-hono@workspace:."
   dependencies:
     "@photonjs/hono": "npm:^0.1.8"
-    "@types/node": "npm:^24.10.1"
+    "@types/node": "npm:^24.10.2"
     "@yarnpkg/sdks": "npm:^3.2.3"
-    hono: "npm:^4.10.7"
+    hono: "npm:^4.10.8"
     solid-js: "npm:^1.9.10"
     typescript: "npm:^5.9.3"
     vike: "npm:^0.4.247"
     vike-photon: "npm:^0.1.21"
     vike-solid: "npm:^0.7.13"
-    vite: "npm:^7.2.6"
+    vite: "npm:^7.2.7"
   languageName: unknown
   linkType: soft
 
@@ -3897,9 +3897,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:>=6.3.0, vite@npm:^7.2.6":
-  version: 7.2.6
-  resolution: "vite@npm:7.2.6"
+"vite@npm:>=6.3.0, vite@npm:^7.2.7":
+  version: 7.2.7
+  resolution: "vite@npm:7.2.7"
   dependencies:
     esbuild: "npm:^0.25.0"
     fdir: "npm:^6.5.0"
@@ -3948,7 +3948,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10c0/d444a159ab8f0f854d596d1938f201b449d59ed4d336e587be9dc89005467214d85848c212c2495f76a8421372ffe4d061d023d659600f1aaa3ba5ac13e804f7
+  checksum: 10c0/0c502d9eb898d9c05061dbd8fd199f280b524bbb4c12ab5f88c7b12779947386684a269e4dd0aa424aa35bcd857f1aa44aadb9ea764702a5043af433052455b5
   languageName: node
   linkType: hard
 
