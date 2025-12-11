@@ -12,7 +12,9 @@
     "od": "yarn outdated"
   },
   "dependencies": {
+    "bson": "^7.0.0",
     "hono": "^4.10.8",
+    "mongodb-query-parser": "^4.7.0",
     "solid-js": "^1.9.10"
   },
   "devDependencies": {

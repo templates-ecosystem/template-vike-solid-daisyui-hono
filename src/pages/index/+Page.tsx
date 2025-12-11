@@ -1,6 +1,9 @@
+import { useData } from 'vike-solid/useData'
+
 function Page() {
+  const data = useData<{ message: string }>()
   return (
-    <>Hello World</>
+    <>{data.message}</>
   )
 }
 
