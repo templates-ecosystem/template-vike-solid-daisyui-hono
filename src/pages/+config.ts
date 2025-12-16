@@ -9,9 +9,10 @@ export default {
     vikePhoton
   ],
   photon: {
-    server: 'server/index.ts',
+    server: process.env.NODE_ENV === 'production' ? 'server/index.ts' : 'server/entry.node.ts',
     standalone: {
       bundle: true
-    }
+    },
+    target: 'vercel'
   }
 } satisfies Config
