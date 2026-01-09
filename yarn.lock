@@ -4574,7 +4574,7 @@ __metadata:
     typescript-eslint: "npm:^8.52.0"
     vike: "npm:^0.4.250"
     vike-photon: "npm:^0.1.24"
-    vike-solid: "npm:^0.7.14"
+    vike-solid: "npm:^0.7.18"
     vite: "npm:^7.3.1"
   languageName: unknown
   linkType: soft
@@ -4806,17 +4806,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vike-solid@npm:^0.7.14":
-  version: 0.7.14
-  resolution: "vike-solid@npm:0.7.14"
+"vike-solid@npm:^0.7.18":
+  version: 0.7.18
+  resolution: "vike-solid@npm:0.7.18"
   dependencies:
     isbot-fast: "npm:^1.2.0"
     vite-plugin-solid: "npm:^2.11.10"
   peerDependencies:
     solid-js: ^1.8.7
-    vike: ">=0.4.195"
-    vite: ">=5.0.0"
-  checksum: 10c0/3abb796950bc6340694c5c1dee3a4ed2f8107a66135712e4556b7d04ee8349d1fbb8296bfe7b93ddfa7a164a43f2635356bf0d8a86daa2c680510eea2448b935
+    vike: ">=0.4.250"
+  checksum: 10c0/273aa6231507492a4379ee5e2d3b046569f08dde09f80453cc91b6688d3a40c8791b33b205500d28e3a76873eee831321980c4e6e042a603d47668653c792540
   languageName: node
   linkType: hard
 
