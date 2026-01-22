@@ -244,7 +244,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@brillout/vite-plugin-server-entry@npm:^0.7.15":
+"@brillout/vite-plugin-server-entry@npm:^0.7.15, @brillout/vite-plugin-server-entry@npm:^0.7.17":
   version: 0.7.17
   resolution: "@brillout/vite-plugin-server-entry@npm:0.7.17"
   dependencies:
@@ -4602,9 +4602,9 @@ __metadata:
     tailwindcss: "npm:^4.1.18"
     typescript: "npm:^5.9.3"
     typescript-eslint: "npm:^8.53.1"
-    vike: "npm:^0.4.250"
+    vike: "npm:^0.4.252"
     vike-photon: "npm:^0.1.24"
-    vike-solid: "npm:^0.7.18"
+    vike-solid: "npm:^0.7.19"
     vite: "npm:^7.3.1"
   languageName: unknown
   linkType: soft
@@ -4836,22 +4836,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vike-solid@npm:^0.7.18":
-  version: 0.7.18
-  resolution: "vike-solid@npm:0.7.18"
+"vike-solid@npm:^0.7.19":
+  version: 0.7.19
+  resolution: "vike-solid@npm:0.7.19"
   dependencies:
     isbot-fast: "npm:^1.2.0"
     vite-plugin-solid: "npm:^2.11.10"
   peerDependencies:
     solid-js: ^1.8.7
     vike: ">=0.4.250"
-  checksum: 10c0/273aa6231507492a4379ee5e2d3b046569f08dde09f80453cc91b6688d3a40c8791b33b205500d28e3a76873eee831321980c4e6e042a603d47668653c792540
+  checksum: 10c0/352ed12a3db3473d8239f50ffea9449293af9d40222ffd93f0fd0bc2653de7369f3721b01be3775c9d7d4e9c2b7cabc635428c4fa1aa1ef207114270235bf4a9
   languageName: node
   linkType: hard
 
-"vike@npm:^0.4.250":
-  version: 0.4.250
-  resolution: "vike@npm:0.4.250"
+"vike@npm:^0.4.252":
+  version: 0.4.252
+  resolution: "vike@npm:0.4.252"
   dependencies:
     "@babel/core": "npm:^7.28.5"
     "@babel/types": "npm:^7.28.5"
@@ -4859,7 +4859,7 @@ __metadata:
     "@brillout/json-serializer": "npm:^0.5.21"
     "@brillout/picocolors": "npm:^1.0.30"
     "@brillout/require-shim": "npm:^0.1.2"
-    "@brillout/vite-plugin-server-entry": "npm:^0.7.15"
+    "@brillout/vite-plugin-server-entry": "npm:^0.7.17"
     cac: "npm:^6.0.0"
     es-module-lexer: "npm:^1.0.0"
     esbuild: "npm:>=0.19.0"
@@ -4881,7 +4881,7 @@ __metadata:
       optional: true
   bin:
     vike: bin.js
-  checksum: 10c0/6bb1fd41b9e1b1a0b44b966cdf3917f1705669bc2ba2b85dc16ab7b32a74c368517b6e51ca6d69401fc7b265101f75dc1183e520c49796da147d0bd3d91ca1d5
+  checksum: 10c0/6c864b95b95c5791c1cb20fb6204e7ec6fdd513657dc4a9688997f267d255b6770ff19bf049648ae093e7ef24f2c67acd756a00dd8748d272666b17032531f08
   languageName: node
   linkType: hard
 
