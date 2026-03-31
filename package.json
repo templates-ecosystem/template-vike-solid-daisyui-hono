@@ -29,7 +29,7 @@
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.2",
     "typescript-eslint": "^8.58.0",
-    "vike": "^0.4.255",
+    "vike": "^0.4.256",
     "vike-photon": "^0.1.26",
     "vike-solid": "^0.8.2",
     "vite": "^7.3.1",
