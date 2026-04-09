@@ -1,17 +1,12 @@
 import type { Config } from 'vike/types'
-import vikePhoton from 'vike-photon/config'
 import vikeSolid from 'vike-solid/config'
 
 export default {
   prerender: false,
   extends: [
-    vikeSolid,
-    vikePhoton
+    vikeSolid
   ],
-  photon: {
-    server: 'server/index.ts',
-    standalone: {
-      bundle: true
-    }
-  }
+  server: process.env.NODE_ENV === 'production'
+    ? 'import:./server/index.ts:default'
+    : 'import:./server/entry.node.ts:default'
 } satisfies Config
