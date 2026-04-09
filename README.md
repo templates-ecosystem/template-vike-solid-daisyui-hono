@@ -28,6 +28,4 @@ yarn dev
 See [Vercel Guide](/vercel/README.VERCEL.md)
 
 ### Issues
-- "Unknown at rule: @property" warning after `yarn build`
-  - https://github.com/saadeghi/daisyui/issues/3882
-  - https://github.com/parcel-bundler/lightningcss/issues/968
+_None_
