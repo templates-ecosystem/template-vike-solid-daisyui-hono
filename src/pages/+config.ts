@@ -7,6 +7,6 @@ export default {
     vikeSolid
   ],
   server: process.env.NODE_ENV === 'production'
-    ? 'import:./server/index.ts:default'
-    : 'import:./server/entry.node.ts:default'
+    ? 'import:../server/index.ts:default'
+    : 'import:../server/+server.ts:default'
 } satisfies Config
