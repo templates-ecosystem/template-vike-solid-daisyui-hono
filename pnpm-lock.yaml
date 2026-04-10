@@ -20,7 +20,7 @@ importers:
         version: 25.5.2
       '@vikejs/hono':
         specifier: ^0.2.0
-        version: 0.2.0(hono@4.12.12)(srvx@0.11.15)(vike@0.4.257(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0)))
+        version: 0.2.0(hono@4.12.12)(srvx@0.11.15)(vike@0.4.257-commit-c6e29ea(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0)))
       '@yarnpkg/sdks':
         specifier: ^3.2.3
         version: 3.2.3(typanion@3.14.0)
@@ -28,11 +28,11 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2
       vike:
-        specifier: ^0.4.257
-        version: 0.4.257(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0))
+        specifier: 0.4.257-commit-c6e29ea
+        version: 0.4.257-commit-c6e29ea(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0))
       vike-solid:
         specifier: ^0.8.2
-        version: 0.8.2(solid-js@1.9.12)(vike@0.4.257(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0)))
+        version: 0.8.2(solid-js@1.9.12)(vike@0.4.257-commit-c6e29ea(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0)))
       vite:
         specifier: ^8.0.8
         version: 8.0.8(@types/node@25.5.2)(esbuild@0.28.0)
@@ -1198,8 +1198,8 @@ packages:
       vike: '>=0.4.250'
       vite-plugin-solid: ^2.11.10
 
-  vike@0.4.257:
-    resolution: {integrity: sha512-B/RoeJfmhqlgP8cfAfNzBzy6eu0riWbL2XyDYhGcp57IW8w7H19gLwAUe0AsBZ1nxHXrhHeSFJkWJVHZw/Ua/g==}
+  vike@0.4.257-commit-c6e29ea:
+    resolution: {integrity: sha512-Yj2zgOXG7NJJNsYK66JIaFuNRaCps0EaWNstR1JEL4chfW1eRQ69rGufeYlB2WIit/mh4fz2R3YLNkRS1CDw2g==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     peerDependencies:
@@ -1754,11 +1754,11 @@ snapshots:
       - hono
       - srvx
 
-  '@vikejs/hono@0.2.0(hono@4.12.12)(srvx@0.11.15)(vike@0.4.257(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0)))':
+  '@vikejs/hono@0.2.0(hono@4.12.12)(srvx@0.11.15)(vike@0.4.257-commit-c6e29ea(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0)))':
     dependencies:
       '@universal-middleware/hono': 0.4.21(hono@4.12.12)(srvx@0.11.15)
       hono: 4.12.12
-      vike: 0.4.257(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0))
+      vike: 0.4.257-commit-c6e29ea(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0))
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
       - '@hattip/core'
@@ -2376,14 +2376,14 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  vike-solid@0.8.2(solid-js@1.9.12)(vike@0.4.257(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0))):
+  vike-solid@0.8.2(solid-js@1.9.12)(vike@0.4.257-commit-c6e29ea(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0))):
     dependencies:
       isbot-fast: 1.2.0
       solid-js: 1.9.12
-      vike: 0.4.257(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0))
+      vike: 0.4.257-commit-c6e29ea(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0))
       vite-plugin-solid: 2.11.12(solid-js@1.9.12)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0))
 
-  vike@0.4.257(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0)):
+  vike@0.4.257-commit-c6e29ea(hono@4.12.12)(srvx@0.11.15)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.28.0)):
     dependencies:
       '@babel/core': 7.29.0
       '@babel/types': 7.29.0

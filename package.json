@@ -19,7 +19,7 @@
     "@vikejs/hono": "^0.2.0",
     "@yarnpkg/sdks": "^3.2.3",
     "typescript": "^6.0.2",
-    "vike": "^0.4.257",
+    "vike": "0.4.257-commit-c6e29ea",
     "vike-solid": "^0.8.2",
     "vite": "^8.0.8",
     "vite-plugin-solid": "^2.11.12"
