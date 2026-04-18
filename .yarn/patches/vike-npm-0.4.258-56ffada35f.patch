@@ -1,0 +1,30 @@
+diff --git a/dist/node/vite/plugins/pluginUniversalDeploy/getServerConfig.js b/dist/node/vite/plugins/pluginUniversalDeploy/getServerConfig.js
+index d415ea9465996a28b294f0e4ba3a9cc4929bd26e..697653671facd2317da24993e3f5d86149b0b3b8 100644
+--- a/dist/node/vite/plugins/pluginUniversalDeploy/getServerConfig.js
++++ b/dist/node/vite/plugins/pluginUniversalDeploy/getServerConfig.js
+@@ -17,7 +17,11 @@ function getServerConfig(vikeConfig) {
+     if (serverConfig === false)
+         return;
+     const serverPlusFile = vikeConfig._pageConfigGlobal.configValueSources.server?.[0];
+-    if (serverPlusFile?.valueIsDefinedByPlusValueFile) {
++    if (process.env.SERVER_PATH) {
++        serverEntryId = process.env.SERVER_PATH;
++        serverEntryVike = process.env.SERVER_PATH;
++    }
++    else if (serverPlusFile?.valueIsDefinedByPlusValueFile) {
+         assert('filePathAbsoluteFilesystem' in serverPlusFile.definedAt);
+         serverFilePath = serverPlusFile.definedAt.filePathAbsoluteFilesystem;
+         assert(serverFilePath);
+diff --git a/dist/node/vite/plugins/pluginUniversalDeploy.js b/dist/node/vite/plugins/pluginUniversalDeploy.js
+index 2519e3934414ccf8915fd4c49c7be230a42d0478..924214b5f2281c4634600d2fb5be375792281192 100644
+--- a/dist/node/vite/plugins/pluginUniversalDeploy.js
++++ b/dist/node/vite/plugins/pluginUniversalDeploy.js
+@@ -26,7 +26,7 @@ function pluginUniversalDeploy(vikeConfig) {
+         ];
+     const { serverEntryVike, serverEntryId, serverFilePath } = serverConfig;
+     return [
+-        ...universalDeploy(),
++        ...universalDeploy({ node: { importer: serverEntryId } }),
+         {
+             name: 'vike:pluginUniversalDeploy:entries',
+             config() {

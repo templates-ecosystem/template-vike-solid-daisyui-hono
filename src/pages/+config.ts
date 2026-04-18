@@ -5,8 +5,5 @@ export default {
   prerender: false,
   extends: [
     vikeSolid
-  ],
-  server: process.env.NODE_ENV === 'production'
-    ? 'import:./+server.index.ts:default'
-    : 'import:./+server.ts:default'
+  ]
 } satisfies Config

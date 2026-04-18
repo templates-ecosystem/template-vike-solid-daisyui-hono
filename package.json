@@ -16,12 +16,13 @@
   },
   "devDependencies": {
     "@types/node": "^25.5.2",
+    "@universal-deploy/node": "patch:@universal-deploy/node@npm%3A0.1.5#~/.yarn/patches/@universal-deploy-node-npm-0.1.5-6df57aef30.patch",
     "@vikejs/hono": "^0.2.0",
     "@yarnpkg/sdks": "^3.2.3",
     "typescript": "^6.0.2",
-    "vike": "0.4.257",
+    "vike": "patch:vike@npm%3A0.4.258#~/.yarn/patches/vike-npm-0.4.258-56ffada35f.patch",
     "vike-solid": "^0.8.2",
-    "vite": "^8.0.8",
+    "vite": "^7.3.1",
     "vite-plugin-solid": "^2.11.12"
   },
   "engines": {
@@ -29,5 +30,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "packageManager": "yarn@4.13.0",
+  "resolutions": {
+    "@universal-deploy/node@npm:^0.1.5": "patch:@universal-deploy/node@npm%3A0.1.5#~/.yarn/patches/@universal-deploy-node-npm-0.1.5-6df57aef30.patch"
+  }
 }
