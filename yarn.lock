@@ -1224,33 +1224,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@universal-deploy/node@npm:0.1.5":
-  version: 0.1.5
-  resolution: "@universal-deploy/node@npm:0.1.5"
+"@universal-deploy/node@npm:^0.1.5":
+  version: 0.1.6
+  resolution: "@universal-deploy/node@npm:0.1.6"
   dependencies:
     "@universal-deploy/store": "npm:^0.2.1"
+    magic-string: "npm:^0.30.21"
     srvx: "npm:^0.11.9"
   peerDependencies:
     vite: ">=7.1"
   peerDependenciesMeta:
     vite:
       optional: true
-  checksum: 10c0/e6d467138dcd85cd4238f050b551ce3e6d6f79fa83071453653ace9a3d9a4b997b2bbd3c02021840b6a3eb05bea6147515d1339d897f031bba83e3f85bc505ef
-  languageName: node
-  linkType: hard
-
-"@universal-deploy/node@patch:@universal-deploy/node@npm%3A0.1.5#~/.yarn/patches/@universal-deploy-node-npm-0.1.5-6df57aef30.patch":
-  version: 0.1.5
-  resolution: "@universal-deploy/node@patch:@universal-deploy/node@npm%3A0.1.5#~/.yarn/patches/@universal-deploy-node-npm-0.1.5-6df57aef30.patch::version=0.1.5&hash=679eaf"
-  dependencies:
-    "@universal-deploy/store": "npm:^0.2.1"
-    srvx: "npm:^0.11.9"
-  peerDependencies:
-    vite: ">=7.1"
-  peerDependenciesMeta:
-    vite:
-      optional: true
-  checksum: 10c0/aa359e5b12f2d8e704c9babebd2a23ce28945f6862313de1c92b43615f27c1559b05e8fdf85599dac0f38bce7c7f0495a7664ee97edf381170fb3703f9a08613
+  checksum: 10c0/2fcabae33a015644c7cb24f2a90e61cf4c10bbd505493bfb1cb5ccf6599974bc9b14343a057ff487748eb55967ebda92632d17412ed8b7fde347adb70de60c34
   languageName: node
   linkType: hard
 
@@ -3315,13 +3301,12 @@ __metadata:
   resolution: "template-vike-solid-daisyui-hono@workspace:."
   dependencies:
     "@types/node": "npm:^25.5.2"
-    "@universal-deploy/node": "patch:@universal-deploy/node@npm%3A0.1.5#~/.yarn/patches/@universal-deploy-node-npm-0.1.5-6df57aef30.patch"
     "@vikejs/hono": "npm:^0.2.0"
     "@yarnpkg/sdks": "npm:^3.2.3"
     hono: "npm:^4.12.12"
     solid-js: "npm:^1.9.12"
     typescript: "npm:^6.0.2"
-    vike: "patch:vike@npm%3A0.4.258#~/.yarn/patches/vike-npm-0.4.258-56ffada35f.patch"
+    vike: "npm:^0.4.258"
     vike-solid: "npm:^0.8.2"
     vite: "npm:^7.3.1"
     vite-plugin-solid: "npm:^2.11.12"
@@ -3463,7 +3448,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vike@npm:0.4.258":
+"vike@npm:^0.4.258":
   version: 0.4.258
   resolution: "vike@npm:0.4.258"
   dependencies:
@@ -3501,47 +3486,6 @@ __metadata:
   bin:
     vike: bin.js
   checksum: 10c0/cf741ea290c84642b78cbda03390fb3119b53ee0ec27249ed656f675e45d0a02f23ffbe6797cbaeebdcedc4644d99cbcd09a6bd46b0cfb7e40fefe06631df5ba
-  languageName: node
-  linkType: hard
-
-"vike@patch:vike@npm%3A0.4.258#~/.yarn/patches/vike-npm-0.4.258-56ffada35f.patch":
-  version: 0.4.258
-  resolution: "vike@patch:vike@npm%3A0.4.258#~/.yarn/patches/vike-npm-0.4.258-56ffada35f.patch::version=0.4.258&hash=521578"
-  dependencies:
-    "@babel/core": "npm:^7.28.5"
-    "@babel/types": "npm:^7.28.5"
-    "@brillout/import": "npm:^0.2.6"
-    "@brillout/json-serializer": "npm:^0.5.22"
-    "@brillout/picocolors": "npm:^1.0.30"
-    "@brillout/vite-plugin-server-entry": "npm:0.7.18"
-    "@universal-deploy/store": "npm:^0.2.1"
-    "@universal-deploy/vite": "npm:^0.1.7"
-    "@universal-middleware/core": "npm:^0.4.17"
-    "@universal-middleware/node": "npm:^0.1.0"
-    cac: "npm:^6.0.0"
-    convert-route: "npm:^1.1.1"
-    es-module-lexer: "npm:^1.0.0"
-    esbuild: "npm:>=0.19.0"
-    json5: "npm:^2.0.0"
-    magic-string: "npm:^0.30.17"
-    picomatch: "npm:^4.0.4"
-    semver: "npm:^7.7.4"
-    sirv: "npm:^3.0.2"
-    source-map-support: "npm:^0.5.0"
-    tinyglobby: "npm:^0.2.16"
-    vite: "npm:>=6.3.0"
-    vite-plugin-wrapper: "npm:^0.1.0"
-  peerDependencies:
-    react-streaming: ">=0.3.42"
-    vite: ">=6.3.0"
-  peerDependenciesMeta:
-    react-streaming:
-      optional: true
-    vite:
-      optional: true
-  bin:
-    vike: bin.js
-  checksum: 10c0/2db7b51bc2ae315f21fc3e7ba33a765a3b0d4bfb7410ff817622fe409a381dc72953a58d2c9ec188f9ec1d7e03d80499ea3a267a79650f2fcdedba503af94c5e
   languageName: node
   linkType: hard
 
