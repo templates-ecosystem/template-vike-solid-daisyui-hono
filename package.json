@@ -19,7 +19,7 @@
     "@vikejs/hono": "^0.2.0",
     "@yarnpkg/sdks": "^3.2.3",
     "standaloner": "^0.2.2",
-    "typescript": "^6.0.2",
+    "typescript": "^6.0.3",
     "vike": "^0.4.258",
     "vike-solid": "^0.8.2",
     "vite": "^7.3.1",
