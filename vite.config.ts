@@ -1,4 +1,4 @@
-import standaloner from 'standaloner/vite'
+// import standaloner from 'standaloner/vite'
 import { plugin as vike } from 'vike/plugin'
 import vikeSolid from 'vike-solid/vite'
 import type { Plugin, UserConfig } from 'vite'
@@ -9,10 +9,10 @@ export default {
   root: 'src',
   cacheDir: '../.vite',
   plugins: [
-    standaloner({
-      bundle: true,
-      minify
-    }),
+    // standaloner({
+    //   bundle: true,
+    //   minify
+    // }),
     vike(),
     vikeSolid(),
     {
