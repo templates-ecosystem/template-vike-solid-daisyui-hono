@@ -3,12 +3,15 @@ import { plugin as vike } from 'vike/plugin'
 import vikeSolid from 'vike-solid/vite'
 import type { UserConfig } from 'vite'
 
+const minify = false
+
 export default {
   root: 'src',
   cacheDir: '../.vite',
   plugins: [
     standaloner({
-      bundle: true
+      bundle: true,
+      minify
     }),
     vike(),
     vikeSolid()
@@ -19,6 +22,7 @@ export default {
   build: {
     target: 'esnext',
     outDir: '../dist',
-    emptyOutDir: true
+    emptyOutDir: true,
+    minify
   }
 } satisfies UserConfig
