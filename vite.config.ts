@@ -11,7 +11,8 @@ export default {
   plugins: [
     standaloner({
       bundle: true,
-      minify
+      minify,
+      external: ['/server/entrypoint.ts']
     }),
     vike(),
     vikeSolid(),
@@ -25,7 +26,7 @@ export default {
               build: {
                 rolldownOptions: {
                   input: {
-                    index: '/server/entrypoint.ts'
+                    entrypoint: '/server/entrypoint.ts'
                   }
                 },
                 minify

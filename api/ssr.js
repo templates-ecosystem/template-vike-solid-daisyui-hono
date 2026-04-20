@@ -1,4 +1,4 @@
-import { app } from '../dist/server/index.mjs'
+import { app } from '../dist/server/entrypoint.mjs'
 
 console.log('App loaded:', typeof app)
 
