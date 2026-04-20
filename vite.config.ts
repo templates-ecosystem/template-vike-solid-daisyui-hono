@@ -23,7 +23,7 @@ export default {
           environments: {
             ssr: {
               build: {
-                rollupOptions: {
+                rolldownOptions: {
                   input: {
                     entrypoint: '/server/entrypoint.ts'
                   }

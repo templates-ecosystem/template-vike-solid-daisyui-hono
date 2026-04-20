@@ -22,7 +22,7 @@
     "typescript": "^6.0.3",
     "vike": "^0.4.258",
     "vike-solid": "^0.8.2",
-    "vite": "^7.3.1",
+    "vite": "^8.0.9",
     "vite-plugin-solid": "^2.11.12"
   },
   "files": [
