@@ -1,5 +1,6 @@
 {
   "outputDirectory": "dist/client",
+  "installCommand": "pnpm i",
   "rewrites": [
     {
       "source": "/((?!assets/).*)",
