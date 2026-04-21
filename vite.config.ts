@@ -10,7 +10,12 @@ export default {
   cacheDir: '../.vite',
   plugins: [
     standaloner({
-      bundle: true,
+      bundle: {
+        isolated: true,
+        input: {
+          entrypoint: '/server/entrypoint.ts'
+        }
+      },
       minify
     }),
     vike(),
