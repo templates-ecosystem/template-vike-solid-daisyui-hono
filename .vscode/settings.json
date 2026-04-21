@@ -15,9 +15,5 @@
     "**/.yarn": true,
     "**/dist": true
   },
-  "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "window.commandCenter": false,
-  "workbench.startupEditor": "none"
+  "terminal.integrated.defaultProfile.windows": "Command Prompt"
 }
