@@ -13,7 +13,7 @@ export default {
       bundle: {
         isolated: true,
         input: {
-          entrypoint: '/server/entrypoint.ts'
+          index: '/server/entrypoint.ts'
         }
       },
       minify
