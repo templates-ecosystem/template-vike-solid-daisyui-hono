@@ -1,88 +1,54 @@
-import { defineConfig, mergeConfig, type Plugin, type UserConfig } from 'vite'
-import solidPlugin, { type Options as SolidOptions } from "vite-plugin-solid";
 import standaloner from 'standaloner/vite'
-
-function overrideConfig(): Plugin {
-  return {
-    name: 'vite-plugin-vike-solid',
-    config: () => ({
-      optimizeDeps: {
-        include: ['solid-js', 'vike-solid/__internal/integration/onRenderClient']
-      }
-    })
-  }
-}
-
-type PluginInterop = Record<string, unknown> & { name: string }
-function solid(options: Partial<SolidOptions> = {}): PluginInterop[] {
-  const plugins: Plugin[] = [
-    solidPlugin(
-      mergeConfig(
-        {
-          ssr: true,
-          typescript: {
-            onlyRemoveTypeImports: true
-          },
-          solid: {
-            hydratable: true
-          },
-        },
-        options ?? {}
-      )
-    ),
-    overrideConfig()
-  ]
-  return plugins as PluginInterop[]
-}
+import { plugin as vike } from 'vike/plugin'
+import vikeSolid from 'vike-solid/vite'
+import type { Plugin, UserConfig } from 'vite'
 
 const minify = false
 
-export default defineConfig({
+export default {
   root: 'src',
   cacheDir: '../.vite',
-  ssr: {
-    noExternal: true
-  },
-  environments: {
-    ssr: {
-      resolve: {
-        noExternal: true
+  plugins: [
+    standaloner({
+      bundle: {
+        isolated: true,
+        input: 'bundle-all-entries-workaround'
       },
-      build: {
-        emptyOutDir: true,
-        outDir: '../dist/server',
-        ssr: true,
-        rolldownOptions: {
-          input: {
-            index: './server/entrypoint.ts'
-          },
-          output: {
-            entryFileNames: '[name].mjs'
+      minify
+    }),
+    vike(),
+    vikeSolid(),
+    {
+      name: "emit-server-entrypoint",
+      apply: "build",
+      config() {
+        return {
+          environments: {
+            ssr: {
+              resolve: {
+                noExternal: true
+              },
+              build: {
+                rolldownOptions: {
+                  input: {
+                    entrypoint: '/server/entrypoint.ts'
+                  }
+                },
+                minify
+              }
+            }
           }
-        },
-        minify
+        }
       }
-    }
+    } as Plugin
+  ],
+  server: {
+    port: 3000
   },
   build: {
     target: 'esnext',
     outDir: '../dist',
     emptyOutDir: true,
     minify
-  },
-  plugins: [
-    solid(),
-    standaloner({
-      bundle: {
-        isolated: true,
-        input: {
-          index: '../dist/server/index.mjs'
-        }
-      },
-      minify
-    })
-  ],
-  server: {
-    port: 3000
   }
-}) satisfies UserConfig
+} satisfies UserConfig
