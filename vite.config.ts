@@ -10,14 +10,15 @@ export default {
   cacheDir: '../.vite',
   plugins: [
     standaloner({
-      bundle: true,
-      minify,
-      external: ['/server/entrypoint.ts']
+      bundle: {
+        isolated: true
+      },
+      minify
     }),
     vike(),
     vikeSolid(),
     {
-      name: "emit-server",
+      name: "emit-server-entrypoint",
       apply: "build",
       config() {
         return {
