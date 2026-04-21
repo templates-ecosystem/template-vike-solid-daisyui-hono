@@ -1,0 +1,71 @@
+diff --git a/dist/bundle.js b/dist/bundle.js
+index a1437fa16db88af5a6ac33f8e1f83058cd518a27..00e7e338d2e046f538f53ea51d912745d59e29da 100644
+--- a/dist/bundle.js
++++ b/dist/bundle.js
+@@ -17,29 +17,28 @@ export const bundle = async (options) => {
+     assert(options.output?.dir, 'No output directory specified');
+     const { cleanup, root, isolated, ...rest } = options;
+     let buildOutput;
+-    // If isolated mode is enabled and input is an object with multiple entries,
+-    // build each entry separately (concurrently, limited by CPU cores)
+-    if (isolated) {
+-        const entries = Object.entries(rest.input);
+-        if (entries.length > 1) {
+-            // Build entries concurrently with limited concurrency to avoid resource contention
+-            // Use half the CPU cores to prevent overwhelming file system and memory
+-            // Using p-limit allows builds to start as soon as a slot is available,
+-            // rather than waiting for all builds in a batch to complete
+-            const concurrency = Math.max(1, Math.ceil(cpus().length / 2));
+-            const limit = pLimit(concurrency);
+-            const results = await Promise.all(entries.map(([name, entryPath]) => limit(async () => {
++    const entries = Object.entries(rest.input);
++
++    const isIsolated = isolated ?? entries.length > 1;
++
++    if (isIsolated && entries.length > 1) {
++        const concurrency = Math.max(1, Math.ceil(cpus().length / 2));
++        const limit = pLimit(concurrency);
++
++        const results = await Promise.all(
++        entries.map(([name, entryPath]) =>
++            limit(async () => {
+                 return await _bundle({
+                     ...options,
+                     isolated: false, // Prevent recursive isolated builds
+                     input: { [name]: entryPath },
+                 });
+-            })));
+-            // Aggregate outputs from all builds
+-            buildOutput = results.flatMap(r => r.output);
+-        }
+-    }
+-    if (!buildOutput) {
++            })
++        )
++        );
++
++        buildOutput = results.flatMap(r => r.output);
++    } else {
+         buildOutput = (await _bundle(options)).output;
+     }
+     // Get output files and files to delete
+@@ -54,6 +53,10 @@ export const _bundle = (options) => {
+     assert(options.input, 'No input specified');
+     assert(options.output?.dir, 'No output directory specified');
+     const { cleanup, root, isolated, ...rest } = options; // Set up plugins
++    const safeOutput = { ...(rest.output || {}) };
++    delete safeOutput.codeSplitting;
++    delete safeOutput.manualChunks;
++    safeOutput.inlineDynamicImports = true;
+     const plugins = [rest.plugins].flat().filter(Boolean);
+     plugins.push(assetRelocatorPlugin({ outputDir: '.static' }));
+     plugins.push(defaultExternalsPlugin(options.external));
+@@ -67,7 +70,7 @@ export const _bundle = (options) => {
+             banner: generateBanner(),
+             entryFileNames: '[name].mjs',
+             chunkFileNames: '[name]-[hash].mjs',
+-            ...(rest.output || {}),
++            ...safeOutput,
+         },
+         experimental: {
+             strictExecutionOrder: true,

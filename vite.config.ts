@@ -10,13 +10,7 @@ export default {
   cacheDir: '../.vite',
   plugins: [
     standaloner({
-      bundle: {
-        isolated: true,
-        input: {
-          index: './dist/server/index.mjs',
-          entrypoint: './dist/server/entrypoint.mts'
-        }
-      },
+      bundle: true,
       minify
     }),
     vike(),
@@ -28,6 +22,9 @@ export default {
         return {
           environments: {
             ssr: {
+              resolve: {
+                noExternal: true
+              },
               build: {
                 rolldownOptions: {
                   input: {
