@@ -11,7 +11,11 @@ export default {
   plugins: [
     standaloner({
       bundle: {
-        isolated: true
+        isolated: true,
+        output: {
+          inlineDynamicImports: true,
+          codeSplitting: undefined
+        }
       },
       minify
     }),
@@ -24,6 +28,9 @@ export default {
         return {
           environments: {
             ssr: {
+              resolve: {
+                noExternal: true
+              },
               build: {
                 rolldownOptions: {
                   input: {
@@ -37,18 +44,10 @@ export default {
         }
       },
       configResolved(config) {
-        const ssrBuild = config.environments?.ssr?.build
-        if (!ssrBuild) return
-        const rolldownOutput = ssrBuild.rolldownOptions?.output
-        const rollupOutput = ssrBuild.rollupOptions?.output
-        if (rolldownOutput) {
-          console.log('rolldownOutput: YES');
-          delete rolldownOutput.codeSplitting
-          delete rolldownOutput.manualChunks
-        }
-        if (rollupOutput) {
-          console.log('rollupOutput: YES');
-          delete rollupOutput.manualChunks
+        const ssrOutput = config.environments?.ssr?.build?.rolldownOptions?.output;
+        if (ssrOutput) {
+          delete ssrOutput.codeSplitting
+          delete ssrOutput.manualChunks
         }
       }
     } as Plugin
