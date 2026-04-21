@@ -54,7 +54,8 @@ export default defineConfig({
           output: {
             entryFileNames: '[name].mjs'
           }
-        }
+        },
+        minify
       }
     }
   },
@@ -73,7 +74,7 @@ export default defineConfig({
           index: '/dist/server/index.mjs'
         }
       },
-      minify: true
+      minify
     })
   ],
   server: {
