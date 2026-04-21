@@ -12,7 +12,10 @@ export default {
     standaloner({
       bundle: {
         isolated: true,
-        input: 'bundle-all-entries-workaround'
+        input: {
+          entrypoint: '../dist/server/entrypoint.mjs',
+          index: '../dist/server/index.mjs'
+        }
       },
       minify
     }),

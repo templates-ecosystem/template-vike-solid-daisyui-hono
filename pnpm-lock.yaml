@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  standaloner@0.2.2:
+    hash: fca821ec6c1c3865553a1be57c68d7fbc398edf5b0aad65e6ca84e63eee0e9b7
+    path: patches/standaloner@0.2.2.patch
+
 importers:
 
   .:
@@ -23,7 +28,7 @@ importers:
         version: 0.2.0(hono@4.12.12)(srvx@0.11.15)(vike@0.4.258(hono@4.12.12)(srvx@0.11.15)(vite@8.0.9(@types/node@25.5.2)(esbuild@0.28.0)))
       standaloner:
         specifier: ^0.2.2
-        version: 0.2.2(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(rollup@4.60.2)
+        version: 0.2.2(patch_hash=fca821ec6c1c3865553a1be57c68d7fbc398edf5b0aad65e6ca84e63eee0e9b7)(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(rollup@4.60.2)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -2358,7 +2363,7 @@ snapshots:
 
   srvx@0.11.15: {}
 
-  standaloner@0.2.2(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(rollup@4.60.2):
+  standaloner@0.2.2(patch_hash=fca821ec6c1c3865553a1be57c68d7fbc398edf5b0aad65e6ca84e63eee0e9b7)(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(rollup@4.60.2):
     dependencies:
       '@vercel/nft': 1.5.0(rollup@4.60.2)
       acorn: 8.16.0
