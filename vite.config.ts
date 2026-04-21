@@ -40,6 +40,9 @@ const minify = false
 export default defineConfig({
   root: 'src',
   cacheDir: '../.vite',
+  ssr: {
+    noExternal: true
+  },
   environments: {
     ssr: {
       resolve: {
@@ -47,9 +50,11 @@ export default defineConfig({
       },
       build: {
         emptyOutDir: true,
+        outDir: '../dist/server',
+        ssr: true,
         rolldownOptions: {
           input: {
-            index: '/server/entrypoint.ts'
+            index: './server/entrypoint.ts'
           },
           output: {
             entryFileNames: '[name].mjs'
@@ -71,7 +76,7 @@ export default defineConfig({
       bundle: {
         isolated: true,
         input: {
-          index: '/dist/server/index.mjs'
+          index: '../dist/server/index.mjs'
         }
       },
       minify
