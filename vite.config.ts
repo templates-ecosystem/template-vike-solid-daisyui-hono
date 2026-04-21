@@ -12,9 +12,9 @@ export default {
     standaloner({
       bundle: {
         isolated: true,
-        output: {
-          inlineDynamicImports: true,
-          codeSplitting: undefined
+        input: {
+          index: './dist/server/index.mjs',
+          entrypoint: './dist/server/entrypoint.mts'
         }
       },
       minify
@@ -28,9 +28,6 @@ export default {
         return {
           environments: {
             ssr: {
-              resolve: {
-                noExternal: true
-              },
               build: {
                 rolldownOptions: {
                   input: {
@@ -41,13 +38,6 @@ export default {
               }
             }
           }
-        }
-      },
-      configResolved(config) {
-        const ssrOutput = config.environments?.ssr?.build?.rolldownOptions?.output;
-        if (ssrOutput) {
-          delete ssrOutput.codeSplitting
-          delete ssrOutput.manualChunks
         }
       }
     } as Plugin
