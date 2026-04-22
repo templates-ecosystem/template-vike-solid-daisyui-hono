@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vike dev",
-    "build": "vite build && pnpm node postBuild.js",
+    "build": "vite build",
     "prod": "NODE_ENV=production node dist/server/index.mjs",
     "lint": "eslint src/**/*.{ts,tsx} *.ts",
     "od": "yarn outdated"
