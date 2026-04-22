@@ -13,9 +13,9 @@ export default {
       bundle: {
         isolated: true,
         input: {
-          entryLibraries: '../dist/server/entryLibraries.mjs',
           entrypoint: '../dist/server/entrypoint.mjs',
-          entry: '../dist/server/entry.mjs'
+          entry: '../dist/server/entry.mjs',
+          index: '../dist/server/index.mjs'
         }
       },
       minify
