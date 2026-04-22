@@ -14,7 +14,7 @@ export default {
         isolated: true,
         input: {
           entrypoint: '../dist/server/entrypoint.mjs',
-          index: '../dist/server/index.mjs'
+          entry: '../dist/server/entry.mjs'
         }
       },
       minify
