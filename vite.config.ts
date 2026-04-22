@@ -13,9 +13,7 @@ export default {
       bundle: {
         isolated: true,
         input: {
-          entrypoint: '../dist/server/entrypoint.mjs',
-          entry: '../dist/server/entry.mjs',
-          index: '../dist/server/index.mjs'
+          entrypoint: '../dist/server/entrypoint.mjs'
         }
       },
       minify
@@ -23,8 +21,8 @@ export default {
     vike(),
     vikeSolid(),
     {
-      name: "emit-server-entrypoint",
-      apply: "build",
+      name: 'emit-server-entrypoint',
+      apply: 'build',
       config() {
         return {
           environments: {

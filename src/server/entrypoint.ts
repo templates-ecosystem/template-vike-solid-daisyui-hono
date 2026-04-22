@@ -1,3 +1,4 @@
+// @ts-ignore
 import 'virtual:vike:global-entry:server'
 export { default as app } from './index'
 
