@@ -27,5 +27,5 @@
   "files": [
     "dist"
   ],
-  "packageManager": "pnpm@10.33.0"
+  "packageManager": "yarn@4.14.1"
 }
