@@ -21,7 +21,7 @@
     "typescript": "^6.0.3",
     "vike": "^0.4.258",
     "vike-solid": "^0.8.2",
-    "vite": "^8.0.9",
+    "vite": "^8.0.10",
     "vite-plugin-solid": "^2.11.12"
   },
   "files": [
