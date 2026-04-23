@@ -1,8 +1,8 @@
 diff --git a/dist/vite.js b/dist/vite.js
-index a21cc9b1b71549950cb81438f1cc27a7c147c758..4a303a7b776bb4e1b7fd7b59124858787153e109 100644
+index a21cc9b1b71549950cb81438f1cc27a7c147c758..64a80e004776a991bebdae732b0aab15d437e535 100644
 --- a/dist/vite.js
 +++ b/dist/vite.js
-@@ -66,12 +66,20 @@ const standaloner = (options = {}) => {
+@@ -66,16 +66,28 @@ const standaloner = (options = {}) => {
                  }
                  if (bundle_) {
                      function getInputOption() {
@@ -27,4 +27,14 @@ index a21cc9b1b71549950cb81438f1cc27a7c147c758..4a303a7b776bb4e1b7fd7b5912485878
 +                        return bundleEntry ? [bundleEntry.outPath] : outPaths;
                      }
                      const bundleOptions = typeof bundle_ === 'object' ? bundle_ : {};
-                     // Input to object, so that entries are written at the same place
+-                    // Input to object, so that entries are written at the same place
+-                    const input = Object.fromEntries(getInputOption().map(e => [removeExtension(pathRelativeTo(e, outDir)), e]));
++                    let input;
++                    if (typeof bundleOptions.input === 'object' && bundleOptions.input !== null && !Array.isArray(bundleOptions.input)) {
++                        input = Object.fromEntries(Object.entries(bundleOptions.input).map(([k, v]) => [k, path.isAbsolute(v) ? v : path.resolve(config.root, v)]));
++                    } else {
++                        input = Object.fromEntries(getInputOption().map(e => [removeExtension(pathRelativeTo(e, outDir)), e]));
++                    }
+                     await bundle({
+                         ...bundleOptions,
+                         input,
