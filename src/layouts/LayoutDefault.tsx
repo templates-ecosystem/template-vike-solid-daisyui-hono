@@ -1,6 +1,7 @@
 import './styles.css'
 
 import type { JSX } from 'solid-js'
+import { usePageContext } from 'vike-solid/usePageContext'
 
 function Content(props: { children: JSX.Element }) {
   return (
@@ -20,6 +21,7 @@ function Content(props: { children: JSX.Element }) {
 }
 
 export function LayoutDefault(props: { children?: JSX.Element }) {
+  const pageContext = usePageContext()
   return (
     <div
       style={{
@@ -29,6 +31,8 @@ export function LayoutDefault(props: { children?: JSX.Element }) {
       }}
     >
       <Content>{props.children}</Content>
+
+      URL Pathname: {pageContext.urlPathname}
     </div>
   )
 }
