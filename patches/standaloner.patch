@@ -1,41 +1,62 @@
+diff --git a/dist/bundle.js b/dist/bundle.js
+index a1437fa16db88af5a6ac33f8e1f83058cd518a27..66de27420581cb5c183cdd02ce31cfdea5c491b5 100644
+--- a/dist/bundle.js
++++ b/dist/bundle.js
+@@ -63,7 +63,7 @@ export const _bundle = (options) => {
+         ...rest,
+         plugins,
+         output: {
+-            inlineDynamicImports: true,
++            codeSplitting: false,
+             banner: generateBanner(),
+             entryFileNames: '[name].mjs',
+             chunkFileNames: '[name]-[hash].mjs',
+diff --git a/dist/index.js b/dist/index.js
+index 14a131eab3c97f3eab56bffb86b2c131e26941a4..dc2902715ed1ce43431e99951cbaa72908bf630a 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -25,7 +25,7 @@ const standaloner = async (options) => {
+     const { outDir, root, inputPaths, baseDir } = resolvePaths(options);
+     const shouldTrace = options.trace ?? true;
+     const plugins = [bundleOptions.plugins].flat().filter(Boolean);
+-    plugins.push(viteTransformPlugin());
++    plugins.push(viteTransformPlugin({ root }));
+     const bundleOutput = options.bundle !== false
+         ? await bundle({
+             ...bundleOptions,
 diff --git a/dist/vite.js b/dist/vite.js
-index a21cc9b1b71549950cb81438f1cc27a7c147c758..64a80e004776a991bebdae732b0aab15d437e535 100644
+index a21cc9b1b71549950cb81438f1cc27a7c147c758..b343f7d58dbf00b016064ec8e77d7f872d3c96ac 100644
 --- a/dist/vite.js
 +++ b/dist/vite.js
-@@ -66,16 +66,28 @@ const standaloner = (options = {}) => {
+@@ -65,17 +65,21 @@ const standaloner = (options = {}) => {
+                     });
                  }
                  if (bundle_) {
-                     function getInputOption() {
+-                    function getInputOption() {
 -                        const bundleEntryName = typeof bundle_ === 'object' && typeof bundle_.input === 'string' ? bundle_.input : typeof bundle_ === 'string' ? bundle_ : 'index';
 -                        const bundleEntry = entries.find(e => e.name === bundleEntryName);
 -                        if (!bundleEntry) {
 -                            return outPaths;
-+                        if (typeof bundle_ === 'object' && !Array.isArray(bundle_) && bundle_.input) {
-+                            const inputOption = bundle_.input;
-+                            if (typeof inputOption === 'string') {
-+                                const bundleEntry = entries.find(e => e.name === inputOption);
-+                                return bundleEntry ? [bundleEntry.outPath] : outPaths;
-+                            } else if (Array.isArray(inputOption)) {
-+                                const matched = entries.filter(e => e.name && inputOption.includes(e.name));
-+                                return matched.length > 0 ? matched.map(e => e.outPath) : outPaths;
-+                            } else if (typeof inputOption === 'object') {
-+                                return Object.values(inputOption).map(p => path.isAbsolute(p) ? p : path.resolve(config.root, p));
-+                            }
-                         }
+-                        }
 -                        return [bundleEntry.outPath];
-+                        const bundleEntryName = typeof bundle_ === 'string' ? bundle_ : 'index';
-+                        const bundleEntry = entries.find(e => e.name === bundleEntryName);
-+                        return bundleEntry ? [bundleEntry.outPath] : outPaths;
++                    const bundleOptions = typeof bundle_ === 'object' && !Array.isArray(bundle_) ? bundle_ : {};
++                    assertUsage(!Array.isArray(bundleOptions.input), '`bundle.input` must be an object ({ name: path }), not an array');
++                    let input;
++                    if (bundleOptions.input) {
++                        // User-provided input map: keep their keys, resolve values against root.
++                        input = Object.fromEntries(
++                        Object.entries(bundleOptions.input).map(([k, v]) => [k, path.resolve(config.root, v)])
++                        );
++                    } else {
++                        // Re-bundle selected Vite entries in place: key by relpath so output lands at original location.
++                        const names = typeof bundle_ === 'string' ? [bundle_] : Array.isArray(bundle_) ? bundle_ : ['index'];
++                        const selected = entries.filter(e => e.name && names.includes(e.name));
++                        const paths = selected.length > 0 ? selected.map(e => e.outPath) : outPaths;
++                        input = Object.fromEntries(paths.map(p => [removeExtension(pathRelativeTo(p, outDir)), p]));
                      }
 -                    const bundleOptions = typeof bundle_ === 'object' ? bundle_ : {};
 -                    // Input to object, so that entries are written at the same place
 -                    const input = Object.fromEntries(getInputOption().map(e => [removeExtension(pathRelativeTo(e, outDir)), e]));
-+                    const bundleOptions = typeof bundle_ === 'object' && !Array.isArray(bundle_) ? bundle_ : {};
-+                    const input = Object.fromEntries(
-+                        typeof bundleOptions.input === 'object' && bundleOptions.input !== null && !Array.isArray(bundleOptions.input)
-+                        ? Object.entries(bundleOptions.input).map(([k, v]) => [k, path.isAbsolute(v) ? v : path.resolve(config.root, v)])
-+                        : getInputOption().map((e) => [removeExtension(pathRelativeTo(e, outDir)), e])
-+                    );
                      await bundle({
                          ...bundleOptions,
                          input,
