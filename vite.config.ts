@@ -52,5 +52,8 @@ export default {
     outDir: '../dist',
     emptyOutDir: true,
     minify
+  },
+  vitePluginServerEntry: {
+    disableAutoImport: true
   }
 } satisfies UserConfig
