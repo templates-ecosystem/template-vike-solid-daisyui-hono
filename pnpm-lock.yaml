@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   standaloner:
-    hash: 72a9bf2985f068b234365d2b8d9b9245da5f29e9535e98e3b4ade56c11438c5a
+    hash: 06de242ae1188cba5f531d1a0175977368492c46e7fb3aad02bf89914ae5d0cd
     path: patches/standaloner.patch
 
 importers:
@@ -28,7 +28,7 @@ importers:
         version: 0.2.0(hono@4.12.14)(srvx@0.11.15)(vike@0.4.258(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))
       standaloner:
         specifier: ^0.2.2
-        version: 0.2.2(patch_hash=72a9bf2985f068b234365d2b8d9b9245da5f29e9535e98e3b4ade56c11438c5a)(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(rollup@4.60.2)
+        version: 0.2.2(patch_hash=06de242ae1188cba5f531d1a0175977368492c46e7fb3aad02bf89914ae5d0cd)(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(rollup@4.60.2)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -2339,7 +2339,7 @@ snapshots:
 
   srvx@0.11.15: {}
 
-  standaloner@0.2.2(patch_hash=72a9bf2985f068b234365d2b8d9b9245da5f29e9535e98e3b4ade56c11438c5a)(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(rollup@4.60.2):
+  standaloner@0.2.2(patch_hash=06de242ae1188cba5f531d1a0175977368492c46e7fb3aad02bf89914ae5d0cd)(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(rollup@4.60.2):
     dependencies:
       '@vercel/nft': 1.5.0(rollup@4.60.2)
       acorn: 8.16.0
