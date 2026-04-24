@@ -1,5 +1,11 @@
 // @ts-ignore
 import 'virtual:vike:global-entry:server'
-export { default as app } from './index'
+import app from './index'
 
-export const MY_SETTING = 'MY_SETTING'
+const MY_SETTING = 'MY_SETTING'
+
+export default {
+  app,
+  MY_SETTING
+}
+

@@ -7,5 +7,6 @@ export default {
   },
   extends: [
     vikeSolid
-  ]
+  ],
+  serverEntrypoint: 'import:../server/entrypoint.ts:default'
 } satisfies Config
