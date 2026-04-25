@@ -1,46 +1,21 @@
 diff --git a/dist/node/vite/plugins/pluginUniversalDeploy.js b/dist/node/vite/plugins/pluginUniversalDeploy.js
-index 2519e3934414ccf8915fd4c49c7be230a42d0478..57adbf302ae69456520c9e7fc9d9dc3733800b57 100644
+index 2519e3934414ccf8915fd4c49c7be230a42d0478..3271a4340192c4b2b9a5e25da64e8417e2f27c4b 100644
 --- a/dist/node/vite/plugins/pluginUniversalDeploy.js
 +++ b/dist/node/vite/plugins/pluginUniversalDeploy.js
-@@ -26,7 +26,7 @@ function pluginUniversalDeploy(vikeConfig) {
+@@ -1,7 +1,7 @@
+ export { pluginUniversalDeploy };
+ import { toRou3 } from 'convert-route';
+ import { addEntry } from '@universal-deploy/store';
+-import universalDeploy, { resolveTargets } from '@universal-deploy/vite';
++import { resolveTargets } from '@universal-deploy/vite';
+ import { pluginServerEntryInject } from './pluginUniversalDeploy/pluginServerEntryInject.js';
+ import { getDeployConfig } from './pluginUniversalDeploy/getDeployConfig.js';
+ import { pluginCommon } from './pluginUniversalDeploy/common.js';
+@@ -26,7 +26,6 @@ function pluginUniversalDeploy(vikeConfig) {
          ];
      const { serverEntryVike, serverEntryId, serverFilePath } = serverConfig;
      return [
 -        ...universalDeploy(),
-+        ...pluginGetServerEntry(),
          {
              name: 'vike:pluginUniversalDeploy:entries',
              config() {
-@@ -57,3 +57,32 @@ function pluginUniversalDeploy(vikeConfig) {
-         !serverFilePath ? null : pluginUnwrapProdOptions(serverFilePath),
-     ].filter((p) => p !== null);
- }
-+
-+function pluginGetServerEntry(vikeConfig) {
-+  if (vikeConfig.buildServerIndex === false) return []
-+  if (vikeConfig.serverEntrypoint) return [
-+    {
-+      name: 'vike:emit-custom-server-entrypoint',
-+      apply: 'build',
-+      config() {
-+        return {
-+          environments: {
-+            ssr: {
-+              resolve: {
-+                noExternal: true
-+              },
-+              build: {
-+                rolldownOptions: {
-+                  input: {
-+                    index: vikeConfig.serverEntrypoint
-+                  }
-+                }
-+              }
-+            }
-+          }
-+        }
-+      }
-+    }
-+  ]
-+  return universalDeploy()
-+}

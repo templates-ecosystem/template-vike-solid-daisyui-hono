@@ -14,7 +14,30 @@ export default {
       minify
     }),
     vike(),
-    vikeSolid()
+    vikeSolid(),
+    {
+      name: 'emit-server-entrypoint',
+      apply: 'build',
+      config() {
+        return {
+          environments: {
+            ssr: {
+              resolve: {
+                noExternal: true
+              },
+              build: {
+                rolldownOptions: {
+                  input: {
+                    index: '/server/entrypoint.ts'
+                  }
+                },
+                minify
+              }
+            }
+          }
+        }
+      }
+    } as Plugin
   ],
   server: {
     port: 3000
