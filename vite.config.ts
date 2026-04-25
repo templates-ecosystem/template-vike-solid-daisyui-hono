@@ -10,7 +10,12 @@ export default {
   cacheDir: '../.vite',
   plugins: [
     standaloner({
-      bundle: true,
+      bundle: {
+        isolated: true,
+        input: {
+          index: '../dist/server/entrypoint.mjs'
+        }
+      },
       minify
     }),
     vike(),
@@ -28,7 +33,7 @@ export default {
               build: {
                 rolldownOptions: {
                   input: {
-                    index: '/server/entrypoint.ts'
+                    entrypoint: '/server/entrypoint.ts'
                   }
                 },
                 minify

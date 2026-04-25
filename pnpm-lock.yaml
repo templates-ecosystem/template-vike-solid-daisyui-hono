@@ -5,9 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
-  vike:
-    hash: f7712783cd426f50ab6514ef01b29b0f930d295bcfc7c78a0a38022046e5de21
-    path: patches/vike.patch
+  standaloner:
+    hash: 06de242ae1188cba5f531d1a0175977368492c46e7fb3aad02bf89914ae5d0cd
+    path: patches/standaloner.patch
 
 importers:
 
@@ -25,19 +25,19 @@ importers:
         version: 25.6.0
       '@vikejs/hono':
         specifier: ^0.2.0
-        version: 0.2.0(hono@4.12.14)(srvx@0.11.15)(vike@0.4.258(patch_hash=f7712783cd426f50ab6514ef01b29b0f930d295bcfc7c78a0a38022046e5de21)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))
+        version: 0.2.0(hono@4.12.14)(srvx@0.11.15)(vike@0.4.258(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))
       standaloner:
         specifier: ^0.2.2
-        version: 0.2.2(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(rollup@4.60.2)
+        version: 0.2.2(patch_hash=06de242ae1188cba5f531d1a0175977368492c46e7fb3aad02bf89914ae5d0cd)(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(rollup@4.60.2)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
       vike:
         specifier: ^0.4.258
-        version: 0.4.258(patch_hash=f7712783cd426f50ab6514ef01b29b0f930d295bcfc7c78a0a38022046e5de21)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
+        version: 0.4.258(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
       vike-solid:
         specifier: ^0.8.2
-        version: 0.8.2(solid-js@1.9.12)(vike@0.4.258(patch_hash=f7712783cd426f50ab6514ef01b29b0f930d295bcfc7c78a0a38022046e5de21)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))
+        version: 0.8.2(solid-js@1.9.12)(vike@0.4.258(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))
       vite:
         specifier: ^8.0.10
         version: 8.0.10(@types/node@25.6.0)(esbuild@0.28.0)
@@ -1933,11 +1933,11 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vikejs/hono@0.2.0(hono@4.12.14)(srvx@0.11.15)(vike@0.4.258(patch_hash=f7712783cd426f50ab6514ef01b29b0f930d295bcfc7c78a0a38022046e5de21)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))':
+  '@vikejs/hono@0.2.0(hono@4.12.14)(srvx@0.11.15)(vike@0.4.258(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))':
     dependencies:
       '@universal-middleware/hono': 0.4.21(hono@4.12.14)(srvx@0.11.15)
       hono: 4.12.14
-      vike: 0.4.258(patch_hash=f7712783cd426f50ab6514ef01b29b0f930d295bcfc7c78a0a38022046e5de21)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
+      vike: 0.4.258(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
       - '@hattip/core'
@@ -2339,7 +2339,7 @@ snapshots:
 
   srvx@0.11.15: {}
 
-  standaloner@0.2.2(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(rollup@4.60.2):
+  standaloner@0.2.2(patch_hash=06de242ae1188cba5f531d1a0175977368492c46e7fb3aad02bf89914ae5d0cd)(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(rollup@4.60.2):
     dependencies:
       '@vercel/nft': 1.5.0(rollup@4.60.2)
       acorn: 8.16.0
@@ -2394,14 +2394,14 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  vike-solid@0.8.2(solid-js@1.9.12)(vike@0.4.258(patch_hash=f7712783cd426f50ab6514ef01b29b0f930d295bcfc7c78a0a38022046e5de21)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))):
+  vike-solid@0.8.2(solid-js@1.9.12)(vike@0.4.258(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))):
     dependencies:
       isbot-fast: 1.2.0
       solid-js: 1.9.12
-      vike: 0.4.258(patch_hash=f7712783cd426f50ab6514ef01b29b0f930d295bcfc7c78a0a38022046e5de21)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
+      vike: 0.4.258(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
       vite-plugin-solid: 2.11.12(solid-js@1.9.12)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
 
-  vike@0.4.258(patch_hash=f7712783cd426f50ab6514ef01b29b0f930d295bcfc7c78a0a38022046e5de21)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)):
+  vike@0.4.258(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)):
     dependencies:
       '@babel/core': 7.29.0
       '@babel/types': 7.29.0

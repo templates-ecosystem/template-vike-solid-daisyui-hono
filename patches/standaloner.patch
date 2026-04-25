@@ -1,0 +1,41 @@
+diff --git a/dist/vite.js b/dist/vite.js
+index a21cc9b1b71549950cb81438f1cc27a7c147c758..64a80e004776a991bebdae732b0aab15d437e535 100644
+--- a/dist/vite.js
++++ b/dist/vite.js
+@@ -66,16 +66,28 @@ const standaloner = (options = {}) => {
+                 }
+                 if (bundle_) {
+                     function getInputOption() {
+-                        const bundleEntryName = typeof bundle_ === 'object' && typeof bundle_.input === 'string' ? bundle_.input : typeof bundle_ === 'string' ? bundle_ : 'index';
+-                        const bundleEntry = entries.find(e => e.name === bundleEntryName);
+-                        if (!bundleEntry) {
+-                            return outPaths;
++                        if (typeof bundle_ === 'object' && !Array.isArray(bundle_) && bundle_.input) {
++                            const inputOption = bundle_.input;
++                            if (typeof inputOption === 'string') {
++                                const bundleEntry = entries.find(e => e.name === inputOption);
++                                return bundleEntry ? [bundleEntry.outPath] : outPaths;
++                            } else if (Array.isArray(inputOption)) {
++                                const matched = entries.filter(e => e.name && inputOption.includes(e.name));
++                                return matched.length > 0 ? matched.map(e => e.outPath) : outPaths;
++                            } else if (typeof inputOption === 'object') {
++                                return Object.values(inputOption).map(p => path.isAbsolute(p) ? p : path.resolve(config.root, p));
++                            }
+                         }
+-                        return [bundleEntry.outPath];
++                        const bundleEntryName = typeof bundle_ === 'string' ? bundle_ : 'index';
++                        const bundleEntry = entries.find(e => e.name === bundleEntryName);
++                        return bundleEntry ? [bundleEntry.outPath] : outPaths;
+                     }
+-                    const bundleOptions = typeof bundle_ === 'object' ? bundle_ : {};
+-                    // Input to object, so that entries are written at the same place
+-                    const input = Object.fromEntries(getInputOption().map(e => [removeExtension(pathRelativeTo(e, outDir)), e]));
++                    const bundleOptions = typeof bundle_ === 'object' && !Array.isArray(bundle_) ? bundle_ : {};
++                    const input = Object.fromEntries(
++                        typeof bundleOptions.input === 'object' && bundleOptions.input !== null && !Array.isArray(bundleOptions.input)
++                        ? Object.entries(bundleOptions.input).map(([k, v]) => [k, path.isAbsolute(v) ? v : path.resolve(config.root, v)])
++                        : getInputOption().map((e) => [removeExtension(pathRelativeTo(e, outDir)), e])
++                    );
+                     await bundle({
+                         ...bundleOptions,
+                         input,
