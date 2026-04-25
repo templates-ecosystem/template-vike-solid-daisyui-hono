@@ -17,7 +17,7 @@
   "devDependencies": {
     "@types/node": "^25.6.0",
     "@vikejs/hono": "^0.2.0",
-    "standaloner": "^0.2.2",
+    "standaloner": "^0.3.0",
     "typescript": "^6.0.3",
     "vike": "^0.4.258",
     "vike-solid": "^0.8.2",
