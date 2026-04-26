@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  standaloner:
-    hash: c30afec0d1e9688610a6a8ca1c8fc5fe306dd4380bb000ec737d44c5ceacc01f
-    path: patches/standaloner.patch
-
 importers:
 
   .:
@@ -28,7 +23,7 @@ importers:
         version: 0.2.0(hono@4.12.14)(srvx@0.11.15)(vike@0.4.258(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))
       standaloner:
         specifier: ^0.3.0
-        version: 0.3.0(patch_hash=c30afec0d1e9688610a6a8ca1c8fc5fe306dd4380bb000ec737d44c5ceacc01f)(rollup@4.60.2)
+        version: 0.3.0(rollup@4.60.2)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -2372,7 +2367,7 @@ snapshots:
 
   srvx@0.11.15: {}
 
-  standaloner@0.3.0(patch_hash=c30afec0d1e9688610a6a8ca1c8fc5fe306dd4380bb000ec737d44c5ceacc01f)(rollup@4.60.2):
+  standaloner@0.3.0(rollup@4.60.2):
     dependencies:
       '@vercel/nft': 1.5.0(rollup@4.60.2)
       acorn: 8.16.0
