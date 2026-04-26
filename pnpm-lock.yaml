@@ -17,8 +17,8 @@ importers:
   .:
     dependencies:
       hono:
-        specifier: ^4.12.14
-        version: 4.12.14
+        specifier: ^4.12.15
+        version: 4.12.15
       solid-js:
         specifier: ^1.9.12
         version: 1.9.12
@@ -28,7 +28,7 @@ importers:
         version: 25.6.0
       '@vikejs/hono':
         specifier: ^0.2.0
-        version: 0.2.0(hono@4.12.14)(srvx@0.11.15)(vike@0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))
+        version: 0.2.0(hono@4.12.15)(srvx@0.11.15)(vike@0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.15)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))
       standaloner:
         specifier: ^0.3.0
         version: 0.3.0(rollup@4.60.2)
@@ -37,10 +37,10 @@ importers:
         version: 6.0.3
       vike:
         specifier: ^0.4.258
-        version: 0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
+        version: 0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.15)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
       vike-solid:
         specifier: ^0.8.2
-        version: 0.8.2(solid-js@1.9.12)(vike@0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))
+        version: 0.8.2(solid-js@1.9.12)(vike@0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.15)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))
       vite:
         specifier: ^8.0.10
         version: 8.0.10(@types/node@25.6.0)(esbuild@0.28.0)
@@ -948,8 +948,8 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
-  hono@4.12.14:
-    resolution: {integrity: sha512-am5zfg3yu6sqn5yjKBNqhnTX7Cv+m00ox+7jbaKkrLMRJ4rAdldd1xPd/JzbBWspqaQv6RSTrgFN95EsfhC+7w==}
+  hono@4.12.15:
+    resolution: {integrity: sha512-qM0jDhFEaCBb4TxoW7f53Qrpv9RBiayUHo0S52JudprkhvpjIrGoU1mnnr29Fvd1U335ZFPZQY1wlkqgfGXyLg==}
     engines: {node: '>=16.9.0'}
 
   html-entities@2.3.3:
@@ -1880,12 +1880,12 @@ snapshots:
     optionalDependencies:
       srvx: 0.11.15
 
-  '@universal-deploy/vite@0.1.7(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))':
+  '@universal-deploy/vite@0.1.7(hono@4.12.15)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))':
     dependencies:
       '@universal-deploy/netlify': 0.2.2(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
       '@universal-deploy/node': 0.1.5(patch_hash=2082975a49960717a18eb51bd9ff3c23050ecc82dcfb0d6fc555ed21f762411b)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
       '@universal-deploy/store': 0.2.1(srvx@0.11.15)
-      '@universal-middleware/express': 0.4.26(hono@4.12.14)(srvx@0.11.15)
+      '@universal-middleware/express': 0.4.26(hono@4.12.15)(srvx@0.11.15)
       magic-string: 0.30.21
       rou3: 0.8.1
     optionalDependencies:
@@ -1901,18 +1901,18 @@ snapshots:
       - hono
       - srvx
 
-  '@universal-middleware/core@0.4.17(hono@4.12.14)(srvx@0.11.15)':
+  '@universal-middleware/core@0.4.17(hono@4.12.15)(srvx@0.11.15)':
     dependencies:
       regexparam: 3.0.0
       tough-cookie: 6.0.1
     optionalDependencies:
-      hono: 4.12.14
+      hono: 4.12.15
       srvx: 0.11.15
 
-  '@universal-middleware/express@0.4.26(hono@4.12.14)(srvx@0.11.15)':
+  '@universal-middleware/express@0.4.26(hono@4.12.15)(srvx@0.11.15)':
     dependencies:
-      '@universal-middleware/core': 0.4.17(hono@4.12.14)(srvx@0.11.15)
-      '@universal-middleware/node': 0.1.0(hono@4.12.14)(srvx@0.11.15)
+      '@universal-middleware/core': 0.4.17(hono@4.12.15)(srvx@0.11.15)
+      '@universal-middleware/node': 0.1.0(hono@4.12.15)(srvx@0.11.15)
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
       - '@hattip/core'
@@ -1924,9 +1924,9 @@ snapshots:
       - hono
       - srvx
 
-  '@universal-middleware/hono@0.4.21(hono@4.12.14)(srvx@0.11.15)':
+  '@universal-middleware/hono@0.4.21(hono@4.12.15)(srvx@0.11.15)':
     dependencies:
-      '@universal-middleware/core': 0.4.17(hono@4.12.14)(srvx@0.11.15)
+      '@universal-middleware/core': 0.4.17(hono@4.12.15)(srvx@0.11.15)
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
       - '@hattip/core'
@@ -1938,9 +1938,9 @@ snapshots:
       - hono
       - srvx
 
-  '@universal-middleware/node@0.1.0(hono@4.12.14)(srvx@0.11.15)':
+  '@universal-middleware/node@0.1.0(hono@4.12.15)(srvx@0.11.15)':
     dependencies:
-      '@universal-middleware/core': 0.4.17(hono@4.12.14)(srvx@0.11.15)
+      '@universal-middleware/core': 0.4.17(hono@4.12.15)(srvx@0.11.15)
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
       - '@hattip/core'
@@ -1971,11 +1971,11 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vikejs/hono@0.2.0(hono@4.12.14)(srvx@0.11.15)(vike@0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))':
+  '@vikejs/hono@0.2.0(hono@4.12.15)(srvx@0.11.15)(vike@0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.15)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))':
     dependencies:
-      '@universal-middleware/hono': 0.4.21(hono@4.12.14)(srvx@0.11.15)
-      hono: 4.12.14
-      vike: 0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
+      '@universal-middleware/hono': 0.4.21(hono@4.12.15)(srvx@0.11.15)
+      hono: 4.12.15
+      vike: 0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.15)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
       - '@hattip/core'
@@ -2118,7 +2118,7 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  hono@4.12.14: {}
+  hono@4.12.15: {}
 
   html-entities@2.3.3: {}
 
@@ -2428,14 +2428,14 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  vike-solid@0.8.2(solid-js@1.9.12)(vike@0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))):
+  vike-solid@0.8.2(solid-js@1.9.12)(vike@0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.15)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))):
     dependencies:
       isbot-fast: 1.2.0
       solid-js: 1.9.12
-      vike: 0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
+      vike: 0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.15)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
       vite-plugin-solid: 2.11.12(solid-js@1.9.12)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
 
-  vike@0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)):
+  vike@0.4.258(patch_hash=5f5a902177127fcaea1b472534f4678e9ae840642a67305761c2a7cee2f6fc7d)(hono@4.12.15)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0)):
     dependencies:
       '@babel/core': 7.29.0
       '@babel/types': 7.29.0
@@ -2444,9 +2444,9 @@ snapshots:
       '@brillout/picocolors': 1.0.30
       '@brillout/vite-plugin-server-entry': 0.7.18
       '@universal-deploy/store': 0.2.1(srvx@0.11.15)
-      '@universal-deploy/vite': 0.1.7(hono@4.12.14)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
-      '@universal-middleware/core': 0.4.17(hono@4.12.14)(srvx@0.11.15)
-      '@universal-middleware/node': 0.1.0(hono@4.12.14)(srvx@0.11.15)
+      '@universal-deploy/vite': 0.1.7(hono@4.12.15)(srvx@0.11.15)(vite@8.0.10(@types/node@25.6.0)(esbuild@0.28.0))
+      '@universal-middleware/core': 0.4.17(hono@4.12.15)(srvx@0.11.15)
+      '@universal-middleware/node': 0.1.0(hono@4.12.15)(srvx@0.11.15)
       cac: 6.7.14
       convert-route: 1.1.1
       es-module-lexer: 1.7.0
