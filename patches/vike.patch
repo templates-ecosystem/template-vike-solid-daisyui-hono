@@ -1,0 +1,13 @@
+diff --git a/dist/node/vite/plugins/pluginUniversalDeploy.js b/dist/node/vite/plugins/pluginUniversalDeploy.js
+index 2519e3934414ccf8915fd4c49c7be230a42d0478..29af445dde0068f15d503e1ac0c6ba18c25e3682 100644
+--- a/dist/node/vite/plugins/pluginUniversalDeploy.js
++++ b/dist/node/vite/plugins/pluginUniversalDeploy.js
+@@ -26,7 +26,7 @@ function pluginUniversalDeploy(vikeConfig) {
+         ];
+     const { serverEntryVike, serverEntryId, serverFilePath } = serverConfig;
+     return [
+-        ...universalDeploy(),
++        ...universalDeploy({ node: { importer: './server/entrypoint.ts' } }),
+         {
+             name: 'vike:pluginUniversalDeploy:entries',
+             config() {

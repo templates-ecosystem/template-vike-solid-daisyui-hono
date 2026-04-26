@@ -1,0 +1,16 @@
+diff --git a/dist/vite.js b/dist/vite.js
+index 227da93da8d2f229630abdd1719c5caf70bf7501..276e8cac37d71950682dcb36cb8cc87c88ae4866 100644
+--- a/dist/vite.js
++++ b/dist/vite.js
+@@ -16,9 +16,8 @@ function node(options) {
+ 			resolveId: {
+ 				filter: { id: re_udNode },
+ 				async handler(id, importer) {
+-					let importerResolvedId;
+-					if (options?.importer) importerResolvedId = (await this.resolve(options.importer))?.id;
+-					const resolved = await this.resolve("@universal-deploy/node/serve", importerResolvedId ?? importer);
++					let resolved;
++					if (options?.importer) resolved = await this.resolve(options.importer, importer);
+ 					if (!resolved) try {
+ 						return { id: createRequire(import.meta.url).resolve("@universal-deploy/node/serve") };
+ 					} catch {

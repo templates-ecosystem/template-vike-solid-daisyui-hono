@@ -1,7 +1,7 @@
 import standaloner from 'standaloner/vite'
 import { plugin as vike } from 'vike/plugin'
 import vikeSolid from 'vike-solid/vite'
-import type { Plugin, UserConfig } from 'vite'
+import type { UserConfig } from 'vite'
 
 const minify = false
 
@@ -10,39 +10,11 @@ export default {
   cacheDir: '../.vite',
   plugins: [
     standaloner({
-      bundle: {
-        isolated: true,
-        input: {
-          index: '../dist/server/entrypoint.mjs'
-        }
-      },
+      bundle: true,
       minify
     }),
     vike(),
-    vikeSolid(),
-    {
-      name: 'emit-server-entrypoint',
-      apply: 'build',
-      config() {
-        return {
-          environments: {
-            ssr: {
-              resolve: {
-                noExternal: true
-              },
-              build: {
-                rolldownOptions: {
-                  input: {
-                    entrypoint: '/server/entrypoint.ts'
-                  }
-                },
-                minify
-              }
-            }
-          }
-        }
-      }
-    } as Plugin
+    vikeSolid()
   ],
   server: {
     port: 3000
