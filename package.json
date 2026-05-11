@@ -11,17 +11,17 @@
     "od": "yarn outdated"
   },
   "dependencies": {
-    "hono": "^4.12.15",
+    "hono": "^4.12.18",
     "solid-js": "^1.9.12"
   },
   "devDependencies": {
-    "@types/node": "^25.6.0",
+    "@types/node": "^25.6.2",
     "@vikejs/hono": "^0.2.0",
     "standaloner": "^0.3.0",
     "typescript": "^6.0.3",
-    "vike": "^0.4.258",
+    "vike": "^0.4.259",
     "vike-solid": "^0.8.2",
-    "vite": "^8.0.10",
+    "vite": "^8.0.12",
     "vite-plugin-solid": "^2.11.12"
   },
   "files": [
