@@ -13,42 +13,44 @@ export default {
   root: 'src',
   cacheDir: '../.vite',
   plugins: [
-    ...NODE_ENV === 'production' ? [{
-      name: 'emit-server-entrypoint',
-      apply: 'build',
-      enforce: 'post',
-      config() {
-        return {
-          environments: {
-            ssr: {
-              resolve: {
-                noExternal: true
-              },
-              build: {
-                rolldownOptions: {
-                  input: {
-                    index: '/server/entrypoint.ts'
+    ...NODE_ENV === 'production' ? [
+      standaloner({
+        bundle: {
+          input: {
+            index: '../dist/server/index.mjs'
+          }
+        },
+        minify
+      }),
+      {
+        name: 'emit-server-entrypoint',
+        apply: 'build',
+        enforce: 'post',
+        config() {
+          return {
+            environments: {
+              ssr: {
+                resolve: {
+                  noExternal: true
+                },
+                build: {
+                  rolldownOptions: {
+                    input: {
+                      index: 'server/entrypoint.ts'
+                    }
                   }
                 }
               }
             }
           }
         }
-      }
-    } as Plugin] : [devServer({
+      } as Plugin
+    ] : [devServer({
       entry: 'server/dev-entrypoint.ts',
       // Can conflit the Vike's HMR, so avoid injecting the default Vite client script
       // since Hono's dev server already handles HMR and live reload functionality
       injectClientScript: false
     })],
-    standaloner({
-      bundle: {
-        input: {
-          index: '../dist/server/index.mjs'
-        }
-      },
-      minify
-    }),
     vike(),
     vikeSolid()
   ],
