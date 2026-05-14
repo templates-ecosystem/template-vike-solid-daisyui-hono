@@ -16,6 +16,7 @@ export default {
     ...NODE_ENV === 'production' ? [{
       name: 'emit-server-entrypoint',
       apply: 'build',
+      enforce: 'post',
       config() {
         return {
           environments: {
