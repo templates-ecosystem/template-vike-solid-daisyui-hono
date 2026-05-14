@@ -15,11 +15,7 @@ export default {
   plugins: [
     ...NODE_ENV === 'production' ? [
       standaloner({
-        bundle: {
-          input: {
-            index: '../dist/server/index.mjs'
-          }
-        },
+        bundle: true,
         minify
       }),
       {
