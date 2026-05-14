@@ -4,14 +4,19 @@ import { plugin as vike } from 'vike/plugin'
 import vikeSolid from 'vike-solid/vite'
 import type { UserConfig } from 'vite'
 
+const { NODE_ENV, PORT } = process.env
+
+const port = PORT ? parseInt(PORT) : 3000
 const minify = false
 
 export default {
   root: 'src',
   cacheDir: '../.vite',
   plugins: [
-    ...process.env.NODE_ENV === 'production' ? [] : [devServer({
+    ...NODE_ENV === 'production' ? [] : [devServer({
       entry: 'server/dev-entrypoint.ts',
+      // Can conflit the Vike's HMR, so avoid injecting the default Vite client script
+      // since Hono's dev server already handles HMR and live reload functionality
       injectClientScript: false
     })],
     standaloner({
@@ -48,7 +53,7 @@ export default {
     }
   ],
   server: {
-    port: 3000
+    port
   },
   build: {
     target: 'esnext',
