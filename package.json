@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vike dev",
-    "build": "vike build && pnpm node scripts/postBuild.js",
+    "build": "vike build && node scripts/postBuild.js",
     "prod": "NODE_ENV=production node dist/server/index.mjs",
     "lint": "eslint src/**/*.{ts,tsx} *.ts",
     "depatch": "node scripts/patcher.js",
-    "od": "yarn outdated"
+    "od": "pnpm outdated"
   },
   "dependencies": {
     "hono": "^4.12.18",
