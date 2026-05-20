@@ -1,13 +1,43 @@
 diff --git a/dist/node/vite/plugins/pluginUniversalDeploy.js b/dist/node/vite/plugins/pluginUniversalDeploy.js
-index 2519e3934414ccf8915fd4c49c7be230a42d0478..a8cb5567ff991be9da48875f2612f0de97f85c70 100644
+index 2519e3934414ccf8915fd4c49c7be230a42d0478..9cd389f2ebcaf089ade3d8522cdbfc93d38e4768 100644
 --- a/dist/node/vite/plugins/pluginUniversalDeploy.js
 +++ b/dist/node/vite/plugins/pluginUniversalDeploy.js
-@@ -26,7 +26,7 @@ function pluginUniversalDeploy(vikeConfig) {
-         ];
+@@ -27,6 +27,38 @@ function pluginUniversalDeploy(vikeConfig) {
      const { serverEntryVike, serverEntryId, serverFilePath } = serverConfig;
      return [
--        ...universalDeploy(),
-+        ...universalDeploy({ node: { serverEntrypoint: './src/server/entrypoint.ts' } }),
+         ...universalDeploy(),
++        {
++            name: "ud:target:emit",
++            apply: "build",
++            config: {
++                order: "post",
++                handler() {
++                    const buildEnvOptions = {};
++                    if (this.meta.rolldownVersion) {
++                        buildEnvOptions.rolldownOptions = {
++                            input: {
++                                index: './src/server/entrypoint.ts',
++                            },
++                        };
++                    } else {
++                        buildEnvOptions.rollupOptions = {
++                            input: {
++                                index: './src/server/entrypoint.ts',
++                            },
++                        };
++                    }
++                    return {
++                        environments: {
++                            ssr: {
++                                build: {
++                                    ...buildEnvOptions,
++                                },
++                            },
++                        },
++                    };
++                },
++            },
++        },
          {
              name: 'vike:pluginUniversalDeploy:entries',
              config() {
