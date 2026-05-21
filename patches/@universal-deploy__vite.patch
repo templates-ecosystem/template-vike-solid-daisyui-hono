@@ -1,0 +1,22 @@
+diff --git a/dist/index.js b/dist/index.js
+index 14f80545c97fc416de930971f4a017f97f09deb7..c21304469b9d81cf41dc582110430c0eef3d86d4 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -125,7 +125,16 @@ function auto(options) {
+ 			p[INSTANCE] = instance;
+ 			return enablePluginIf((config) => noDeploymentTargetFound(p, config), p);
+ 		}),
+-		...netlifyGlue()
++		{
++			name: "ud:target:emit",
++			apply: "build",
++			config: {
++				order: "post",
++				handler() {
++					return { environments: { ssr: { build: { rolldownOptions: { input: { index: './src/server/entrypoint.ts' } } } } } }
++				}
++			}
++		}
+ 	];
+ }
+ 
