@@ -8,6 +8,9 @@ patchedDependencies:
   '@universal-deploy/vite':
     hash: f74d5f229043dd850392e08be062a16c1d06ca5000149e81d3e580538b73f0b6
     path: patches/@universal-deploy__vite.patch
+  vike:
+    hash: 14e7a153349556451b2c71b91b40eae0bb742c8ed5545c421992dcd645c7426b
+    path: patches/vike.patch
 
 importers:
 
@@ -25,7 +28,7 @@ importers:
         version: 25.9.1
       '@vikejs/hono':
         specifier: ^0.2.0
-        version: 0.2.0(hono@4.12.21)(srvx@0.11.15)(vike@0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))
+        version: 0.2.0(hono@4.12.21)(srvx@0.11.15)(vike@0.4.259(patch_hash=14e7a153349556451b2c71b91b40eae0bb742c8ed5545c421992dcd645c7426b)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))
       depatcher:
         specifier: ^0.0.10
         version: 0.0.10
@@ -37,10 +40,10 @@ importers:
         version: 6.0.3
       vike:
         specifier: ^0.4.259
-        version: 0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
+        version: 0.4.259(patch_hash=14e7a153349556451b2c71b91b40eae0bb742c8ed5545c421992dcd645c7426b)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
       vike-solid:
         specifier: ^0.8.2
-        version: 0.8.2(solid-js@1.9.13)(vike@0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.13)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))
+        version: 0.8.2(solid-js@1.9.13)(vike@0.4.259(patch_hash=14e7a153349556451b2c71b91b40eae0bb742c8ed5545c421992dcd645c7426b)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.13)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))
       vite:
         specifier: ^8.0.14
         version: 8.0.14(@types/node@25.9.1)(esbuild@0.28.0)
@@ -1979,11 +1982,11 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vikejs/hono@0.2.0(hono@4.12.21)(srvx@0.11.15)(vike@0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))':
+  '@vikejs/hono@0.2.0(hono@4.12.21)(srvx@0.11.15)(vike@0.4.259(patch_hash=14e7a153349556451b2c71b91b40eae0bb742c8ed5545c421992dcd645c7426b)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))':
     dependencies:
       '@universal-middleware/hono': 0.4.21(hono@4.12.21)(srvx@0.11.15)
       hono: 4.12.21
-      vike: 0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
+      vike: 0.4.259(patch_hash=14e7a153349556451b2c71b91b40eae0bb742c8ed5545c421992dcd645c7426b)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
       - '@hattip/core'
@@ -2442,14 +2445,14 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  vike-solid@0.8.2(solid-js@1.9.13)(vike@0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.13)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))):
+  vike-solid@0.8.2(solid-js@1.9.13)(vike@0.4.259(patch_hash=14e7a153349556451b2c71b91b40eae0bb742c8ed5545c421992dcd645c7426b)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.13)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))):
     dependencies:
       isbot-fast: 1.2.0
       solid-js: 1.9.13
-      vike: 0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
+      vike: 0.4.259(patch_hash=14e7a153349556451b2c71b91b40eae0bb742c8ed5545c421992dcd645c7426b)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
       vite-plugin-solid: 2.11.12(solid-js@1.9.13)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
 
-  vike@0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)):
+  vike@0.4.259(patch_hash=14e7a153349556451b2c71b91b40eae0bb742c8ed5545c421992dcd645c7426b)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)):
     dependencies:
       '@babel/core': 7.29.0
       '@babel/types': 7.29.0

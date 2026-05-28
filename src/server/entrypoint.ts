@@ -1,6 +1,3 @@
-// @ts-ignore
-import 'virtual:ud:catch-all'
-
 import vike from '@vikejs/hono'
 import { Hono } from 'hono'
 
