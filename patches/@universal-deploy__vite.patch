@@ -1,8 +1,8 @@
 diff --git a/dist/index.js b/dist/index.js
-index 14f80545c97fc416de930971f4a017f97f09deb7..766deeee5edcd3b45a6721fde814f904c74ef3e3 100644
+index 14f80545c97fc416de930971f4a017f97f09deb7..ed6cee3665d2b202ece14f143b8e2e24db7e2a58 100644
 --- a/dist/index.js
 +++ b/dist/index.js
-@@ -121,11 +121,16 @@ function auto(options) {
+@@ -121,11 +121,26 @@ function auto(options) {
  	return [
  		catchAll(),
  		devServer(),
@@ -17,7 +17,17 @@ index 14f80545c97fc416de930971f4a017f97f09deb7..766deeee5edcd3b45a6721fde814f904
 +			config: {
 +				order: "post",
 +				handler() {
-+					return { environments: { ssr: { build: { rolldownOptions: { input: { index: './src/server/entrypoint.ts' } } } } } }
++					return { environments: { ssr: { build: { rolldownOptions: { input: { index: options.entry } } } } } }
++				}
++			},
++			transform(code, id) {
++				if (resolvedEntry && id === resolvedEntry) {
++					const s = new MagicString(code)
++					s.prepend(`import "virtual:ud:catch-all";\n`)
++					return {
++						code: s.toString(),
++						map: s.generateMap({ hires: true })
++					}
 +				}
 +			}
 +		}

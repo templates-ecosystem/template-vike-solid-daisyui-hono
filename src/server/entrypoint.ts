@@ -1,6 +1,3 @@
-// @ts-ignore
-import 'virtual:vike:global-entry:server'
-
 import vike from '@vikejs/hono'
 import { Hono } from 'hono'
 
