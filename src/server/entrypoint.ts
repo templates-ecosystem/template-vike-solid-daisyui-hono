@@ -1,5 +1,5 @@
 // @ts-ignore
-import 'virtual:ud:catch-all'
+import 'virtual:vike:global-entry:server'
 
 export { default } from './index'
 
