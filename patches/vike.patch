@@ -1,5 +1,5 @@
 diff --git a/dist/node/vite/plugins/pluginUniversalDeploy/getServerConfig.js b/dist/node/vite/plugins/pluginUniversalDeploy/getServerConfig.js
-index d415ea9465996a28b294f0e4ba3a9cc4929bd26e..eb0ce77c7961935217bb73f58352d6336f124b76 100644
+index d415ea9465996a28b294f0e4ba3a9cc4929bd26e..a3a08c01e1792664d358752255573fa3f7df9b4d 100644
 --- a/dist/node/vite/plugins/pluginUniversalDeploy/getServerConfig.js
 +++ b/dist/node/vite/plugins/pluginUniversalDeploy/getServerConfig.js
 @@ -1,3 +1,4 @@
@@ -15,20 +15,22 @@ index d415ea9465996a28b294f0e4ba3a9cc4929bd26e..eb0ce77c7961935217bb73f58352d633
      // universal-deploy support must be manually enabled
      const serverConfig = 
      // +config.js > `export default { server: true }`
-@@ -21,8 +23,10 @@ function getServerConfig(vikeConfig) {
+@@ -21,8 +23,12 @@ function getServerConfig(vikeConfig) {
          assert('filePathAbsoluteFilesystem' in serverPlusFile.definedAt);
          serverFilePath = serverPlusFile.definedAt.filePathAbsoluteFilesystem;
          assert(serverFilePath);
 -        serverEntryId = serverFilePath;
 -        serverEntryVike = serverFilePath;
-+        const entry = serverPlusFile.valueIsLoaded && serverPlusFile.value && typeof serverPlusFile.value === 'object' ? serverPlusFile.value.entry : undefined;
-+        isServerEntry = typeof entry === 'string';
-+        assert(entry === undefined || isServerEntry);
-+        serverEntryVike = serverEntryId = isServerEntry ? resolve(dirname(entry)) : serverFilePath;
++        assert(serverPlusFile.valueIsLoaded)
++        assert(typeof serverPlusFile.value === 'object')
++        const entry = serverPlusFile.value.entry
++        isServerEntry = typeof entry === 'string'
++        assert(entry === undefined || isServerEntry)
++        serverEntryVike = serverEntryId = isServerEntry ? resolve(dirname(serverFilePath), entry) : serverFilePath
      }
      else {
          serverEntryId = catchAllEntry;
-@@ -36,6 +40,7 @@ function getServerConfig(vikeConfig) {
+@@ -36,6 +42,7 @@ function getServerConfig(vikeConfig) {
          // It either points to the default fetchable endpoint (vike/fetch), or one defined by the user through +server.
          serverEntryVike,
          serverFilePath,
@@ -37,15 +39,31 @@ index d415ea9465996a28b294f0e4ba3a9cc4929bd26e..eb0ce77c7961935217bb73f58352d633
  }
  function isUniversalDeployVitePreview(vikeConfig, viteConfigResolved) {
 diff --git a/dist/node/vite/plugins/pluginUniversalDeploy.js b/dist/node/vite/plugins/pluginUniversalDeploy.js
-index 2519e3934414ccf8915fd4c49c7be230a42d0478..2c54325964fb597d84d7261b4d4ed6a678aba0fa 100644
+index 2519e3934414ccf8915fd4c49c7be230a42d0478..3432eede2e406bb0798ac92c1a060bf4f6b1844d 100644
 --- a/dist/node/vite/plugins/pluginUniversalDeploy.js
 +++ b/dist/node/vite/plugins/pluginUniversalDeploy.js
-@@ -24,7 +24,7 @@ function pluginUniversalDeploy(vikeConfig) {
+@@ -24,9 +24,9 @@ function pluginUniversalDeploy(vikeConfig) {
                  assertUsage(target === undefined, `${target} requires +server — see https://vike.dev/server`);
              }),
          ];
 -    const { serverEntryVike, serverEntryId, serverFilePath } = serverConfig;
 +    const { serverEntryVike, serverEntryId, serverFilePath, isServerEntry } = serverConfig;
      return [
-         ...universalDeploy(),
+-        ...universalDeploy(),
++        ...universalDeploy({ entry: isServerEntry ? serverEntryVike : undefined }),
          {
+             name: 'vike:pluginUniversalDeploy:entries',
+             config() {
+diff --git a/dist/node/vite/shared/resolveVikeConfigInternal/metaBuiltIn.js b/dist/node/vite/shared/resolveVikeConfigInternal/metaBuiltIn.js
+index d352b816391631e83e2c98a21b47ad692e785201..ec8ebf4a84d8bca77defc88d01558f9b32623e72 100644
+--- a/dist/node/vite/shared/resolveVikeConfigInternal/metaBuiltIn.js
++++ b/dist/node/vite/shared/resolveVikeConfigInternal/metaBuiltIn.js
+@@ -226,7 +226,7 @@ const metaBuiltIn = {
+         global: true,
+     },
+     server: {
+-        env: { server: true },
++        env: { server: true, config: true },
+         global: true,
+     },
+     cli: {
