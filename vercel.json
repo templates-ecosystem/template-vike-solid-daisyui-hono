@@ -1,6 +1,6 @@
 {
   "outputDirectory": "dist/client",
-  "installCommand": "pnpm i",
+  "installCommand": "pnpm i --frozen-lockfile",
   "rewrites": [
     {
       "source": "/((?!assets/).*)",
