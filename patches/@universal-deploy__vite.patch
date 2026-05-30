@@ -1,13 +1,14 @@
 diff --git a/dist/index.js b/dist/index.js
-index 14f80545c97fc416de930971f4a017f97f09deb7..4a1deb75306879c36d3d67689324f69a0d62d094 100644
+index 14f80545c97fc416de930971f4a017f97f09deb7..7af397294d9fa81a5d5d8aae526fa00b958415ec 100644
 --- a/dist/index.js
 +++ b/dist/index.js
-@@ -110,7 +110,18 @@ async function findSupportedDeploymentTargets(thisNodePlugin, c) {
+@@ -110,7 +110,35 @@ async function findSupportedDeploymentTargets(thisNodePlugin, c) {
  	if (plugins.some((p) => p.name.startsWith("ud:node:emit") && p[INSTANCE] !== thisNodePlugin?.[INSTANCE])) found.push("@universal-deploy/node");
  	return found;
  }
 -
 +function target(entry) {
++	let resolvedEntry
 +	return {
 +		name: "ud:target:emit",
 +		apply: "build",
@@ -16,13 +17,29 @@ index 14f80545c97fc416de930971f4a017f97f09deb7..4a1deb75306879c36d3d67689324f69a
 +			handler() {
 +				return { environments: { ssr: { build: { rolldownOptions: { input: { index: entry } } } } } }
 +			}
++		},
++		async buildStart() {
++      const resolved = await this.resolve(entry);
++      if (resolved) {
++        resolvedEntry = resolved.id;
++      }
++    },
++		transform(code, id) {
++			if (resolvedEntry && id === resolvedEntry) {
++				const s = new MagicString(code)
++				s.prepend(`import "virtual:vike:global-entry:server";\n`)
++				return {
++					code: s.toString(),
++					map: s.generateMap({ hires: true })
++				}
++			}
 +		}
 +	}
 +}
  //#endregion
  //#region src/plugins/auto.ts
  /**
-@@ -121,11 +132,7 @@ function auto(options) {
+@@ -121,11 +149,7 @@ function auto(options) {
  	return [
  		catchAll(),
  		devServer(),
