@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vike dev",
-    "build": "vike build && node scripts/postBuild.js",
+    "build": "vike build",
     "prod": "NODE_ENV=production node dist/server/index.mjs",
     "lint": "eslint src/**/*.{ts,tsx} *.ts",
     "depatch": "node scripts/patcher.js",
@@ -24,7 +24,8 @@
     "vike": "^0.4.259",
     "vike-solid": "^0.8.2",
     "vite": "^8.0.14",
-    "vite-plugin-solid": "^2.11.12"
+    "vite-plugin-solid": "^2.11.12",
+    "vite-plugin-vercel": "^11.1.0"
   },
   "files": [
     "dist"

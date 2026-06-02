@@ -2,6 +2,7 @@ import standaloner from 'standaloner/vite'
 import { plugin as vike } from 'vike/plugin'
 import vikeSolid from 'vike-solid/vite'
 import type { UserConfig } from 'vite'
+import { vercel } from 'vite-plugin-vercel/vite'
 
 const { NODE_ENV, PORT } = process.env
 
@@ -16,7 +17,8 @@ export default {
       standaloner({
         bundle: true,
         minify
-      })
+      }),
+      vercel()
     ] : [],
     vike(),
     vikeSolid()
