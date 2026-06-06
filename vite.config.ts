@@ -1,7 +1,66 @@
 import standaloner from 'standaloner/vite'
 import { plugin as vike } from 'vike/plugin'
 import vikeSolid from 'vike-solid/vite'
-import type { UserConfig } from 'vite'
+import type { UserConfig, Plugin } from 'vite'
+
+function customServerPlugin(): Plugin {
+  return {
+    name: 'custom-server-plugin',
+    configureServer(server) {
+      return () => {
+        server.middlewares.use(async (req, res, next) => {
+          try {
+            const { default: app } = await server.ssrLoadModule('/server/index.ts')
+
+            const protocol = req.headers['x-forwarded-proto'] || 'http'
+            const host = req.headers.host || 'localhost'
+            const url = new URL(req.url || '/', `${protocol}://${host}`)
+
+            let body;
+            if (req.method !== 'GET' && req.method !== 'HEAD') {
+              body = await new Promise<Buffer>((resolve, reject) => {
+                const chunks: Buffer[] = []
+                req.on('data', chunk => chunks.push(chunk))
+                req.on('end', () => resolve(Buffer.concat(chunks)))
+                req.on('error', reject)
+              })
+            }
+
+            const request = new Request(url.href, {
+              method: req.method,
+              headers: req.headers as HeadersInit,
+              body
+            })
+
+            const response = await app.fetch(request)
+
+            // If the Hono app doesn't find a route and falls back (e.g., for static assets not seen by Vite), we pass it back to Vite
+            if (response.status === 404 && !url.pathname.startsWith('/api')) {
+              return next()
+            }
+
+            res.statusCode = response.status
+            response.headers.forEach((value, name) => {
+              res.setHeader(name, value)
+            })
+
+            if (response.body) {
+              const reader = response.body.getReader()
+              while (true) {
+                const { done, value } = await reader.read()
+                if (done) break
+                res.write(value)
+              }
+            }
+            res.end()
+          } catch (e) {
+            next(e)
+          }
+        })
+      }
+    }
+  }
+}
 
 const { NODE_ENV, PORT } = process.env
 
@@ -17,7 +76,9 @@ export default {
         bundle: true,
         minify
       })
-    ] : [],
+    ] : [
+      customServerPlugin()
+    ],
     vike(),
     vikeSolid()
   ],
