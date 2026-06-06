@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  vike:
+    hash: 1aac72d0dcb003cc166cbd3493625eae3c0014f80f09770325949a4c0824b5d9
+    path: patches/vike.patch
+
 importers:
 
   .:
@@ -20,7 +25,7 @@ importers:
         version: 25.9.1
       '@vikejs/hono':
         specifier: ^0.2.0
-        version: 0.2.0(hono@4.12.21)(srvx@0.11.15)(vike@0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))
+        version: 0.2.0(hono@4.12.21)(srvx@0.11.15)(vike@0.4.259-commit-9fc8a01(patch_hash=1aac72d0dcb003cc166cbd3493625eae3c0014f80f09770325949a4c0824b5d9)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))
       depatcher:
         specifier: ^0.0.10
         version: 0.0.10
@@ -31,11 +36,11 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
       vike:
-        specifier: ^0.4.259
-        version: 0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
+        specifier: 0.4.259-commit-9fc8a01
+        version: 0.4.259-commit-9fc8a01(patch_hash=1aac72d0dcb003cc166cbd3493625eae3c0014f80f09770325949a4c0824b5d9)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
       vike-solid:
         specifier: ^0.8.2
-        version: 0.8.2(solid-js@1.9.13)(vike@0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.13)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))
+        version: 0.8.2(solid-js@1.9.13)(vike@0.4.259-commit-9fc8a01(patch_hash=1aac72d0dcb003cc166cbd3493625eae3c0014f80f09770325949a4c0824b5d9)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.13)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))
       vite:
         specifier: ^8.0.14
         version: 8.0.14(@types/node@25.9.1)(esbuild@0.28.0)
@@ -152,8 +157,8 @@ packages:
   '@brillout/json-serializer@0.5.23':
     resolution: {integrity: sha512-nM7okvu4UaoxYshKB+903s3/UpIBdkJl++iDT3gOLnHaSqY6HbhAXTsUTxrroAAcIt6RKQfShaKjCBlzR2A1Gg==}
 
-  '@brillout/picocolors@1.0.30':
-    resolution: {integrity: sha512-xJjdgyN1H0qh2nB2xlzazIipiDixuUd9oD5msh/Qv5bXJG9j8MSD/m4lREt6Z10ej6FF31b8vB4tdT7lDUbiyA==}
+  '@brillout/picocolors@1.0.31':
+    resolution: {integrity: sha512-xFCPBefU/AevF8XkwXSd/jIHA0fWw+mZ/gd5x2WOc5ysG7keHnU8m0gwY2Bvq5lvTyjwT4tiyow6fnMoYdmSqw==}
 
   '@brillout/vite-plugin-server-entry@0.7.18':
     resolution: {integrity: sha512-j3neG+vaIZ2AbP2/vGgaIyJwrFIxlK3xd3Ey2EGBswCvAGeI4QSSfXGbb7R3b3H8223PgTTsWOZuZH0Y8Ope2w==}
@@ -908,12 +913,28 @@ packages:
       vite:
         optional: true
 
+  '@universal-deploy/node@0.1.7':
+    resolution: {integrity: sha512-HxSiVZ2CYGX0M9RFl7cxf7Pfaz+vAA3ZfHJ6Yvflv04Gtyfyus2Z6xGSOluy3c8OxAyVu8fvhoXinU0ziHmaGA==}
+    peerDependencies:
+      vite: '>=7.1'
+    peerDependenciesMeta:
+      vite:
+        optional: true
+
   '@universal-deploy/store@0.2.1':
     resolution: {integrity: sha512-9CYaStacvufXAaVmaf8dxEVptqpcX5m9+vz1PIlN4gjYKlXfOdbZTuhv2xLwp3mj4jBR2/8VYdF5Vviw9cBYEA==}
     peerDependencies:
       srvx: '*'
     peerDependenciesMeta:
       srvx:
+        optional: true
+
+  '@universal-deploy/vite@0.1.10':
+    resolution: {integrity: sha512-fORNv7+cTgWT1iS2ywUvwaxVkn7QCUHwXwZjfEEv9tL//MoTdwmosq7z2vB4tyN8ERGgWKU7MaQN+YNxfg/68g==}
+    peerDependencies:
+      vite: '>=7.1'
+    peerDependenciesMeta:
+      vite:
         optional: true
 
   '@universal-deploy/vite@0.1.9':
@@ -964,6 +985,9 @@ packages:
 
   '@universal-middleware/node@0.1.0':
     resolution: {integrity: sha512-I03mkOhw0Ka28MtALkpoGJYE8YYSJxmq/iambaqKGXxlFXgLI/VXlw0LmX9iansUzbolNq4hWFMfHyNp2xb4jA==}
+
+  '@universal-middleware/node@0.2.0':
+    resolution: {integrity: sha512-Q7ppCHGYw0wtlF5oW5pDaIimDbnSvbPGWcseXsRWDUvzqM1fI0B6G1r43+Bv7qgCKigj580JKjs+eR3GgzCBrw==}
 
   '@vercel/build-utils@13.26.5':
     resolution: {integrity: sha512-nzXzE43OALBGzchr8f5o579sQojs6+Oq+Ffp61FbQEly0eK+CWRrDXH3MiTZlPWLi2sn789tZ2EIBqrdD7e0dQ==}
@@ -1482,6 +1506,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.8.2:
+    resolution: {integrity: sha512-c8jsqUZm3omBOI66G90z1Dyw5z622G8oLG+omfsHBJf3CWQTlOcwOjvOG6wtiNfW6anKm/eA39LMwMtMez2TiQ==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   seroval-plugins@1.5.2:
     resolution: {integrity: sha512-qpY0Cl+fKYFn4GOf3cMiq6l72CpuVaawb6ILjubOQ+diJ54LfOWaSSPsaswN8DRPIPW4Yq+tE1k5aKd7ILyaFg==}
     engines: {node: '>=10'}
@@ -1534,6 +1563,10 @@ packages:
 
   tinyglobby@0.2.16:
     resolution: {integrity: sha512-pn99VhoACYR8nFHhxqix+uvsbXineAasWm5ojXoN8xEwK5Kd3/TrhNn1wByuD52UxWRLy8pu+kRMniEi6Eq9Zg==}
+    engines: {node: '>=12.0.0'}
+
+  tinyglobby@0.2.17:
+    resolution: {integrity: sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==}
     engines: {node: '>=12.0.0'}
 
   tldts-core@7.0.28:
@@ -1589,8 +1622,8 @@ packages:
       vike: '>=0.4.250'
       vite-plugin-solid: ^2.11.10
 
-  vike@0.4.259:
-    resolution: {integrity: sha512-5S+rgfLYfozCqXTlyZzr6P4FXOIoPcsSbqYO32keBK2Jun4AKR5BI/sQiP3w09Zq/WZkywEu0ofHFAAxtaIdSg==}
+  vike@0.4.259-commit-9fc8a01:
+    resolution: {integrity: sha512-OV4dA84R7AuVVJz3+lVtG5QNkFZfZ9P1m8rW/HnYhhVee+jahnnX+jrk9aRUZEuNYJsPSq6+ZBx+uQfr5Q+Mvw==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     peerDependencies:
@@ -1826,12 +1859,12 @@ snapshots:
 
   '@brillout/json-serializer@0.5.23': {}
 
-  '@brillout/picocolors@1.0.30': {}
+  '@brillout/picocolors@1.0.31': {}
 
   '@brillout/vite-plugin-server-entry@0.7.18':
     dependencies:
       '@brillout/import': 0.2.6
-      '@brillout/picocolors': 1.0.30
+      '@brillout/picocolors': 1.0.31
 
   '@bytecodealliance/preview2-shim@0.17.6': {}
 
@@ -2322,11 +2355,40 @@ snapshots:
     optionalDependencies:
       vite: 8.0.14(@types/node@25.9.1)(esbuild@0.28.0)
 
+  '@universal-deploy/node@0.1.7(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))':
+    dependencies:
+      '@universal-deploy/store': 0.2.1(srvx@0.11.15)
+      magic-string: 0.30.21
+      srvx: 0.11.15
+    optionalDependencies:
+      vite: 8.0.14(@types/node@25.9.1)(esbuild@0.28.0)
+
   '@universal-deploy/store@0.2.1(srvx@0.11.15)':
     dependencies:
       rou3: 0.8.1
     optionalDependencies:
       srvx: 0.11.15
+
+  '@universal-deploy/vite@0.1.10(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))':
+    dependencies:
+      '@universal-deploy/netlify': 0.2.2(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
+      '@universal-deploy/node': 0.1.7(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
+      '@universal-deploy/store': 0.2.1(srvx@0.11.15)
+      '@universal-middleware/express': 0.4.26(hono@4.12.21)(srvx@0.11.15)
+      magic-string: 0.30.21
+      rou3: 0.8.1
+    optionalDependencies:
+      vite: 8.0.14(@types/node@25.9.1)(esbuild@0.28.0)
+    transitivePeerDependencies:
+      - '@cloudflare/workers-types'
+      - '@hattip/core'
+      - '@types/express'
+      - '@webroute/route'
+      - elysia
+      - fastify
+      - h3
+      - hono
+      - srvx
 
   '@universal-deploy/vite@0.1.9(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))':
     dependencies:
@@ -2400,6 +2462,20 @@ snapshots:
       - hono
       - srvx
 
+  '@universal-middleware/node@0.2.0(hono@4.12.21)(srvx@0.11.15)':
+    dependencies:
+      '@universal-middleware/core': 0.4.17(hono@4.12.21)(srvx@0.11.15)
+    transitivePeerDependencies:
+      - '@cloudflare/workers-types'
+      - '@hattip/core'
+      - '@types/express'
+      - '@webroute/route'
+      - elysia
+      - fastify
+      - h3
+      - hono
+      - srvx
+
   '@vercel/build-utils@13.26.5':
     dependencies:
       '@vercel/python-analysis': 0.11.1
@@ -2442,11 +2518,11 @@ snapshots:
     optionalDependencies:
       ajv: 6.15.0
 
-  '@vikejs/hono@0.2.0(hono@4.12.21)(srvx@0.11.15)(vike@0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))':
+  '@vikejs/hono@0.2.0(hono@4.12.21)(srvx@0.11.15)(vike@0.4.259-commit-9fc8a01(patch_hash=1aac72d0dcb003cc166cbd3493625eae3c0014f80f09770325949a4c0824b5d9)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))':
     dependencies:
       '@universal-middleware/hono': 0.4.21(hono@4.12.21)(srvx@0.11.15)
       hono: 4.12.21
-      vike: 0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
+      vike: 0.4.259-commit-9fc8a01(patch_hash=1aac72d0dcb003cc166cbd3493625eae3c0014f80f09770325949a4c0824b5d9)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
       - '@hattip/core'
@@ -2954,6 +3030,8 @@ snapshots:
 
   semver@7.7.4: {}
 
+  semver@7.8.2: {}
+
   seroval-plugins@1.5.2(seroval@1.5.2):
     dependencies:
       seroval: 1.5.2
@@ -3020,6 +3098,11 @@ snapshots:
       fdir: 6.5.0(picomatch@4.0.4)
       picomatch: 4.0.4
 
+  tinyglobby@0.2.17:
+    dependencies:
+      fdir: 6.5.0(picomatch@4.0.4)
+      picomatch: 4.0.4
+
   tldts-core@7.0.28: {}
 
   tldts@7.0.28:
@@ -3058,25 +3141,25 @@ snapshots:
       punycode: 2.3.1
     optional: true
 
-  vike-solid@0.8.2(solid-js@1.9.13)(vike@0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.13)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))):
+  vike-solid@0.8.2(solid-js@1.9.13)(vike@0.4.259-commit-9fc8a01(patch_hash=1aac72d0dcb003cc166cbd3493625eae3c0014f80f09770325949a4c0824b5d9)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)))(vite-plugin-solid@2.11.12(solid-js@1.9.13)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))):
     dependencies:
       isbot-fast: 1.2.0
       solid-js: 1.9.13
-      vike: 0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
+      vike: 0.4.259-commit-9fc8a01(patch_hash=1aac72d0dcb003cc166cbd3493625eae3c0014f80f09770325949a4c0824b5d9)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
       vite-plugin-solid: 2.11.12(solid-js@1.9.13)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
 
-  vike@0.4.259(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)):
+  vike@0.4.259-commit-9fc8a01(patch_hash=1aac72d0dcb003cc166cbd3493625eae3c0014f80f09770325949a4c0824b5d9)(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)):
     dependencies:
       '@babel/core': 7.29.0
-      '@babel/types': 7.29.0
+      '@babel/types': 7.29.7
       '@brillout/import': 0.2.6
       '@brillout/json-serializer': 0.5.23
-      '@brillout/picocolors': 1.0.30
+      '@brillout/picocolors': 1.0.31
       '@brillout/vite-plugin-server-entry': 0.7.18
       '@universal-deploy/store': 0.2.1(srvx@0.11.15)
-      '@universal-deploy/vite': 0.1.9(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
+      '@universal-deploy/vite': 0.1.10(hono@4.12.21)(srvx@0.11.15)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
       '@universal-middleware/core': 0.4.17(hono@4.12.21)(srvx@0.11.15)
-      '@universal-middleware/node': 0.1.0(hono@4.12.21)(srvx@0.11.15)
+      '@universal-middleware/node': 0.2.0(hono@4.12.21)(srvx@0.11.15)
       cac: 6.7.14
       convert-route: 1.1.1
       es-module-lexer: 1.7.0
@@ -3084,10 +3167,10 @@ snapshots:
       json5: 2.2.3
       magic-string: 0.30.21
       picomatch: 4.0.4
-      semver: 7.7.4
+      semver: 7.8.2
       sirv: 3.0.2
       source-map-support: 0.5.21
-      tinyglobby: 0.2.16
+      tinyglobby: 0.2.17
       vite-plugin-wrapper: 0.1.0(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0))
     optionalDependencies:
       vite: 8.0.14(@types/node@25.9.1)(esbuild@0.28.0)
