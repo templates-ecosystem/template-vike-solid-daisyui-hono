@@ -7,7 +7,7 @@ import type { UserConfig, Plugin } from 'vite'
 
 const { NODE_ENV, PORT } = process.env
 
-const port = PORT ? parseInt(PORT) : 3000
+const port = PORT ? Number.parseInt(PORT) : 3000
 const minify = false
 
 export default {
