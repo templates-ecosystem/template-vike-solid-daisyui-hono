@@ -16,15 +16,25 @@ function customServerPlugin(): Plugin {
             const host = req.headers.host || 'localhost'
             const url = new URL(req.url || '/', `${protocol}://${host}`)
 
-            let body;
-            if (req.method !== 'GET' && req.method !== 'HEAD') {
-              body = await new Promise<Buffer>((resolve, reject) => {
-                const chunks: Buffer[] = []
-                req.on('data', chunk => chunks.push(chunk))
-                req.on('end', () => resolve(Buffer.concat(chunks)))
-                req.on('error', reject)
+            /** @link https://github.com/magne4000/universal-middleware/blob/main/packages/node/src/request.ts */
+            const body = req.method === 'GET' || req.method === 'HEAD'
+              ? undefined
+              : new ReadableStream({
+                start(controller) {
+                  req.on('data', (chunk) => {
+                    controller.enqueue(chunk)
+                    if ((controller.desiredSize ?? 1) <= 0) req.pause()
+                  })
+                  req.on('end', () => controller.close())
+                  req.on('error', (err) => controller.error(err))
+                },
+                pull() {
+                  req.resume()
+                },
+                cancel(reason) {
+                  req.destroy(reason instanceof Error ? reason : undefined)
+                }
               })
-            }
 
             const request = new Request(url.href, {
               method: req.method,
