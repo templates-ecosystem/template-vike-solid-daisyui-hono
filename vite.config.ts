@@ -13,13 +13,13 @@ export default {
   root: 'src',
   cacheDir: '../.vite',
   plugins: [
-    // ...NODE_ENV === 'production' ? [
-    //   standaloner({
-    //     bundle: true,
-    //     minify
-    //   }),
-    //   vercel()
-    // ] : [],
+    ...NODE_ENV === 'production' ? [
+      standaloner({
+        bundle: true,
+        minify
+      }),
+      vercel()
+    ] : [],
     vike(),
     vikeSolid()
   ],
