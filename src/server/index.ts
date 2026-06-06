@@ -15,8 +15,8 @@ app.get('*', async (c, next) => {
   const pageContextInit = {
     // c.req.url is a standard URL in Hono
     urlOriginal: c.req.url,
-    // You can pass the original fetch Request object if needed in components
-    fetchRequest: c.req.raw
+    headersOriginal: c.req.raw.headers,
+    _reqWeb: c.req.raw
   }
 
   try {
@@ -29,16 +29,12 @@ app.get('*', async (c, next) => {
       return next()
     }
 
-    const { body, statusCode, headers } = httpResponse
-
-    // Set the headers returned by Vike
-    headers.forEach(([name, value]) => {
-      c.header(name, value)
+    // Vike provides a standard web stream for its response
+    const readable = httpResponse.getReadableWebStream()
+    return new Response(readable, {
+      status: httpResponse.statusCode,
+      headers: httpResponse.headers
     })
-
-    // Return the generated HTML with the appropriate status code (e.g., 200 or 404)
-    c.status(statusCode as any)
-    return c.body(body)
   } catch (error) {
     console.error('Error during Vike rendering:', error)
     return c.text('Internal Server Error', 500)
