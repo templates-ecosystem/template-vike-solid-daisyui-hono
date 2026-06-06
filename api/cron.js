@@ -1,4 +1,4 @@
-import { MY_SETTING } from '../src/server/entrypoint'
+import { MY_SETTING } from '../dist/server/index.mjs'
 
 export default async function handler(request, response) {
   const authHeader = request.headers.authorization

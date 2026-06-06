@@ -1,5 +1,12 @@
 {
+  "outputDirectory": "dist/client",
   "installCommand": "pnpm i --frozen-lockfile",
+  "rewrites": [
+    {
+      "source": "/((?!assets/).*)",
+      "destination": "/api/ssr.js"
+    }
+  ],
   "crons": [
     {
       "path": "/api/cron.js",
