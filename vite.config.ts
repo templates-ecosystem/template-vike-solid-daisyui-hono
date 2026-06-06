@@ -1,3 +1,4 @@
+import { Readable } from 'node:stream'
 import standaloner from 'standaloner/vite'
 import { plugin as vike } from 'vike/plugin'
 import vikeSolid from 'vike-solid/vite'
@@ -19,22 +20,8 @@ function customServerPlugin(): Plugin {
             /** @link https://github.com/magne4000/universal-middleware/blob/main/packages/node/src/request.ts */
             const body = req.method === 'GET' || req.method === 'HEAD'
               ? undefined
-              : new ReadableStream({
-                start(controller) {
-                  req.on('data', (chunk) => {
-                    controller.enqueue(chunk)
-                    if ((controller.desiredSize ?? 1) <= 0) req.pause()
-                  })
-                  req.on('end', () => controller.close())
-                  req.on('error', (err) => controller.error(err))
-                },
-                pull() {
-                  req.resume()
-                },
-                cancel(reason) {
-                  req.destroy(reason instanceof Error ? reason : undefined)
-                }
-              })
+              // uses internal V8 bindings that are more efficient than a manual wrapper
+              : Readable.toWeb(req) as ReadableStream<Uint8Array>
 
             const request = new Request(url.href, {
               method: req.method,
