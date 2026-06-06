@@ -1,8 +1,8 @@
 diff --git a/dist/node/vite/plugins/pluginUniversalDeploy.js b/dist/node/vite/plugins/pluginUniversalDeploy.js
-index 2519e3934414ccf8915fd4c49c7be230a42d0478..4a22f88efe2af46cb3706e65dba526d46e331756 100644
+index 2519e3934414ccf8915fd4c49c7be230a42d0478..cab8be4c4e14fbcd233f8723af6f6d84459e248b 100644
 --- a/dist/node/vite/plugins/pluginUniversalDeploy.js
 +++ b/dist/node/vite/plugins/pluginUniversalDeploy.js
-@@ -1,32 +1,20 @@
+@@ -1,32 +1,18 @@
  export { pluginUniversalDeploy };
 +import { resolve } from 'node:path';
  import { toRou3 } from 'convert-route';
@@ -14,8 +14,8 @@ index 2519e3934414ccf8915fd4c49c7be230a42d0478..4a22f88efe2af46cb3706e65dba526d4
  import { pluginCommon } from './pluginUniversalDeploy/common.js';
 -import { hasVikeServerOrVikePhoton } from './pluginUniversalDeploy/detectDeprecated.js';
 -import { getServerConfig } from './pluginUniversalDeploy/getServerConfig.js';
- import { pluginServerEntryAlias } from './pluginUniversalDeploy/pluginServerEntryAlias.js';
- import { pluginUnwrapProdOptions } from './pluginUniversalDeploy/pluginUnwrapProdOptions.js';
+-import { pluginServerEntryAlias } from './pluginUniversalDeploy/pluginServerEntryAlias.js';
+-import { pluginUnwrapProdOptions } from './pluginUniversalDeploy/pluginUnwrapProdOptions.js';
  import { unique } from '../../../utils/unique.js';
  import { assertUsage } from '../../../utils/assert.js';
  import '../assertEnvVite.js';
@@ -39,14 +39,13 @@ index 2519e3934414ccf8915fd4c49c7be230a42d0478..4a22f88efe2af46cb3706e65dba526d4
          {
              name: 'vike:pluginUniversalDeploy:entries',
              config() {
-@@ -52,8 +40,7 @@ function pluginUniversalDeploy(vikeConfig) {
+@@ -52,8 +38,6 @@ function pluginUniversalDeploy(vikeConfig) {
              },
              ...pluginCommon,
          },
 -        pluginServerEntryInject(serverFilePath ?? serverEntryId),
 -        pluginServerEntryAlias(serverFilePath),
 -        !serverFilePath ? null : pluginUnwrapProdOptions(serverFilePath),
-+        pluginServerEntryInject(serverEntryVike),
-+        pluginServerEntryAlias(serverEntryVike),
++        pluginServerEntryInject('virtual:vike:global-entry:server'),
      ].filter((p) => p !== null);
  }
