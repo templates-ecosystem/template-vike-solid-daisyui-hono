@@ -1,4 +1,3 @@
-import { Readable } from 'node:stream'
 import standaloner from 'standaloner/vite'
 import { plugin as vike } from 'vike/plugin'
 import vikeSolid from 'vike-solid/vite'
@@ -20,8 +19,7 @@ function customServerPlugin(): Plugin {
             /** @link https://github.com/magne4000/universal-middleware/blob/main/packages/node/src/request.ts */
             const body = req.method === 'GET' || req.method === 'HEAD'
               ? undefined
-              // uses internal V8 bindings that are more efficient than a manual wrapper
-              : Readable.toWeb(req) as ReadableStream<Uint8Array>
+              : req as unknown as BodyInit
 
             const request = new Request(url.href, {
               method: req.method,
