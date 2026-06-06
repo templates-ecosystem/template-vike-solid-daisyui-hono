@@ -12,18 +12,18 @@
     "od": "pnpm outdated"
   },
   "dependencies": {
-    "hono": "^4.12.21",
+    "hono": "^4.12.23",
     "solid-js": "^1.9.13"
   },
   "devDependencies": {
-    "@types/node": "^25.9.1",
+    "@types/node": "^25.9.2",
     "@vikejs/hono": "^0.2.0",
-    "depatcher": "^0.0.10",
-    "standaloner": "^0.3.1",
+    "depatcher": "^0.0.12",
+    "standaloner": "^0.3.2",
     "typescript": "^6.0.3",
     "vike": "0.4.259-commit-9fc8a01",
     "vike-solid": "^0.8.2",
-    "vite": "^8.0.14",
+    "vite": "^8.0.16",
     "vite-plugin-solid": "^2.11.12"
   },
   "files": [
