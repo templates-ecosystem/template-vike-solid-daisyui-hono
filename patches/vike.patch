@@ -1,10 +1,10 @@
 diff --git a/dist/node/vite/plugins/pluginUniversalDeploy.js b/dist/node/vite/plugins/pluginUniversalDeploy.js
-index 2519e3934414ccf8915fd4c49c7be230a42d0478..4c2a0e43fb409dc468edc4027aeb1b983f6d3c0c 100644
+index 2519e3934414ccf8915fd4c49c7be230a42d0478..e4eb9a827a3a049ccb40854eaf3bde27553a9a9b 100644
 --- a/dist/node/vite/plugins/pluginUniversalDeploy.js
 +++ b/dist/node/vite/plugins/pluginUniversalDeploy.js
-@@ -1,32 +1,21 @@
+@@ -1,32 +1,20 @@
  export { pluginUniversalDeploy };
-+import { resolve } from 'path';
++import { resolve } from 'node:path';
  import { toRou3 } from 'convert-route';
  import { addEntry } from '@universal-deploy/store';
 -import universalDeploy, { resolveTargets } from '@universal-deploy/vite';
@@ -33,19 +33,18 @@ index 2519e3934414ccf8915fd4c49c7be230a42d0478..4c2a0e43fb409dc468edc4027aeb1b98
 -        ];
 -    const { serverEntryVike, serverEntryId, serverFilePath } = serverConfig;
 +    const serverEntryVike = resolve('./src/server/entrypoint.ts');
-+    const serverFilePath = serverEntryVike;
      return [
 -        ...universalDeploy(),
-+        ...universalDeploy({ entry: serverFilePath }),
++        ...universalDeploy({ entry: serverEntryVike }),
          {
              name: 'vike:pluginUniversalDeploy:entries',
              config() {
-@@ -52,7 +41,7 @@ function pluginUniversalDeploy(vikeConfig) {
+@@ -52,8 +40,5 @@ function pluginUniversalDeploy(vikeConfig) {
              },
              ...pluginCommon,
          },
 -        pluginServerEntryInject(serverFilePath ?? serverEntryId),
-+        pluginServerEntryInject(serverFilePath),
-         pluginServerEntryAlias(serverFilePath),
-         !serverFilePath ? null : pluginUnwrapProdOptions(serverFilePath),
+-        pluginServerEntryAlias(serverFilePath),
+-        !serverFilePath ? null : pluginUnwrapProdOptions(serverFilePath),
      ].filter((p) => p !== null);
+ }
