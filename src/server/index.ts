@@ -13,13 +13,12 @@ app.route('/api', apiRoutes)
 // Catch-all: Everything that is not /api is passed to Vike
 app.get('*', async (c, next) => {
   try {
-    // Call Vike to render the page
-    const pageContext = await renderPage({
+    // Call Vike to render the page and get httpResponse from pageContext
+    const { httpResponse } = await renderPage({
       urlOriginal: c.req.url,
       headersOriginal: c.req.raw.headers,
       _reqWeb: c.req.raw
     })
-    const { httpResponse } = pageContext
 
     // If Vike doesn't know what to do with the URL (e.g., no page exists for this route)
     if (!httpResponse) {
@@ -27,8 +26,7 @@ app.get('*', async (c, next) => {
     }
 
     // Vike provides a standard web stream for its response
-    const readable = httpResponse.getReadableWebStream()
-    return new Response(readable, {
+    return new Response(httpResponse.getReadableWebStream(), {
       status: httpResponse.statusCode,
       headers: httpResponse.headers
     })
