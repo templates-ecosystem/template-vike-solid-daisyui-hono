@@ -12,16 +12,13 @@ app.route('/api', apiRoutes)
 // 2. SERVER-SIDE RENDERING (Vike) HANDLING
 // Catch-all: Everything that is not /api is passed to Vike
 app.get('*', async (c, next) => {
-  const pageContextInit = {
-    // c.req.url is a standard URL in Hono
-    urlOriginal: c.req.url,
-    headersOriginal: c.req.raw.headers,
-    _reqWeb: c.req.raw
-  }
-
   try {
     // Call Vike to render the page
-    const pageContext = await renderPage(pageContextInit)
+    const pageContext = await renderPage({
+      urlOriginal: c.req.url,
+      headersOriginal: c.req.raw.headers,
+      _reqWeb: c.req.raw
+    })
     const { httpResponse } = pageContext
 
     // If Vike doesn't know what to do with the URL (e.g., no page exists for this route)
