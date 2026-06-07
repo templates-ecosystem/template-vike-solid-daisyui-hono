@@ -14,25 +14,25 @@
     "od": "yarn outdated"
   },
   "dependencies": {
-    "hono": "^4.12.12",
-    "solid-js": "^1.9.12"
+    "hono": "^4.12.23",
+    "solid-js": "^1.9.13"
   },
   "devDependencies": {
     "@photonjs/hono": "^0.1.12",
-    "@tailwindcss/vite": "^4.2.2",
-    "@types/node": "^25.5.2",
-    "@yarnpkg/sdks": "^3.2.3",
-    "daisyui": "^5.5.19",
-    "eslint": "^9.39.2",
+    "@tailwindcss/vite": "^4.3.0",
+    "@types/node": "^25.9.2",
+    "@yarnpkg/sdks": "^3.3.0",
+    "daisyui": "^5.5.23",
+    "eslint": "^10.4.1",
     "eslint-plugin-solid": "^0.14.5",
     "eslint-plugin-unicorn": "^64.0.0",
-    "tailwindcss": "^4.2.2",
-    "typescript": "^6.0.2",
-    "typescript-eslint": "^8.58.1",
-    "vike": "^0.4.256",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.60.1",
+    "vike": "^0.4.259",
     "vike-photon": "^0.1.26",
     "vike-solid": "^0.8.2",
-    "vite": "^7.3.1",
+    "vite": "^8.0.16",
     "vite-plugin-solid": "^2.11.12"
   },
   "files": [
