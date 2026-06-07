@@ -5,35 +5,33 @@ import apiRoutes from './api/index'
 
 const app = new Hono()
 
-// 1. CUSTOM API HANDLING
 // All requests starting with /api will be passed to the apiRoutes router
 app.route('/api', apiRoutes)
 
-// 2. SERVER-SIDE RENDERING (Vike) HANDLING
-// Catch-all: Everything that is not /api is passed to Vike
+// Catch-all remaining requests using Vike rendering
 app.get('*', async (c, next) => {
-  try {
-    // Call Vike to render the page and get httpResponse from pageContext
-    const { httpResponse } = await renderPage({
-      urlOriginal: c.req.url,
-      headersOriginal: c.req.raw.headers,
-      _reqWeb: c.req.raw
-    })
+  // Call Vike to render the page and get httpResponse from pageContext
+  const { httpResponse } = await renderPage({
+    urlOriginal: c.req.url,
+    headersOriginal: c.req.raw.headers,
+    _reqWeb: c.req.raw
+  })
 
-    // If Vike doesn't know what to do with the URL (e.g., no page exists for this route)
-    if (!httpResponse) {
-      return next()
-    }
-
-    // Vike provides a standard web stream for its response
-    return new Response(httpResponse.getReadableWebStream(), {
-      status: httpResponse.statusCode,
-      headers: httpResponse.headers
-    })
-  } catch (error) {
-    console.error('Error during Vike rendering:', error)
-    return c.text('Internal Server Error', 500)
+  // If Vike doesn't know what to do with the URL (e.g., no page exists for this route)
+  if (!httpResponse) {
+    return next()
   }
+
+  // Vike provides a standard web stream for its response
+  return new Response(httpResponse.getReadableWebStream(), {
+    status: httpResponse.statusCode,
+    headers: httpResponse.headers
+  })
+})
+
+app.onError((error, c) => {
+  console.error(error)
+  return c.json({ error: 'Internal Server Error' }, 500)
 })
 
 export default app
