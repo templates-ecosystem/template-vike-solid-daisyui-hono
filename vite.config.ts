@@ -1,6 +1,6 @@
 import path from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
-import { plugin as vike } from 'vike/plugin'
+import vike from 'vike/plugin'
 import vikeSolid from 'vike-solid/vite'
 import type { UserConfig } from 'vite'
 
