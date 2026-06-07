@@ -1,4 +1,6 @@
 ### ▲ Adapt to Deploy on Vercel
+> OUTDATED
+
 - Update `/pages/+config.ts`
   ```diff
   import type { Config } from 'vike/types'
