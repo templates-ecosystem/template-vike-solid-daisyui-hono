@@ -18,7 +18,8 @@ export default {
   build: {
     target: 'esnext',
     outDir: '../dist',
-    minify: true
+    minify: true,
+    emptyOutDir: true
   },
   resolve: {
     alias: {
