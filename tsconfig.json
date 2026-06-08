@@ -24,7 +24,10 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "types": [
+      "vite/client"
+    ]
   },
   "exclude": [
     ".github",

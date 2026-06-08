@@ -5,9 +5,9 @@
   "type": "module",
   "packageManager": "yarn@4.16.0",
   "scripts": {
-    "dev": "vike dev",
-    "build": "vike build",
-    "build:entry-node": "ENTRY_NODE=true vike build",
+    "dev": "vite dev",
+    "build": "vite build",
+    "build:entry-node": "ENTRY_NODE=true vite build",
     "prod": "NODE_ENV=production node dist/server/index.mjs",
     "preview": "yarn build:entry-node && yarn prod",
     "lint": "eslint src/**/*.{ts,tsx} *.ts",
@@ -28,8 +28,6 @@
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.60.1",
-    "vike": "^0.4.259",
-    "vike-solid": "^0.8.2",
     "vite": "^8.0.16",
     "vite-plugin-solid": "^2.11.12"
   },

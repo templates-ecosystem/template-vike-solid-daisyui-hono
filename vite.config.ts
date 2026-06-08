@@ -1,16 +1,14 @@
 import path from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
-import vike from 'vike/plugin'
-import vikeSolid from 'vike-solid/vite'
+import solidPlugin from 'vite-plugin-solid'
 import type { UserConfig } from 'vite'
 
 export default {
   root: 'src',
   cacheDir: '../.vite',
   plugins: [
-    tailwindcss(),
-    vike(),
-    vikeSolid()
+    solidPlugin(),
+    tailwindcss()
   ],
   server: {
     port: 3000
@@ -19,7 +17,8 @@ export default {
     target: 'esnext',
     outDir: '../dist',
     minify: true,
-    emptyOutDir: true
+    emptyOutDir: true,
+    cssMinify: 'lightningcss'
   },
   resolve: {
     alias: {
