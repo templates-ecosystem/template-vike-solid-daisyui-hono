@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vike dev",
-    "build": "vike build",
+    "build": "vike build && node scripts/postBuild.js",
     "prod": "NODE_ENV=production node dist/server/index.mjs",
     "lint": "eslint src/**/*.{ts,tsx} *.ts",
     "depatch": "node scripts/patcher.js",
@@ -18,6 +18,7 @@
   "devDependencies": {
     "@types/node": "^25.9.2",
     "depatcher": "^0.0.12",
+    "standaloner": "^0.3.2",
     "typescript": "^6.0.3",
     "vike": "0.4.259-commit-9fc8a01",
     "vike-solid": "^0.8.2",
