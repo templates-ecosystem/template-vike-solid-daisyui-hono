@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
+  '@universal-deploy/vite':
+    hash: 7d0f295f7a7c69924ecf367e451edd6beb37c191d43bdd3a8e8d1d22af2fac96
+    path: patches/@universal-deploy__vite.patch
   vike:
     hash: 745727b7f044bcd2d78aa92246cd670c544222302c21f81450c5f9ce0cf505c6
     path: patches/vike.patch
@@ -1872,7 +1875,7 @@ snapshots:
     optionalDependencies:
       srvx: 0.11.15
 
-  '@universal-deploy/vite@0.1.10(hono@4.12.23)(srvx@0.11.15)(vite@8.0.16(@types/node@25.9.2)(esbuild@0.28.0))':
+  '@universal-deploy/vite@0.1.10(patch_hash=7d0f295f7a7c69924ecf367e451edd6beb37c191d43bdd3a8e8d1d22af2fac96)(hono@4.12.23)(srvx@0.11.15)(vite@8.0.16(@types/node@25.9.2)(esbuild@0.28.0))':
     dependencies:
       '@universal-deploy/netlify': 0.2.2(srvx@0.11.15)(vite@8.0.16(@types/node@25.9.2)(esbuild@0.28.0))
       '@universal-deploy/node': 0.1.7(vite@8.0.16(@types/node@25.9.2)(esbuild@0.28.0))
@@ -2425,7 +2428,7 @@ snapshots:
       '@brillout/picocolors': 1.0.31
       '@brillout/vite-plugin-server-entry': 0.7.18
       '@universal-deploy/store': 0.2.1(srvx@0.11.15)
-      '@universal-deploy/vite': 0.1.10(hono@4.12.23)(srvx@0.11.15)(vite@8.0.16(@types/node@25.9.2)(esbuild@0.28.0))
+      '@universal-deploy/vite': 0.1.10(patch_hash=7d0f295f7a7c69924ecf367e451edd6beb37c191d43bdd3a8e8d1d22af2fac96)(hono@4.12.23)(srvx@0.11.15)(vite@8.0.16(@types/node@25.9.2)(esbuild@0.28.0))
       '@universal-middleware/core': 0.4.17(hono@4.12.23)(srvx@0.11.15)
       '@universal-middleware/node': 0.2.0(hono@4.12.23)(srvx@0.11.15)
       cac: 6.7.14
