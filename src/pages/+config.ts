@@ -5,7 +5,6 @@ import vikeSolid from 'vike-solid/config'
 export default {
   title: 'My Vike + Solid App', // <title>
   description: 'Demo showcasing Vike + Solid', // <meta name='description'>
-  prerender: true,
   extends: [
     vikeSolid
   ]
