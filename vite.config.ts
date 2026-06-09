@@ -19,6 +19,7 @@ export default {
     target: 'esnext',
     outDir: '../dist',
     minify: true,
+    cssMinify: 'lightningcss',
     emptyOutDir: true
   },
   resolve: {
