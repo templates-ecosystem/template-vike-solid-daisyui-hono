@@ -1,7 +1,7 @@
 import standaloner from 'standaloner/vite'
 import { plugin as vike } from 'vike/plugin'
 import vikeSolid from 'vike-solid/vite'
-import type { UserConfig } from 'vite'
+import type { Plugin, UserConfig } from 'vite'
 
 const { NODE_ENV, PORT } = process.env
 
@@ -16,7 +16,30 @@ export default {
       standaloner({
         bundle: true,
         minify
-      })
+      }),
+      {
+        name: 'emit-server-index',
+        apply: 'build',
+        enforce: 'post',
+        config() {
+          return {
+            environments: {
+              ssr: {
+                resolve: {
+                  noExternal: true
+                },
+                build: {
+                  rolldownOptions: {
+                    input: {
+                      index: 'server/entrypoint.ts'
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      } as Plugin
     ] : [],
     vike(),
     vikeSolid()
