@@ -1,3 +1,0 @@
-patchedDependencies:
-  '@universal-deploy/vite': patches/@universal-deploy__vite.patch
-  vike: patches/vike.patch
