@@ -7,6 +7,7 @@
     "dev": "vike dev",
     "build": "vike build",
     "prod": "NODE_ENV=production node dist/server/index.mjs",
+    "preview": "NODE_ENV=production node scripts/startServer.mjs",
     "lint": "eslint src/**/*.{ts,tsx} *.ts",
     "depatch": "node scripts/patcher.js",
     "od": "pnpm outdated"
@@ -16,6 +17,7 @@
     "solid-js": "^1.9.13"
   },
   "devDependencies": {
+    "@hono/node-server": "^2.0.4",
     "@types/node": "^25.9.2",
     "depatcher": "^0.0.12",
     "standaloner": "^0.3.2",
