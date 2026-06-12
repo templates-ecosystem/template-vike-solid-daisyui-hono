@@ -1,5 +1,5 @@
 // @ts-ignore
-import 'virtual:vike:global-entry:server'
+import 'virtual:@brillout/vite-plugin-server-entry:serverEntry'
 
 export { default } from './index'
 
