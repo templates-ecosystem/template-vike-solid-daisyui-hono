@@ -7,5 +7,6 @@ export default {
   },
   extends: [
     vikeSolid
-  ]
+  ],
+  server: 'import:../server/index.ts:default'
 } satisfies Config
