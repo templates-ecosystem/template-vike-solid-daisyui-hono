@@ -1,28 +1,22 @@
-import standaloner from 'standaloner/vite'
-import { plugin as vike } from 'vike/plugin'
-import vikeSolid from 'vike-solid/vite'
 import type { UserConfig } from 'vite'
-
-const minify = false
 
 export default {
   root: 'src',
   cacheDir: '../.vite',
-  plugins: [
-    standaloner({
-      bundle: true,
-      minify
-    }),
-    vike(),
-    vikeSolid()
-  ],
   server: {
     port: 3000
   },
-  build: {
-    target: 'esnext',
-    outDir: '../dist',
-    emptyOutDir: true,
-    minify
+  environments: {
+    client: {
+      build: {
+        outDir: '../dist/client',
+        emptyOutDir: true,
+        cssMinify: true,
+        manifest: true,
+        rolldownOptions: {
+          input: 'entry-client.tsx',
+        }
+      }
+    }
   }
 } satisfies UserConfig
